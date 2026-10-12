@@ -1,0 +1,3 @@
+Domanda inviata a http://localhost:8080, aspetto la risposta...
+
+Interrotta a mano dopo circa 7 minuti e 24711 token generati: il modello stava ancora ragionando.

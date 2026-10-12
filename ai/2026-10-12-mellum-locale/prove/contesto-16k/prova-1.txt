@@ -1,0 +1,51 @@
+Domanda inviata a http://localhost:8080, aspetto la risposta...
+
+=== Ragionamento del modello ===
+We need to find bug: program should signal only F-003 not saved, but also signals F-001. Actually expected non-saved invoices: atteso = List.of(f3.numero()) meaning only F-003 expected. But ottenuto includes F-001 as well. Why? Let's examine code.
+
+We have fatture list: F-001 120, F-002 80.50, F-003 45.
+
+Pagamenti: 
+- f1.numero() "F-001" amount 120
+- f2.numero() "F-002" amount 40.25
+- another f2 amount 40.25 (total 80.5 for F-002)
+- f3 amount 20.00
+
+So total per invoice:
+F-001: 120 (paid 120) matches amount 120 => should be paid.
+F-002: paid 80.5 matches 80.5 => paid.
+F-003: paid 20, amount 45 => not fully paid, so should be non-saved.
+
+But program also flags F-001? Wait, why would F-001 be non-saved? Let's compute: totalPagato map: for each payment, merge by numeroFattura. For F-001, payment 120. So pagato = 120. f.importo = 120. equals, so not added. So why would F-001 appear in ottenuto? Maybe because of rounding issues? BigDecimal values: f1.importo = 120.00, payment 120 (no decimal). That's equal. Should be fine.
+
+But maybe the bug is that in fattureNonSaldate, they use f.numero() but the record Fattura has field "numero", while Pagamento has "numeroFattura". In the loop over fatture, they use f.numero() to get key for totalePagato.get(f.numero()). That's correct.
+
+Wait, maybe the bug is that they compare pagato.equals(f.importo()) but pagato is BigDecimal sum of payments for that invoice. For F-001, pagato = 120, f.importo = 120.00. BigDecimal(120) vs BigDecimal("120.00") are equal? BigDecimal(120) is 120, BigDecimal("120.00") is 120.00, they are equal numerically, but maybe equals returns false due to different scale? BigDecimal.equals compares value and scale? Actually BigDecimal.equals(Object) compares the entire value including scale if the argument is BigDecimal. If one is 120 (scale 0) and the other is 120.00 (scale 2), equals returns false because scale differs. Yes! BigDecimal equality by .equals() checks scale as well. So pagato (120) vs f.importo (120.00) are not equal, causing F-001 to be considered non-paid. That's the bug.
+
+Thus the program incorrectly flags F-001 because of scale mismatch. The fix: use compareTo(0) == 0 or use .compareTo(f.importo()) == 0, or normalize scale, e.g., use .compareTo(BigDecimal.ZERO) != 0, but better to use .compareTo(f.importo()) == 0.
+
+Simplest correction: replace `!pagato.equals(f.importo())` with `pagato.compareTo(f.importo()) != 0` or `pagato.subtract(f.importo()).abs().compareTo(BigDecimal.ZERO) > 0`? Actually we just need to check if not fully paid: pagato.compareTo(f.importo()) != 0.
+
+Thus minimal change: in fattureNonSaldate, change the condition.
+
+So answer: bug is using .equals on BigDecimal with different scales, causing false positive for F-001. Correction: use compareTo instead of equals.
+
+Provide in few lines explanation and correction.
+
+=== Risposta ===
+**Bug**  
+`pagato.equals(f.importo())` confronta i `BigDecimal` con scale diversi (es. `120` vs `120.00`). Perciò F‑001 viene considerato “non pagato” anche se l’importo è stato liquidato.
+
+**Correzione minimale**  
+Sostituire la coniazione `equals` con un confronto basato su `compareTo`:
+
+```java
+if (pagato.compareTo(f.importo()) != 0) {
+    nonSaldate.add(f.numero());
+}
+```
+
+Con questa modifica il programma segnala solo le fatture effettivamente inattualibrate (in questo caso solo F‑003).
+
+Tempo totale: 19.9 secondi
+Velocità di generazione: 63.8 token/s

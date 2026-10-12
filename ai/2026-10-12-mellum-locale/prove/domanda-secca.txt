@@ -1,0 +1,22 @@
+Domanda: In Java, new BigDecimal("1.0").equals(new BigDecimal("1.00")) restituisce true o false? Rispondi con una parola.
+Risposta giusta (verificata con jshell): false
+Parametri: temperature 0.6, top_p 0.95, top_k 20. Modello Q4_K_M.
+
+Serie A - contesto 16384, 4 slot, mentre il server lavorava anche su altre richieste
+true (133 token), true (208), false (1109), true (170), true (654), true (5969), true (251)
+Giuste: 1 su 7
+
+Serie B - contesto 16384, 1 slot, nessun'altra richiesta
+true (1409), true (121), false (1470), true (3184), true (1847), false (1485), true (710)
+Giuste: 2 su 7
+
+Serie C - contesto 131072, 1 slot
+false (903), false (922), false (389), true (1216), false (1144), false (2586), false (624)
+Giuste: 6 su 7
+
+Serie D - contesto 131072, 1 slot, subito dopo la serie C
+true (139), true (1784), true (217), false (4741), true (215), true (375), true (205)
+Giuste: 1 su 7
+
+Totale: 10 giuste su 28. 3 su 14 con contesto 16k, 7 su 14 con 131k.
+La serie C da sola mi aveva fatto pensare che il contesto fosse la causa. La serie D l'ha smentita.
