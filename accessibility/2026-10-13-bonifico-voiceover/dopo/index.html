@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuovo bonifico</title>
+<link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+<main class="app">
+  <header class="barra">
+    <button class="icona" type="button" aria-label="Indietro" onclick="history.back()">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <h1 class="titolo">Nuovo bonifico</h1>
+    <button class="icona" type="button" aria-label="Aiuto">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5V14M12 17h.01" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+  </header>
+
+  <form onsubmit="if (this.querySelector('[aria-disabled=true]')) { document.getElementById('importo').focus(); } else { alert('Bonifico inviato'); } return false;">
+    <div class="campo">
+      <label for="beneficiario">Beneficiario</label>
+      <input id="beneficiario" type="text" autocomplete="name">
+    </div>
+    <div class="campo">
+      <label for="iban">IBAN</label>
+      <input id="iban" type="text" value="IT60X0542811101000000123456">
+    </div>
+    <div class="campo">
+      <label for="importo">Importo in euro</label>
+      <input id="importo" type="text" inputmode="decimal" value="1.000,00" class="errore" aria-invalid="true" aria-describedby="importo-errore riepilogo">
+      <p id="importo-errore" class="messaggio-errore">Importo superiore al disponibile (850,00 €)</p>
+    </div>
+    <div class="campo">
+      <label for="causale">Causale</label>
+      <input id="causale" type="text">
+    </div>
+
+    <div class="riga">
+      <label for="salva">Salva tra i beneficiari</label>
+      <input id="salva" type="checkbox" role="switch" class="interruttore-nativo">
+    </div>
+
+    <p id="riepilogo" class="piccolo">Commissione 0,00 €. Disponibile 850,00 €.</p>
+
+    <button class="bottone" type="submit" aria-disabled="true" aria-describedby="importo-errore">Continua</button>
+  </form>
+</main>
+</body>
+</html>

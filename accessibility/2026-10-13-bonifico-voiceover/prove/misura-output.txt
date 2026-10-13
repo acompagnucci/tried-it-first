@@ -1,0 +1,45 @@
+
+> misura
+> node misura.mjs
+
+
+=== prima ===
+Violazioni axe-core (WCAG 2.2 A/AA): 3 regole, 5 elementi
+  [critical] button-name: Buttons must have discernible text (1)
+  [serious] color-contrast: Elements must meet minimum color contrast ratio thresholds (3)
+  [serious] html-has-lang: <html> element must have a lang attribute (1)
+Cosa sente lo screen reader:
+  StaticText: "Nuovo bonifico"
+  button: (senza nome)
+  textbox: "Beneficiario"
+  textbox: "IBAN"
+  textbox: "Importo"
+  textbox: "Causale"
+  StaticText: "Salva tra i beneficiari"
+  StaticText: "Commissione 0,00 €. Disponibile 850,00 €."
+  StaticText: "Continua"
+Raggiungibili con Tab (5): button → Beneficiario → IBAN → Importo → Causale
+
+=== dopo ===
+Violazioni axe-core (WCAG 2.2 A/AA): 0 regole, 0 elementi
+Cosa sente lo screen reader:
+  main: (senza nome)
+  button: "Indietro"
+  heading: "Nuovo bonifico"
+  button: "Aiuto"
+  form: (senza nome)
+  StaticText: "Beneficiario"
+  textbox: "Beneficiario"
+  StaticText: "IBAN"
+  textbox: "IBAN"
+  StaticText: "Importo in euro"
+  textbox: "Importo in euro"
+  StaticText: "Importo superiore al disponibile (850,00 €)"
+  StaticText: "Causale"
+  textbox: "Causale"
+  switch: "Salva tra i beneficiari"
+  StaticText: "Commissione 0,00 €. Disponibile 850,00 €."
+  button: "Continua"
+Raggiungibili con Tab (8): Indietro → Aiuto → Beneficiario → IBAN → Importo in euro → Causale → Salva tra i beneficiari → Continua
+
+Risultati completi in prove/misura.json

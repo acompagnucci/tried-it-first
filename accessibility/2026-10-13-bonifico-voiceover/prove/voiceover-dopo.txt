@@ -1,0 +1,11 @@
+Pagina: "Nuovo bonifico, web content"
+Indietro: "Indietro, button, main"
+Aiuto (?): "Aiuto, button"
+Beneficiario: "Beneficiario, edit text"
+IBAN: "IT60X0542811101000000123456, contents selected, IBAN, edit text"
+Importo: "1.000,00, contents selected, Importo in euro Importo superiore al disponibile (850,00 €) Commissione 0,00 €. Disponibile 850,00 €., invalid data, edit text"
+Causale: "Causale, edit text"
+Salva tra i beneficiari: "Salva tra i beneficiari, off, switch"
+Commissione e disponibile: letti insieme all'importo
+Continua: "Continua Importo superiore al disponibile (850,00 €), dimmed, button"
+Continua attivato con Ctrl+Opt+Spazio: il bonifico non parte, si torna sul campo Importo

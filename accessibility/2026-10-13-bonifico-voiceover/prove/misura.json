@@ -1,0 +1,74 @@
+{
+  "prima": {
+    "violazioni": [
+      {
+        "regola": "button-name",
+        "impatto": "critical",
+        "descrizione": "Buttons must have discernible text",
+        "elementi": 1
+      },
+      {
+        "regola": "color-contrast",
+        "impatto": "serious",
+        "descrizione": "Elements must meet minimum color contrast ratio thresholds",
+        "elementi": 3
+      },
+      {
+        "regola": "html-has-lang",
+        "impatto": "serious",
+        "descrizione": "<html> element must have a lang attribute",
+        "elementi": 1
+      }
+    ],
+    "albero": [
+      "StaticText: \"Nuovo bonifico\"",
+      "button: (senza nome)",
+      "textbox: \"Beneficiario\"",
+      "textbox: \"IBAN\"",
+      "textbox: \"Importo\"",
+      "textbox: \"Causale\"",
+      "StaticText: \"Salva tra i beneficiari\"",
+      "StaticText: \"Commissione 0,00 €. Disponibile 850,00 €.\"",
+      "StaticText: \"Continua\""
+    ],
+    "tab": [
+      "button",
+      "Beneficiario",
+      "IBAN",
+      "Importo",
+      "Causale"
+    ]
+  },
+  "dopo": {
+    "violazioni": [],
+    "albero": [
+      "main: (senza nome)",
+      "button: \"Indietro\"",
+      "heading: \"Nuovo bonifico\"",
+      "button: \"Aiuto\"",
+      "form: (senza nome)",
+      "StaticText: \"Beneficiario\"",
+      "textbox: \"Beneficiario\"",
+      "StaticText: \"IBAN\"",
+      "textbox: \"IBAN\"",
+      "StaticText: \"Importo in euro\"",
+      "textbox: \"Importo in euro\"",
+      "StaticText: \"Importo superiore al disponibile (850,00 €)\"",
+      "StaticText: \"Causale\"",
+      "textbox: \"Causale\"",
+      "switch: \"Salva tra i beneficiari\"",
+      "StaticText: \"Commissione 0,00 €. Disponibile 850,00 €.\"",
+      "button: \"Continua\""
+    ],
+    "tab": [
+      "Indietro",
+      "Aiuto",
+      "Beneficiario",
+      "IBAN",
+      "Importo in euro",
+      "Causale",
+      "Salva tra i beneficiari",
+      "Continua"
+    ]
+  }
+}

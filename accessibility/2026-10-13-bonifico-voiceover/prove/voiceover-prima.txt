@@ -1,0 +1,11 @@
+Pagina: "Bonifico, web content"
+Indietro: non viene letto
+Aiuto (?): "button"
+Titolo: "Nuovo"
+Beneficiario: "Beneficiario, Insertion at beginning of text., edit text"
+IBAN: "IT60X0542811101000000123456, contents selected, edit text"
+Importo: "1.000,00, contents selected, edit text"
+Causale: "Causale, Insertion at beginning of text., edit text"
+Salva tra i beneficiari: non viene letto
+Commissione e disponibile: non vengono letti
+Continua: non viene letto
