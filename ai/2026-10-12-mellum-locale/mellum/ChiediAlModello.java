@@ -40,7 +40,7 @@ public class ChiediAlModello {
             ERR.println("Uso: java mellum/ChiediAlModello.java <file da analizzare>");
             return 1;
         }
-        Path sorgente = Path.of(args[0]);
+        var sorgente = Path.of(args[0]);
         if (!Files.isRegularFile(sorgente)) {
             ERR.println("Non trovo il file " + sorgente.toAbsolutePath());
             return 1;
@@ -49,12 +49,12 @@ public class ChiediAlModello {
         String baseUrl = System.getenv().getOrDefault("MODEL_URL", "http://localhost:8080");
 
         String messaggio = DOMANDA + "\n\n```java\n" + codice + "\n```";
-        String body = """
+        var body = """
                 {"messages":[{"role":"user","content":"%s"}],
                  "temperature":0.6,"top_p":0.95,"top_k":20,"stream":false}"""
                 .formatted(jsonEscape(messaggio));
 
-        HttpRequest request = HttpRequest.newBuilder(URI.create(baseUrl + "/v1/chat/completions"))
+        var request = HttpRequest.newBuilder(URI.create(baseUrl + "/v1/chat/completions"))
                 .header("Content-Type", "application/json")
                 .timeout(Duration.ofMinutes(15))
                 .POST(HttpRequest.BodyPublishers.ofString(body))
@@ -63,7 +63,7 @@ public class ChiediAlModello {
         OUT.println("Domanda inviata a " + baseUrl + ", aspetto la risposta...\n");
         long inizio = System.nanoTime();
         HttpResponse<String> response;
-        try (HttpClient client = HttpClient.newHttpClient()) {
+        try (var client = HttpClient.newHttpClient()) {
             response = client.send(request, HttpResponse.BodyHandlers.ofString());
         } catch (ConnectException e) {
             ERR.println("Non riesco a collegarmi a " + baseUrl + ". Il server è avviato? (README, passo 4)");
@@ -101,7 +101,7 @@ public class ChiediAlModello {
     }
 
     static String jsonEscape(String s) {
-        StringBuilder sb = new StringBuilder();
+        var sb = new StringBuilder();
         for (char c : s.toCharArray()) {
             switch (c) {
                 case '"' -> sb.append("\\\"");
@@ -121,7 +121,7 @@ public class ChiediAlModello {
         if (inizio < 0) {
             return null;
         }
-        StringBuilder sb = new StringBuilder();
+        var sb = new StringBuilder();
         int i = inizio + chiave.length();
         while (i < json.length() && json.charAt(i) != '"') {
             if (json.charAt(i) == '\\') {
