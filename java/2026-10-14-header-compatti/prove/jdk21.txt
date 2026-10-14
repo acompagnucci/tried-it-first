@@ -1,0 +1,13 @@
+Java 21.0.12.1+12-LTS, header compatti: non esiste in questa versione
+Rate in memoria: 1.200.000
+Heap usato dopo la GC: 175 MB
+
+ num     #instances         #bytes  class name (module)
+-------------------------------------------------------
+   1:       2400030       96001200  java.math.BigDecimal (java.base@21.0.12.1)
+   2:       1200000       48000000  rate.PianoRate$Rata
+   3:       1190004       28560096  java.time.LocalDate (java.base@21.0.12.1)
+   4:          3277        5077328  [Ljava.lang.Object; (java.base@21.0.12.1)
+   5:         30915        2025096  [B (java.base@21.0.12.1)
+   6:         30740         737760  java.lang.String (java.base@21.0.12.1)
+   7:          3869         463752  java.lang.Class (java.base@21.0.12.1)

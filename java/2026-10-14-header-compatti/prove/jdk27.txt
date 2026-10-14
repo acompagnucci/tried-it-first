@@ -1,0 +1,13 @@
+Java 27+35-FR, header compatti: true
+Rate in memoria: 1.200.000
+Heap usato dopo la GC: 140 MB
+
+ num     #instances         #bytes  class name (module)
+-------------------------------------------------------
+   1:       2400028       76800896  java.math.BigDecimal (java.base@27)
+   2:       1200000       38400000  rate.PianoRate$Rata
+   3:       1190004       19040064  java.time.LocalDate (java.base@27)
+   4:          2869        5000208  [Ljava.lang.Object; (java.base@27)
+   5:         10640        2550224  [Ljdk.internal.vm.FillerElement; (java.base@27)
+   6:         30708        1383320  [B (java.base@27)
+   7:         30588         734112  java.lang.String (java.base@27)

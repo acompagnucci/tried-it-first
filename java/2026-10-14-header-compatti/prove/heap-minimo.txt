@@ -1,0 +1,4 @@
+Heap minimo per caricare tutte le rate (passi da 5 MB)
+JDK 21:                        170 MB
+JDK 27 senza header compatti:  170 MB
+JDK 27:                        140 MB
