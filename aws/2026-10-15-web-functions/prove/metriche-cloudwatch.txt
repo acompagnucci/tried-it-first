@@ -1,0 +1,32 @@
+CloudWatch, AWS/Lambda/Web, FunctionName=tried-it-first-web, somma per minuto (ora italiana)
+Carico costante con il tetto: 06:39:27-06:40:57. Senza tetto: 06:48:36-06:50:06.
+
+minuto  vita ambienti (ms)  CPU (ms)
+06:38    2398.0    1617.0
+06:39    599613.0    2122.0
+06:40    359998.0    4702.0
+06:41    505019.0    5954.0
+06:42    179936.0    302.0
+06:43    120000.0    237.0
+06:44    180000.0    225.0
+06:45    180000.0    317.0
+06:46    240000.0    303.0
+06:47    83100.0    118.0
+06:48    17087.0    11244.0
+06:49    4317029.0    19122.0
+06:50    2251606.0    6849.0
+06:51    3242995.0    7915.0
+06:52    360000.0    613.0
+
+AWS/Lambda/Web/Usage EndpointActiveEnvironments (massimo per minuto)
+endpoint prova:
+  06:38 10.0
+  06:39 10.0
+  06:40 10.0
+  06:41 3.0
+endpoint senza-tetto:
+  06:48 72.0
+  06:49 72.0
+  06:50 46.0
+
+EnvironmentMaxMemoryUsage (massimo): 193.0 MB

@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  Tried It First - bucket per il codice delle due funzioni.
+  Le Web Functions leggono il codice solo da S3, con il versioning attivo.
+
+Parameters:
+  NomeWebFunction:
+    Type: String
+    Default: tried-it-first-web
+
+Resources:
+  Codice:
+    Type: AWS::S3::Bucket
+    Properties:
+      VersioningConfiguration:
+        Status: Enabled
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  LetturaPerLambda:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref Codice
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action:
+              - s3:GetObject
+              - s3:GetObjectVersion
+            Resource: !Sub '${Codice.Arn}/*'
+            Condition:
+              ArnLike:
+                aws:SourceArn: !Sub 'arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:web-function/${NomeWebFunction}/revision/*'
+
+Outputs:
+  Bucket:
+    Value: !Ref Codice

@@ -1,0 +1,142 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  Tried It First - lo stesso endpoint come Lambda classica (con Function URL)
+  e come Lambda Web Function. Tutte e due aspettano 200 ms e rispondono.
+
+Parameters:
+  Bucket:
+    Type: String
+  ChiaveWeb:
+    Type: String
+    Default: web.zip
+  VersioneWeb:
+    Type: String
+  ChiaveClassica:
+    Type: String
+    Default: classica.zip
+  VersioneClassica:
+    Type: String
+
+Resources:
+  Ruolo:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+
+  LogClassica:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-classica
+      RetentionInDays: 1
+
+  LogWeb:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/web/tried-it-first-web
+      RetentionInDays: 1
+
+  LogWebLocale:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/web/tried-it-first-web.local
+      RetentionInDays: 1
+
+  Classica:
+    Type: AWS::Lambda::Function
+    DependsOn: LogClassica
+    Properties:
+      FunctionName: tried-it-first-classica
+      Runtime: nodejs24.x
+      Architectures: [arm64]
+      Handler: index.handler
+      MemorySize: 512
+      Timeout: 10
+      Role: !GetAtt Ruolo.Arn
+      Code:
+        S3Bucket: !Ref Bucket
+        S3Key: !Ref ChiaveClassica
+        S3ObjectVersion: !Ref VersioneClassica
+
+  UrlClassica:
+    Type: AWS::Lambda::Url
+    Properties:
+      TargetFunctionArn: !Ref Classica
+      AuthType: NONE
+
+  PermessoUrl:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref Classica
+      Action: lambda:InvokeFunctionUrl
+      Principal: '*'
+      FunctionUrlAuthType: NONE
+
+  PermessoInvocazione:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref Classica
+      Action: lambda:InvokeFunction
+      Principal: '*'
+      InvokedViaFunctionUrl: true
+
+  Web:
+    Type: AWS::Lambda::WebFunction
+    Properties:
+      FunctionName: tried-it-first-web
+
+  RevisioneWeb:
+    Type: AWS::Lambda::WebFunctionRevision
+    DependsOn: [Web, LogWeb, LogWebLocale]
+    Properties:
+      FunctionName: tried-it-first-web
+      BuildConfig:
+        CodeConfig:
+          S3Object:
+            Bucket: !Ref Bucket
+            Key: !Ref ChiaveWeb
+            VersionId: !Ref VersioneWeb
+        RuntimeConfig:
+          Runtime: nodejs24.x
+      ServiceConfig:
+        ExecutionRoleArn: !GetAtt Ruolo.Arn
+        TimeoutSeconds: 10
+
+  EndpointWeb:
+    Type: AWS::Lambda::WebFunctionEndpoint
+    Properties:
+      FunctionName: tried-it-first-web
+      EndpointName: prova
+      EndpointType: HomeRegion
+      AuthType: ApplicationManaged
+      RevisionWeights:
+        - RevisionId: !GetAtt RevisioneWeb.RevisionId
+          Weight: 100
+      ScalingConfig:
+        MaxEnvironments: 10
+
+  EndpointWebSenzaTetto:
+    Type: AWS::Lambda::WebFunctionEndpoint
+    Properties:
+      FunctionName: tried-it-first-web
+      EndpointName: senza-tetto
+      EndpointType: HomeRegion
+      AuthType: ApplicationManaged
+      RevisionWeights:
+        - RevisionId: !GetAtt RevisioneWeb.RevisionId
+          Weight: 100
+
+Outputs:
+  UrlClassica:
+    Value: !GetAtt UrlClassica.FunctionUrl
+  UrlWeb:
+    Value: !Sub 'https://${EndpointWeb.DomainName}/'
+  UrlWebSenzaTetto:
+    Value: !Sub 'https://${EndpointWebSenzaTetto.DomainName}/'

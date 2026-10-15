@@ -1,0 +1,944 @@
+{
+  "url": "https://axbknf6brtjszcq4f5e5euno2u0qiira.lambda-url.eu-west-1.on.aws/",
+  "quando": "2026-10-15T04:39:03.944Z",
+  "risultati": [
+    {
+      "richieste": 10,
+      "stati": {
+        "200": 10
+      },
+      "ambienti": 9,
+      "piuInsiemeInUnAmbiente": 1,
+      "msMediana": 621,
+      "msP95": 644,
+      "msMax": 644,
+      "errori": [],
+      "risposte": [
+        {
+          "stato": 200,
+          "ms": 600,
+          "tipo": "classica",
+          "ambiente": "08b4b422",
+          "insieme": 1,
+          "vivoDaMs": 21734
+        },
+        {
+          "stato": 200,
+          "ms": 631,
+          "tipo": "classica",
+          "ambiente": "a80b6c71",
+          "insieme": 1,
+          "vivoDaMs": 211
+        },
+        {
+          "stato": 200,
+          "ms": 638,
+          "tipo": "classica",
+          "ambiente": "5d320afa",
+          "insieme": 1,
+          "vivoDaMs": 210
+        },
+        {
+          "stato": 200,
+          "ms": 621,
+          "tipo": "classica",
+          "ambiente": "28e1b7ba",
+          "insieme": 1,
+          "vivoDaMs": 208
+        },
+        {
+          "stato": 200,
+          "ms": 367,
+          "tipo": "classica",
+          "ambiente": "08b4b422",
+          "insieme": 1,
+          "vivoDaMs": 21527
+        },
+        {
+          "stato": 200,
+          "ms": 595,
+          "tipo": "classica",
+          "ambiente": "b925f16b",
+          "insieme": 1,
+          "vivoDaMs": 207
+        },
+        {
+          "stato": 200,
+          "ms": 589,
+          "tipo": "classica",
+          "ambiente": "ecdc87aa",
+          "insieme": 1,
+          "vivoDaMs": 208
+        },
+        {
+          "stato": 200,
+          "ms": 644,
+          "tipo": "classica",
+          "ambiente": "55431e5f",
+          "insieme": 1,
+          "vivoDaMs": 209
+        },
+        {
+          "stato": 200,
+          "ms": 621,
+          "tipo": "classica",
+          "ambiente": "89cbc866",
+          "insieme": 1,
+          "vivoDaMs": 209
+        },
+        {
+          "stato": 200,
+          "ms": 569,
+          "tipo": "classica",
+          "ambiente": "bba76a13",
+          "insieme": 1,
+          "vivoDaMs": 210
+        }
+      ]
+    },
+    {
+      "richieste": 50,
+      "stati": {
+        "200": 10,
+        "429": 40
+      },
+      "ambienti": 10,
+      "piuInsiemeInUnAmbiente": 1,
+      "msMediana": 261,
+      "msP95": 289,
+      "msMax": 289,
+      "errori": [
+        "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+      ],
+      "risposte": [
+        {
+          "stato": 200,
+          "ms": 262,
+          "tipo": "classica",
+          "ambiente": "a80b6c71",
+          "insieme": 1,
+          "vivoDaMs": 3493
+        },
+        {
+          "stato": 200,
+          "ms": 289,
+          "tipo": "classica",
+          "ambiente": "73b8f739",
+          "insieme": 1,
+          "vivoDaMs": 3299
+        },
+        {
+          "stato": 200,
+          "ms": 260,
+          "tipo": "classica",
+          "ambiente": "89cbc866",
+          "insieme": 1,
+          "vivoDaMs": 3496
+        },
+        {
+          "stato": 200,
+          "ms": 260,
+          "tipo": "classica",
+          "ambiente": "b925f16b",
+          "insieme": 1,
+          "vivoDaMs": 3522
+        },
+        {
+          "stato": 200,
+          "ms": 257,
+          "tipo": "classica",
+          "ambiente": "55431e5f",
+          "insieme": 1,
+          "vivoDaMs": 3473
+        },
+        {
+          "stato": 200,
+          "ms": 256,
+          "tipo": "classica",
+          "ambiente": "5d320afa",
+          "insieme": 1,
+          "vivoDaMs": 3484
+        },
+        {
+          "stato": 200,
+          "ms": 282,
+          "tipo": "classica",
+          "ambiente": "08b4b422",
+          "insieme": 1,
+          "vivoDaMs": 25104
+        },
+        {
+          "stato": 200,
+          "ms": 261,
+          "tipo": "classica",
+          "ambiente": "28e1b7ba",
+          "insieme": 1,
+          "vivoDaMs": 3502
+        },
+        {
+          "stato": 200,
+          "ms": 278,
+          "tipo": "classica",
+          "ambiente": "bba76a13",
+          "insieme": 1,
+          "vivoDaMs": 3568
+        },
+        {
+          "stato": 200,
+          "ms": 258,
+          "tipo": "classica",
+          "ambiente": "ecdc87aa",
+          "insieme": 1,
+          "vivoDaMs": 3532
+        },
+        {
+          "stato": 429,
+          "ms": 190,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 205,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 194,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 177,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 184,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 162,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 177,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 191,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 185,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 207,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 171,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 184,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 177,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 160,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 165,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 164,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 194,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 186,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 197,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 152,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 180,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 179,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 185,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 162,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 183,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 154,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 184,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 185,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 195,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 190,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 186,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 177,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 168,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 160,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 188,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 182,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 156,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 183,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 142,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 162,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        }
+      ]
+    },
+    {
+      "richieste": 100,
+      "stati": {
+        "200": 10,
+        "429": 90
+      },
+      "ambienti": 10,
+      "piuInsiemeInUnAmbiente": 1,
+      "msMediana": 257,
+      "msP95": 264,
+      "msMax": 264,
+      "errori": [
+        "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+      ],
+      "risposte": [
+        {
+          "stato": 200,
+          "ms": 264,
+          "tipo": "classica",
+          "ambiente": "89cbc866",
+          "insieme": 1,
+          "vivoDaMs": 6788
+        },
+        {
+          "stato": 200,
+          "ms": 258,
+          "tipo": "classica",
+          "ambiente": "73b8f739",
+          "insieme": 1,
+          "vivoDaMs": 6561
+        },
+        {
+          "stato": 429,
+          "ms": 56,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 55,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 200,
+          "ms": 256,
+          "tipo": "classica",
+          "ambiente": "bba76a13",
+          "insieme": 1,
+          "vivoDaMs": 6838
+        },
+        {
+          "stato": 200,
+          "ms": 257,
+          "tipo": "classica",
+          "ambiente": "5d320afa",
+          "insieme": 1,
+          "vivoDaMs": 6778
+        },
+        {
+          "stato": 200,
+          "ms": 258,
+          "tipo": "classica",
+          "ambiente": "08b4b422",
+          "insieme": 1,
+          "vivoDaMs": 28373
+        },
+        {
+          "stato": 429,
+          "ms": 56,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 200,
+          "ms": 258,
+          "tipo": "classica",
+          "ambiente": "28e1b7ba",
+          "insieme": 1,
+          "vivoDaMs": 6794
+        },
+        {
+          "stato": 429,
+          "ms": 57,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 56,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 55,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 200,
+          "ms": 257,
+          "tipo": "classica",
+          "ambiente": "ecdc87aa",
+          "insieme": 1,
+          "vivoDaMs": 6823
+        },
+        {
+          "stato": 429,
+          "ms": 58,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 54,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 51,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 53,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 53,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 54,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 200,
+          "ms": 257,
+          "tipo": "classica",
+          "ambiente": "55431e5f",
+          "insieme": 1,
+          "vivoDaMs": 6767
+        },
+        {
+          "stato": 200,
+          "ms": 254,
+          "tipo": "classica",
+          "ambiente": "b925f16b",
+          "insieme": 1,
+          "vivoDaMs": 6812
+        },
+        {
+          "stato": 200,
+          "ms": 256,
+          "tipo": "classica",
+          "ambiente": "a80b6c71",
+          "insieme": 1,
+          "vivoDaMs": 6787
+        },
+        {
+          "stato": 429,
+          "ms": 54,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 52,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 51,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 51,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 51,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 55,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 56,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 52,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 52,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 50,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 55,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 52,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 50,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 52,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 53,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 54,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 56,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 55,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 50,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 53,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 53,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 48,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 55,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 54,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 51,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 54,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 52,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 51,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 171,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 212,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 193,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 202,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 188,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 184,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 169,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 163,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 185,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 180,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 165,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 182,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 169,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 206,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 162,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 158,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 165,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 196,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 193,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 181,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 203,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 156,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 175,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 166,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 174,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 187,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 174,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 166,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 181,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 160,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 167,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 200,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 171,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 159,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 188,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 193,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 187,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 184,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 191,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 153,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 188,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 193,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 174,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 167,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 188,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 180,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 191,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 169,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 177,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        },
+        {
+          "stato": 429,
+          "ms": 174,
+          "errore": "{\"Reason\":\"ConcurrentInvocationLimitExceeded\",\"Type\":\"User\",\"message\":\"Rate Exce"
+        }
+      ]
+    }
+  ]
+}

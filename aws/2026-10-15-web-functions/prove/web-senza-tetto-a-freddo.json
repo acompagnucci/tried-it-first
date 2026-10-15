@@ -1,0 +1,1328 @@
+{
+  "url": "https://xb9dcvs5yk590pgt.sjd.lambda-web.eu-west-1.on.aws/",
+  "quando": "2026-10-15T04:48:33.985Z",
+  "risultati": [
+    {
+      "richieste": 10,
+      "stati": {
+        "200": 10
+      },
+      "ambienti": 5,
+      "piuInsiemeInUnAmbiente": 2,
+      "msMediana": 791,
+      "msP95": 817,
+      "msMax": 817,
+      "errori": [],
+      "risposte": [
+        {
+          "stato": 200,
+          "ms": 817,
+          "tipo": "web",
+          "ambiente": "4012e9ea",
+          "insieme": 2,
+          "vivoDaMs": 224
+        },
+        {
+          "stato": 200,
+          "ms": 766,
+          "tipo": "web",
+          "ambiente": "6ae6327c",
+          "insieme": 1,
+          "vivoDaMs": 224
+        },
+        {
+          "stato": 200,
+          "ms": 763,
+          "tipo": "web",
+          "ambiente": "6ae6327c",
+          "insieme": 2,
+          "vivoDaMs": 225
+        },
+        {
+          "stato": 200,
+          "ms": 803,
+          "tipo": "web",
+          "ambiente": "0b449db9",
+          "insieme": 2,
+          "vivoDaMs": 224
+        },
+        {
+          "stato": 200,
+          "ms": 769,
+          "tipo": "web",
+          "ambiente": "6ef71dcf",
+          "insieme": 2,
+          "vivoDaMs": 223
+        },
+        {
+          "stato": 200,
+          "ms": 775,
+          "tipo": "web",
+          "ambiente": "4012e9ea",
+          "insieme": 1,
+          "vivoDaMs": 223
+        },
+        {
+          "stato": 200,
+          "ms": 791,
+          "tipo": "web",
+          "ambiente": "b6f29ca9",
+          "insieme": 1,
+          "vivoDaMs": 223
+        },
+        {
+          "stato": 200,
+          "ms": 767,
+          "tipo": "web",
+          "ambiente": "6ef71dcf",
+          "insieme": 1,
+          "vivoDaMs": 222
+        },
+        {
+          "stato": 200,
+          "ms": 792,
+          "tipo": "web",
+          "ambiente": "b6f29ca9",
+          "insieme": 2,
+          "vivoDaMs": 223
+        },
+        {
+          "stato": 200,
+          "ms": 798,
+          "tipo": "web",
+          "ambiente": "0b449db9",
+          "insieme": 1,
+          "vivoDaMs": 223
+        }
+      ]
+    },
+    {
+      "richieste": 50,
+      "stati": {
+        "200": 50
+      },
+      "ambienti": 14,
+      "piuInsiemeInUnAmbiente": 2,
+      "msMediana": 465,
+      "msP95": 664,
+      "msMax": 671,
+      "errori": [],
+      "risposte": [
+        {
+          "stato": 200,
+          "ms": 253,
+          "tipo": "web",
+          "ambiente": "b6f29ca9",
+          "insieme": 1,
+          "vivoDaMs": 3487
+        },
+        {
+          "stato": 200,
+          "ms": 262,
+          "tipo": "web",
+          "ambiente": "06e47ee2",
+          "insieme": 2,
+          "vivoDaMs": 3478
+        },
+        {
+          "stato": 200,
+          "ms": 258,
+          "tipo": "web",
+          "ambiente": "cd0b7214",
+          "insieme": 1,
+          "vivoDaMs": 3459
+        },
+        {
+          "stato": 200,
+          "ms": 262,
+          "tipo": "web",
+          "ambiente": "ac71a377",
+          "insieme": 2,
+          "vivoDaMs": 3472
+        },
+        {
+          "stato": 200,
+          "ms": 261,
+          "tipo": "web",
+          "ambiente": "06e47ee2",
+          "insieme": 1,
+          "vivoDaMs": 3477
+        },
+        {
+          "stato": 200,
+          "ms": 261,
+          "tipo": "web",
+          "ambiente": "ac71a377",
+          "insieme": 1,
+          "vivoDaMs": 3471
+        },
+        {
+          "stato": 200,
+          "ms": 248,
+          "tipo": "web",
+          "ambiente": "6ef71dcf",
+          "insieme": 1,
+          "vivoDaMs": 3509
+        },
+        {
+          "stato": 200,
+          "ms": 249,
+          "tipo": "web",
+          "ambiente": "6ae6327c",
+          "insieme": 1,
+          "vivoDaMs": 3530
+        },
+        {
+          "stato": 200,
+          "ms": 251,
+          "tipo": "web",
+          "ambiente": "4012e9ea",
+          "insieme": 1,
+          "vivoDaMs": 3507
+        },
+        {
+          "stato": 200,
+          "ms": 249,
+          "tipo": "web",
+          "ambiente": "0b449db9",
+          "insieme": 1,
+          "vivoDaMs": 3478
+        },
+        {
+          "stato": 200,
+          "ms": 576,
+          "tipo": "web",
+          "ambiente": "6ef71dcf",
+          "insieme": 2,
+          "vivoDaMs": 3835
+        },
+        {
+          "stato": 200,
+          "ms": 454,
+          "tipo": "web",
+          "ambiente": "b6f29ca9",
+          "insieme": 2,
+          "vivoDaMs": 3692
+        },
+        {
+          "stato": 200,
+          "ms": 465,
+          "tipo": "web",
+          "ambiente": "06e47ee2",
+          "insieme": 2,
+          "vivoDaMs": 3684
+        },
+        {
+          "stato": 200,
+          "ms": 362,
+          "tipo": "web",
+          "ambiente": "6ae6327c",
+          "insieme": 2,
+          "vivoDaMs": 3645
+        },
+        {
+          "stato": 200,
+          "ms": 370,
+          "tipo": "web",
+          "ambiente": "b6f29ca9",
+          "insieme": 2,
+          "vivoDaMs": 3610
+        },
+        {
+          "stato": 200,
+          "ms": 575,
+          "tipo": "web",
+          "ambiente": "4012e9ea",
+          "insieme": 2,
+          "vivoDaMs": 3834
+        },
+        {
+          "stato": 200,
+          "ms": 568,
+          "tipo": "web",
+          "ambiente": "6ae6327c",
+          "insieme": 2,
+          "vivoDaMs": 3848
+        },
+        {
+          "stato": 200,
+          "ms": 633,
+          "tipo": "web",
+          "ambiente": "7cf7f284",
+          "insieme": 1,
+          "vivoDaMs": 222
+        },
+        {
+          "stato": 200,
+          "ms": 457,
+          "tipo": "web",
+          "ambiente": "ac71a377",
+          "insieme": 1,
+          "vivoDaMs": 3675
+        },
+        {
+          "stato": 200,
+          "ms": 671,
+          "tipo": "web",
+          "ambiente": "0214ebca",
+          "insieme": 1,
+          "vivoDaMs": 224
+        },
+        {
+          "stato": 200,
+          "ms": 448,
+          "tipo": "web",
+          "ambiente": "0b449db9",
+          "insieme": 2,
+          "vivoDaMs": 3682
+        },
+        {
+          "stato": 200,
+          "ms": 458,
+          "tipo": "web",
+          "ambiente": "ac71a377",
+          "insieme": 2,
+          "vivoDaMs": 3676
+        },
+        {
+          "stato": 200,
+          "ms": 457,
+          "tipo": "web",
+          "ambiente": "cd0b7214",
+          "insieme": 2,
+          "vivoDaMs": 3663
+        },
+        {
+          "stato": 200,
+          "ms": 651,
+          "tipo": "web",
+          "ambiente": "0b449db9",
+          "insieme": 2,
+          "vivoDaMs": 3886
+        },
+        {
+          "stato": 200,
+          "ms": 659,
+          "tipo": "web",
+          "ambiente": "8fa404af",
+          "insieme": 1,
+          "vivoDaMs": 222
+        },
+        {
+          "stato": 200,
+          "ms": 445,
+          "tipo": "web",
+          "ambiente": "4012e9ea",
+          "insieme": 2,
+          "vivoDaMs": 3712
+        },
+        {
+          "stato": 200,
+          "ms": 647,
+          "tipo": "web",
+          "ambiente": "6ae6327c",
+          "insieme": 2,
+          "vivoDaMs": 3937
+        },
+        {
+          "stato": 200,
+          "ms": 442,
+          "tipo": "web",
+          "ambiente": "6ae6327c",
+          "insieme": 2,
+          "vivoDaMs": 3732
+        },
+        {
+          "stato": 200,
+          "ms": 457,
+          "tipo": "web",
+          "ambiente": "06e47ee2",
+          "insieme": 1,
+          "vivoDaMs": 3684
+        },
+        {
+          "stato": 200,
+          "ms": 656,
+          "tipo": "web",
+          "ambiente": "ac71a377",
+          "insieme": 1,
+          "vivoDaMs": 3879
+        },
+        {
+          "stato": 200,
+          "ms": 664,
+          "tipo": "web",
+          "ambiente": "81b104d1",
+          "insieme": 2,
+          "vivoDaMs": 223
+        },
+        {
+          "stato": 200,
+          "ms": 353,
+          "tipo": "web",
+          "ambiente": "cd0b7214",
+          "insieme": 2,
+          "vivoDaMs": 3564
+        },
+        {
+          "stato": 200,
+          "ms": 363,
+          "tipo": "web",
+          "ambiente": "0b449db9",
+          "insieme": 2,
+          "vivoDaMs": 3604
+        },
+        {
+          "stato": 200,
+          "ms": 356,
+          "tipo": "web",
+          "ambiente": "6ef71dcf",
+          "insieme": 2,
+          "vivoDaMs": 3630
+        },
+        {
+          "stato": 200,
+          "ms": 646,
+          "tipo": "web",
+          "ambiente": "6ef71dcf",
+          "insieme": 2,
+          "vivoDaMs": 3917
+        },
+        {
+          "stato": 200,
+          "ms": 664,
+          "tipo": "web",
+          "ambiente": "81b104d1",
+          "insieme": 1,
+          "vivoDaMs": 222
+        },
+        {
+          "stato": 200,
+          "ms": 627,
+          "tipo": "web",
+          "ambiente": "7cf7f284",
+          "insieme": 2,
+          "vivoDaMs": 223
+        },
+        {
+          "stato": 200,
+          "ms": 438,
+          "tipo": "web",
+          "ambiente": "6ef71dcf",
+          "insieme": 2,
+          "vivoDaMs": 3713
+        },
+        {
+          "stato": 200,
+          "ms": 565,
+          "tipo": "web",
+          "ambiente": "0b449db9",
+          "insieme": 2,
+          "vivoDaMs": 3808
+        },
+        {
+          "stato": 200,
+          "ms": 614,
+          "tipo": "web",
+          "ambiente": "9dde314c",
+          "insieme": 2,
+          "vivoDaMs": 223
+        },
+        {
+          "stato": 200,
+          "ms": 658,
+          "tipo": "web",
+          "ambiente": "0214ebca",
+          "insieme": 2,
+          "vivoDaMs": 225
+        },
+        {
+          "stato": 200,
+          "ms": 650,
+          "tipo": "web",
+          "ambiente": "8fa404af",
+          "insieme": 2,
+          "vivoDaMs": 223
+        },
+        {
+          "stato": 200,
+          "ms": 555,
+          "tipo": "web",
+          "ambiente": "cd0b7214",
+          "insieme": 2,
+          "vivoDaMs": 3769
+        },
+        {
+          "stato": 200,
+          "ms": 355,
+          "tipo": "web",
+          "ambiente": "4012e9ea",
+          "insieme": 2,
+          "vivoDaMs": 3630
+        },
+        {
+          "stato": 200,
+          "ms": 648,
+          "tipo": "web",
+          "ambiente": "4012e9ea",
+          "insieme": 2,
+          "vivoDaMs": 3917
+        },
+        {
+          "stato": 200,
+          "ms": 658,
+          "tipo": "web",
+          "ambiente": "ac87caad",
+          "insieme": 2,
+          "vivoDaMs": 224
+        },
+        {
+          "stato": 200,
+          "ms": 563,
+          "tipo": "web",
+          "ambiente": "b6f29ca9",
+          "insieme": 2,
+          "vivoDaMs": 3816
+        },
+        {
+          "stato": 200,
+          "ms": 658,
+          "tipo": "web",
+          "ambiente": "ac87caad",
+          "insieme": 1,
+          "vivoDaMs": 223
+        },
+        {
+          "stato": 200,
+          "ms": 644,
+          "tipo": "web",
+          "ambiente": "b6f29ca9",
+          "insieme": 2,
+          "vivoDaMs": 3897
+        },
+        {
+          "stato": 200,
+          "ms": 609,
+          "tipo": "web",
+          "ambiente": "9dde314c",
+          "insieme": 1,
+          "vivoDaMs": 223
+        }
+      ]
+    },
+    {
+      "richieste": 100,
+      "stati": {
+        "200": 100
+      },
+      "ambienti": 36,
+      "piuInsiemeInUnAmbiente": 2,
+      "msMediana": 340,
+      "msP95": 448,
+      "msMax": 453,
+      "errori": [],
+      "risposte": [
+        {
+          "stato": 200,
+          "ms": 261,
+          "tipo": "web",
+          "ambiente": "bdb31c5e",
+          "insieme": 1,
+          "vivoDaMs": 3454
+        },
+        {
+          "stato": 200,
+          "ms": 250,
+          "tipo": "web",
+          "ambiente": "ac71a377",
+          "insieme": 1,
+          "vivoDaMs": 7141
+        },
+        {
+          "stato": 200,
+          "ms": 255,
+          "tipo": "web",
+          "ambiente": "3702cfc7",
+          "insieme": 1,
+          "vivoDaMs": 3455
+        },
+        {
+          "stato": 200,
+          "ms": 266,
+          "tipo": "web",
+          "ambiente": "4b0e0f0e",
+          "insieme": 1,
+          "vivoDaMs": 3447
+        },
+        {
+          "stato": 200,
+          "ms": 257,
+          "tipo": "web",
+          "ambiente": "dc104289",
+          "insieme": 1,
+          "vivoDaMs": 3483
+        },
+        {
+          "stato": 200,
+          "ms": 253,
+          "tipo": "web",
+          "ambiente": "06e47ee2",
+          "insieme": 1,
+          "vivoDaMs": 7149
+        },
+        {
+          "stato": 200,
+          "ms": 248,
+          "tipo": "web",
+          "ambiente": "cd0b7214",
+          "insieme": 1,
+          "vivoDaMs": 7129
+        },
+        {
+          "stato": 200,
+          "ms": 259,
+          "tipo": "web",
+          "ambiente": "9a382acd",
+          "insieme": 1,
+          "vivoDaMs": 3460
+        },
+        {
+          "stato": 200,
+          "ms": 257,
+          "tipo": "web",
+          "ambiente": "31cb0667",
+          "insieme": 1,
+          "vivoDaMs": 3449
+        },
+        {
+          "stato": 200,
+          "ms": 262,
+          "tipo": "web",
+          "ambiente": "b35c4360",
+          "insieme": 1,
+          "vivoDaMs": 3455
+        },
+        {
+          "stato": 200,
+          "ms": 262,
+          "tipo": "web",
+          "ambiente": "b802abc8",
+          "insieme": 1,
+          "vivoDaMs": 3439
+        },
+        {
+          "stato": 200,
+          "ms": 261,
+          "tipo": "web",
+          "ambiente": "7ae7562a",
+          "insieme": 1,
+          "vivoDaMs": 3446
+        },
+        {
+          "stato": 200,
+          "ms": 261,
+          "tipo": "web",
+          "ambiente": "4882ffc8",
+          "insieme": 1,
+          "vivoDaMs": 3397
+        },
+        {
+          "stato": 200,
+          "ms": 259,
+          "tipo": "web",
+          "ambiente": "0fd20cd1",
+          "insieme": 1,
+          "vivoDaMs": 3423
+        },
+        {
+          "stato": 200,
+          "ms": 260,
+          "tipo": "web",
+          "ambiente": "85a6c71b",
+          "insieme": 1,
+          "vivoDaMs": 3441
+        },
+        {
+          "stato": 200,
+          "ms": 264,
+          "tipo": "web",
+          "ambiente": "2d87048a",
+          "insieme": 1,
+          "vivoDaMs": 3402
+        },
+        {
+          "stato": 200,
+          "ms": 260,
+          "tipo": "web",
+          "ambiente": "ad353aca",
+          "insieme": 1,
+          "vivoDaMs": 3411
+        },
+        {
+          "stato": 200,
+          "ms": 260,
+          "tipo": "web",
+          "ambiente": "fd813673",
+          "insieme": 1,
+          "vivoDaMs": 3416
+        },
+        {
+          "stato": 200,
+          "ms": 254,
+          "tipo": "web",
+          "ambiente": "6ae6327c",
+          "insieme": 1,
+          "vivoDaMs": 7217
+        },
+        {
+          "stato": 200,
+          "ms": 262,
+          "tipo": "web",
+          "ambiente": "4942aae5",
+          "insieme": 1,
+          "vivoDaMs": 3368
+        },
+        {
+          "stato": 200,
+          "ms": 256,
+          "tipo": "web",
+          "ambiente": "f4e2e932",
+          "insieme": 1,
+          "vivoDaMs": 3418
+        },
+        {
+          "stato": 200,
+          "ms": 262,
+          "tipo": "web",
+          "ambiente": "c07dceea",
+          "insieme": 1,
+          "vivoDaMs": 3405
+        },
+        {
+          "stato": 200,
+          "ms": 259,
+          "tipo": "web",
+          "ambiente": "0aa67fbb",
+          "insieme": 1,
+          "vivoDaMs": 3417
+        },
+        {
+          "stato": 200,
+          "ms": 264,
+          "tipo": "web",
+          "ambiente": "6489b923",
+          "insieme": 1,
+          "vivoDaMs": 3414
+        },
+        {
+          "stato": 200,
+          "ms": 255,
+          "tipo": "web",
+          "ambiente": "7cf7f284",
+          "insieme": 1,
+          "vivoDaMs": 3524
+        },
+        {
+          "stato": 200,
+          "ms": 259,
+          "tipo": "web",
+          "ambiente": "67503c1b",
+          "insieme": 1,
+          "vivoDaMs": 3413
+        },
+        {
+          "stato": 200,
+          "ms": 253,
+          "tipo": "web",
+          "ambiente": "dc104289",
+          "insieme": 2,
+          "vivoDaMs": 3484
+        },
+        {
+          "stato": 200,
+          "ms": 250,
+          "tipo": "web",
+          "ambiente": "9dde314c",
+          "insieme": 1,
+          "vivoDaMs": 3531
+        },
+        {
+          "stato": 200,
+          "ms": 249,
+          "tipo": "web",
+          "ambiente": "6ef71dcf",
+          "insieme": 1,
+          "vivoDaMs": 7195
+        },
+        {
+          "stato": 200,
+          "ms": 251,
+          "tipo": "web",
+          "ambiente": "06e47ee2",
+          "insieme": 2,
+          "vivoDaMs": 7153
+        },
+        {
+          "stato": 200,
+          "ms": 249,
+          "tipo": "web",
+          "ambiente": "0214ebca",
+          "insieme": 1,
+          "vivoDaMs": 3486
+        },
+        {
+          "stato": 200,
+          "ms": 247,
+          "tipo": "web",
+          "ambiente": "4012e9ea",
+          "insieme": 1,
+          "vivoDaMs": 7191
+        },
+        {
+          "stato": 200,
+          "ms": 248,
+          "tipo": "web",
+          "ambiente": "b6f29ca9",
+          "insieme": 1,
+          "vivoDaMs": 7171
+        },
+        {
+          "stato": 200,
+          "ms": 256,
+          "tipo": "web",
+          "ambiente": "4f295c7d",
+          "insieme": 1,
+          "vivoDaMs": 3386
+        },
+        {
+          "stato": 200,
+          "ms": 257,
+          "tipo": "web",
+          "ambiente": "9a382acd",
+          "insieme": 2,
+          "vivoDaMs": 3462
+        },
+        {
+          "stato": 200,
+          "ms": 254,
+          "tipo": "web",
+          "ambiente": "ac87caad",
+          "insieme": 1,
+          "vivoDaMs": 3486
+        },
+        {
+          "stato": 200,
+          "ms": 249,
+          "tipo": "web",
+          "ambiente": "0b449db9",
+          "insieme": 1,
+          "vivoDaMs": 7161
+        },
+        {
+          "stato": 200,
+          "ms": 250,
+          "tipo": "web",
+          "ambiente": "ac71a377",
+          "insieme": 2,
+          "vivoDaMs": 7150
+        },
+        {
+          "stato": 200,
+          "ms": 249,
+          "tipo": "web",
+          "ambiente": "cd0b7214",
+          "insieme": 2,
+          "vivoDaMs": 7135
+        },
+        {
+          "stato": 200,
+          "ms": 253,
+          "tipo": "web",
+          "ambiente": "3702cfc7",
+          "insieme": 2,
+          "vivoDaMs": 3456
+        },
+        {
+          "stato": 200,
+          "ms": 258,
+          "tipo": "web",
+          "ambiente": "7ae7562a",
+          "insieme": 2,
+          "vivoDaMs": 3447
+        },
+        {
+          "stato": 200,
+          "ms": 257,
+          "tipo": "web",
+          "ambiente": "4b0e0f0e",
+          "insieme": 2,
+          "vivoDaMs": 3448
+        },
+        {
+          "stato": 200,
+          "ms": 252,
+          "tipo": "web",
+          "ambiente": "31cb0667",
+          "insieme": 2,
+          "vivoDaMs": 3450
+        },
+        {
+          "stato": 200,
+          "ms": 247,
+          "tipo": "web",
+          "ambiente": "8fa404af",
+          "insieme": 1,
+          "vivoDaMs": 3490
+        },
+        {
+          "stato": 200,
+          "ms": 259,
+          "tipo": "web",
+          "ambiente": "85a6c71b",
+          "insieme": 2,
+          "vivoDaMs": 3443
+        },
+        {
+          "stato": 200,
+          "ms": 254,
+          "tipo": "web",
+          "ambiente": "bdb31c5e",
+          "insieme": 2,
+          "vivoDaMs": 3455
+        },
+        {
+          "stato": 200,
+          "ms": 250,
+          "tipo": "web",
+          "ambiente": "81b104d1",
+          "insieme": 1,
+          "vivoDaMs": 3485
+        },
+        {
+          "stato": 200,
+          "ms": 254,
+          "tipo": "web",
+          "ambiente": "f4e2e932",
+          "insieme": 2,
+          "vivoDaMs": 3419
+        },
+        {
+          "stato": 200,
+          "ms": 257,
+          "tipo": "web",
+          "ambiente": "b35c4360",
+          "insieme": 2,
+          "vivoDaMs": 3456
+        },
+        {
+          "stato": 200,
+          "ms": 255,
+          "tipo": "web",
+          "ambiente": "b802abc8",
+          "insieme": 2,
+          "vivoDaMs": 3440
+        },
+        {
+          "stato": 200,
+          "ms": 385,
+          "tipo": "web",
+          "ambiente": "4f295c7d",
+          "insieme": 2,
+          "vivoDaMs": 3514
+        },
+        {
+          "stato": 200,
+          "ms": 368,
+          "tipo": "web",
+          "ambiente": "c07dceea",
+          "insieme": 2,
+          "vivoDaMs": 3518
+        },
+        {
+          "stato": 200,
+          "ms": 369,
+          "tipo": "web",
+          "ambiente": "4882ffc8",
+          "insieme": 2,
+          "vivoDaMs": 3515
+        },
+        {
+          "stato": 200,
+          "ms": 388,
+          "tipo": "web",
+          "ambiente": "8fa404af",
+          "insieme": 2,
+          "vivoDaMs": 3634
+        },
+        {
+          "stato": 200,
+          "ms": 390,
+          "tipo": "web",
+          "ambiente": "ac87caad",
+          "insieme": 2,
+          "vivoDaMs": 3631
+        },
+        {
+          "stato": 200,
+          "ms": 449,
+          "tipo": "web",
+          "ambiente": "4012e9ea",
+          "insieme": 2,
+          "vivoDaMs": 7395
+        },
+        {
+          "stato": 200,
+          "ms": 357,
+          "tipo": "web",
+          "ambiente": "0aa67fbb",
+          "insieme": 2,
+          "vivoDaMs": 3527
+        },
+        {
+          "stato": 200,
+          "ms": 381,
+          "tipo": "web",
+          "ambiente": "0b449db9",
+          "insieme": 2,
+          "vivoDaMs": 7302
+        },
+        {
+          "stato": 200,
+          "ms": 387,
+          "tipo": "web",
+          "ambiente": "7cf7f284",
+          "insieme": 2,
+          "vivoDaMs": 3665
+        },
+        {
+          "stato": 200,
+          "ms": 360,
+          "tipo": "web",
+          "ambiente": "fd813673",
+          "insieme": 2,
+          "vivoDaMs": 3527
+        },
+        {
+          "stato": 200,
+          "ms": 448,
+          "tipo": "web",
+          "ambiente": "81b104d1",
+          "insieme": 2,
+          "vivoDaMs": 3689
+        },
+        {
+          "stato": 200,
+          "ms": 453,
+          "tipo": "web",
+          "ambiente": "31cb0667",
+          "insieme": 2,
+          "vivoDaMs": 3655
+        },
+        {
+          "stato": 200,
+          "ms": 446,
+          "tipo": "web",
+          "ambiente": "8fa404af",
+          "insieme": 2,
+          "vivoDaMs": 3695
+        },
+        {
+          "stato": 200,
+          "ms": 448,
+          "tipo": "web",
+          "ambiente": "ac71a377",
+          "insieme": 2,
+          "vivoDaMs": 7354
+        },
+        {
+          "stato": 200,
+          "ms": 445,
+          "tipo": "web",
+          "ambiente": "06e47ee2",
+          "insieme": 1,
+          "vivoDaMs": 7356
+        },
+        {
+          "stato": 200,
+          "ms": 363,
+          "tipo": "web",
+          "ambiente": "6489b923",
+          "insieme": 2,
+          "vivoDaMs": 3527
+        },
+        {
+          "stato": 200,
+          "ms": 448,
+          "tipo": "web",
+          "ambiente": "31cb0667",
+          "insieme": 1,
+          "vivoDaMs": 3654
+        },
+        {
+          "stato": 200,
+          "ms": 386,
+          "tipo": "web",
+          "ambiente": "81b104d1",
+          "insieme": 2,
+          "vivoDaMs": 3631
+        },
+        {
+          "stato": 200,
+          "ms": 356,
+          "tipo": "web",
+          "ambiente": "67503c1b",
+          "insieme": 2,
+          "vivoDaMs": 3523
+        },
+        {
+          "stato": 200,
+          "ms": 360,
+          "tipo": "web",
+          "ambiente": "ad353aca",
+          "insieme": 2,
+          "vivoDaMs": 3528
+        },
+        {
+          "stato": 200,
+          "ms": 436,
+          "tipo": "web",
+          "ambiente": "cd0b7214",
+          "insieme": 2,
+          "vivoDaMs": 7332
+        },
+        {
+          "stato": 200,
+          "ms": 374,
+          "tipo": "web",
+          "ambiente": "4012e9ea",
+          "insieme": 2,
+          "vivoDaMs": 7330
+        },
+        {
+          "stato": 200,
+          "ms": 376,
+          "tipo": "web",
+          "ambiente": "9dde314c",
+          "insieme": 2,
+          "vivoDaMs": 3671
+        },
+        {
+          "stato": 200,
+          "ms": 363,
+          "tipo": "web",
+          "ambiente": "6ae6327c",
+          "insieme": 2,
+          "vivoDaMs": 7344
+        },
+        {
+          "stato": 200,
+          "ms": 439,
+          "tipo": "web",
+          "ambiente": "9dde314c",
+          "insieme": 2,
+          "vivoDaMs": 3733
+        },
+        {
+          "stato": 200,
+          "ms": 372,
+          "tipo": "web",
+          "ambiente": "4942aae5",
+          "insieme": 2,
+          "vivoDaMs": 3500
+        },
+        {
+          "stato": 200,
+          "ms": 434,
+          "tipo": "web",
+          "ambiente": "ac71a377",
+          "insieme": 2,
+          "vivoDaMs": 7347
+        },
+        {
+          "stato": 200,
+          "ms": 372,
+          "tipo": "web",
+          "ambiente": "b6f29ca9",
+          "insieme": 2,
+          "vivoDaMs": 7311
+        },
+        {
+          "stato": 200,
+          "ms": 436,
+          "tipo": "web",
+          "ambiente": "6ef71dcf",
+          "insieme": 2,
+          "vivoDaMs": 7398
+        },
+        {
+          "stato": 200,
+          "ms": 439,
+          "tipo": "web",
+          "ambiente": "dc104289",
+          "insieme": 1,
+          "vivoDaMs": 3687
+        },
+        {
+          "stato": 200,
+          "ms": 441,
+          "tipo": "web",
+          "ambiente": "dc104289",
+          "insieme": 2,
+          "vivoDaMs": 3688
+        },
+        {
+          "stato": 200,
+          "ms": 365,
+          "tipo": "web",
+          "ambiente": "6ef71dcf",
+          "insieme": 2,
+          "vivoDaMs": 7332
+        },
+        {
+          "stato": 200,
+          "ms": 432,
+          "tipo": "web",
+          "ambiente": "0b449db9",
+          "insieme": 2,
+          "vivoDaMs": 7365
+        },
+        {
+          "stato": 200,
+          "ms": 374,
+          "tipo": "web",
+          "ambiente": "0214ebca",
+          "insieme": 2,
+          "vivoDaMs": 3632
+        },
+        {
+          "stato": 200,
+          "ms": 433,
+          "tipo": "web",
+          "ambiente": "b6f29ca9",
+          "insieme": 2,
+          "vivoDaMs": 7373
+        },
+        {
+          "stato": 200,
+          "ms": 441,
+          "tipo": "web",
+          "ambiente": "3702cfc7",
+          "insieme": 2,
+          "vivoDaMs": 3661
+        },
+        {
+          "stato": 200,
+          "ms": 340,
+          "tipo": "web",
+          "ambiente": "0fd20cd1",
+          "insieme": 2,
+          "vivoDaMs": 3528
+        },
+        {
+          "stato": 200,
+          "ms": 434,
+          "tipo": "web",
+          "ambiente": "cd0b7214",
+          "insieme": 2,
+          "vivoDaMs": 7340
+        },
+        {
+          "stato": 200,
+          "ms": 440,
+          "tipo": "web",
+          "ambiente": "f4e2e932",
+          "insieme": 1,
+          "vivoDaMs": 3624
+        },
+        {
+          "stato": 200,
+          "ms": 436,
+          "tipo": "web",
+          "ambiente": "06e47ee2",
+          "insieme": 2,
+          "vivoDaMs": 7358
+        },
+        {
+          "stato": 200,
+          "ms": 352,
+          "tipo": "web",
+          "ambiente": "2d87048a",
+          "insieme": 2,
+          "vivoDaMs": 3517
+        },
+        {
+          "stato": 200,
+          "ms": 436,
+          "tipo": "web",
+          "ambiente": "6ae6327c",
+          "insieme": 2,
+          "vivoDaMs": 7422
+        },
+        {
+          "stato": 200,
+          "ms": 430,
+          "tipo": "web",
+          "ambiente": "0214ebca",
+          "insieme": 2,
+          "vivoDaMs": 3691
+        },
+        {
+          "stato": 200,
+          "ms": 438,
+          "tipo": "web",
+          "ambiente": "bdb31c5e",
+          "insieme": 1,
+          "vivoDaMs": 3658
+        },
+        {
+          "stato": 200,
+          "ms": 438,
+          "tipo": "web",
+          "ambiente": "9a382acd",
+          "insieme": 1,
+          "vivoDaMs": 3665
+        },
+        {
+          "stato": 200,
+          "ms": 433,
+          "tipo": "web",
+          "ambiente": "3702cfc7",
+          "insieme": 1,
+          "vivoDaMs": 3660
+        },
+        {
+          "stato": 200,
+          "ms": 434,
+          "tipo": "web",
+          "ambiente": "7cf7f284",
+          "insieme": 2,
+          "vivoDaMs": 3729
+        },
+        {
+          "stato": 200,
+          "ms": 430,
+          "tipo": "web",
+          "ambiente": "ac87caad",
+          "insieme": 2,
+          "vivoDaMs": 3689
+        },
+        {
+          "stato": 200,
+          "ms": 436,
+          "tipo": "web",
+          "ambiente": "f4e2e932",
+          "insieme": 2,
+          "vivoDaMs": 3624
+        },
+        {
+          "stato": 200,
+          "ms": 435,
+          "tipo": "web",
+          "ambiente": "bdb31c5e",
+          "insieme": 2,
+          "vivoDaMs": 3659
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1004 @@
+{
+  "url": "https://pcqvjy0pdpvjyj3p.sjd.lambda-web.eu-west-1.on.aws/",
+  "quando": "2026-10-15T04:38:53.626Z",
+  "risultati": [
+    {
+      "richieste": 10,
+      "stati": {
+        "200": 10
+      },
+      "ambienti": 4,
+      "piuInsiemeInUnAmbiente": 2,
+      "msMediana": 660,
+      "msP95": 684,
+      "msMax": 684,
+      "errori": [],
+      "risposte": [
+        {
+          "stato": 200,
+          "ms": 425,
+          "tipo": "web",
+          "ambiente": "c65b8967",
+          "insieme": 1,
+          "vivoDaMs": 11711
+        },
+        {
+          "stato": 200,
+          "ms": 660,
+          "tipo": "web",
+          "ambiente": "556eb707",
+          "insieme": 2,
+          "vivoDaMs": 224
+        },
+        {
+          "stato": 200,
+          "ms": 580,
+          "tipo": "web",
+          "ambiente": "c65b8967",
+          "insieme": 2,
+          "vivoDaMs": 11916
+        },
+        {
+          "stato": 200,
+          "ms": 579,
+          "tipo": "web",
+          "ambiente": "c65b8967",
+          "insieme": 1,
+          "vivoDaMs": 11915
+        },
+        {
+          "stato": 200,
+          "ms": 383,
+          "tipo": "web",
+          "ambiente": "c65b8967",
+          "insieme": 2,
+          "vivoDaMs": 11713
+        },
+        {
+          "stato": 200,
+          "ms": 684,
+          "tipo": "web",
+          "ambiente": "efefc9b9",
+          "insieme": 2,
+          "vivoDaMs": 225
+        },
+        {
+          "stato": 200,
+          "ms": 667,
+          "tipo": "web",
+          "ambiente": "5f6b718b",
+          "insieme": 2,
+          "vivoDaMs": 222
+        },
+        {
+          "stato": 200,
+          "ms": 667,
+          "tipo": "web",
+          "ambiente": "5f6b718b",
+          "insieme": 1,
+          "vivoDaMs": 222
+        },
+        {
+          "stato": 200,
+          "ms": 683,
+          "tipo": "web",
+          "ambiente": "efefc9b9",
+          "insieme": 1,
+          "vivoDaMs": 225
+        },
+        {
+          "stato": 200,
+          "ms": 652,
+          "tipo": "web",
+          "ambiente": "556eb707",
+          "insieme": 1,
+          "vivoDaMs": 223
+        }
+      ]
+    },
+    {
+      "richieste": 50,
+      "stati": {
+        "200": 20,
+        "429": 30
+      },
+      "ambienti": 8,
+      "piuInsiemeInUnAmbiente": 2,
+      "msMediana": 361,
+      "msP95": 452,
+      "msMax": 452,
+      "errori": [
+        "Platform.EndpointMaxEnvThrottle"
+      ],
+      "risposte": [
+        {
+          "stato": 200,
+          "ms": 261,
+          "tipo": "web",
+          "ambiente": "6bc45c3c",
+          "insieme": 1,
+          "vivoDaMs": 3380
+        },
+        {
+          "stato": 200,
+          "ms": 262,
+          "tipo": "web",
+          "ambiente": "e2d8d3e5",
+          "insieme": 1,
+          "vivoDaMs": 3463
+        },
+        {
+          "stato": 200,
+          "ms": 251,
+          "tipo": "web",
+          "ambiente": "556eb707",
+          "insieme": 1,
+          "vivoDaMs": 3510
+        },
+        {
+          "stato": 200,
+          "ms": 261,
+          "tipo": "web",
+          "ambiente": "99f7f28a",
+          "insieme": 1,
+          "vivoDaMs": 3455
+        },
+        {
+          "stato": 200,
+          "ms": 251,
+          "tipo": "web",
+          "ambiente": "5f6b718b",
+          "insieme": 1,
+          "vivoDaMs": 3496
+        },
+        {
+          "stato": 200,
+          "ms": 259,
+          "tipo": "web",
+          "ambiente": "e2d8d3e5",
+          "insieme": 2,
+          "vivoDaMs": 3464
+        },
+        {
+          "stato": 200,
+          "ms": 250,
+          "tipo": "web",
+          "ambiente": "c65b8967",
+          "insieme": 1,
+          "vivoDaMs": 15282
+        },
+        {
+          "stato": 200,
+          "ms": 249,
+          "tipo": "web",
+          "ambiente": "efefc9b9",
+          "insieme": 1,
+          "vivoDaMs": 3482
+        },
+        {
+          "stato": 200,
+          "ms": 260,
+          "tipo": "web",
+          "ambiente": "99f7f28a",
+          "insieme": 2,
+          "vivoDaMs": 3456
+        },
+        {
+          "stato": 200,
+          "ms": 256,
+          "tipo": "web",
+          "ambiente": "4f27d431",
+          "insieme": 1,
+          "vivoDaMs": 3444
+        },
+        {
+          "stato": 429,
+          "ms": 204,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 200,
+          "ms": 376,
+          "tipo": "web",
+          "ambiente": "c65b8967",
+          "insieme": 2,
+          "vivoDaMs": 15410
+        },
+        {
+          "stato": 200,
+          "ms": 361,
+          "tipo": "web",
+          "ambiente": "4f27d431",
+          "insieme": 2,
+          "vivoDaMs": 3551
+        },
+        {
+          "stato": 200,
+          "ms": 375,
+          "tipo": "web",
+          "ambiente": "6bc45c3c",
+          "insieme": 2,
+          "vivoDaMs": 3498
+        },
+        {
+          "stato": 200,
+          "ms": 379,
+          "tipo": "web",
+          "ambiente": "efefc9b9",
+          "insieme": 2,
+          "vivoDaMs": 3613
+        },
+        {
+          "stato": 429,
+          "ms": 186,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 191,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 200,
+          "ms": 452,
+          "tipo": "web",
+          "ambiente": "5f6b718b",
+          "insieme": 2,
+          "vivoDaMs": 3701
+        },
+        {
+          "stato": 429,
+          "ms": 193,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 193,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 200,
+          "ms": 450,
+          "tipo": "web",
+          "ambiente": "efefc9b9",
+          "insieme": 2,
+          "vivoDaMs": 3684
+        },
+        {
+          "stato": 429,
+          "ms": 181,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 188,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 187,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 200,
+          "ms": 371,
+          "tipo": "web",
+          "ambiente": "556eb707",
+          "insieme": 2,
+          "vivoDaMs": 3640
+        },
+        {
+          "stato": 429,
+          "ms": 186,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 183,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 187,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 199,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 200,
+          "ms": 444,
+          "tipo": "web",
+          "ambiente": "c65b8967",
+          "insieme": 2,
+          "vivoDaMs": 15486
+        },
+        {
+          "stato": 429,
+          "ms": 191,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 200,
+          "ms": 373,
+          "tipo": "web",
+          "ambiente": "5f6b718b",
+          "insieme": 2,
+          "vivoDaMs": 3629
+        },
+        {
+          "stato": 429,
+          "ms": 200,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 184,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 202,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 199,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 205,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 183,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 192,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 185,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 182,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 180,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 188,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 200,
+          "ms": 438,
+          "tipo": "web",
+          "ambiente": "556eb707",
+          "insieme": 2,
+          "vivoDaMs": 3712
+        },
+        {
+          "stato": 429,
+          "ms": 182,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 185,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 186,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 189,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 186,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 202,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        }
+      ]
+    },
+    {
+      "richieste": 100,
+      "stati": {
+        "200": 20,
+        "429": 80
+      },
+      "ambienti": 10,
+      "piuInsiemeInUnAmbiente": 2,
+      "msMediana": 251,
+      "msP95": 264,
+      "msMax": 264,
+      "errori": [
+        "Platform.EndpointMaxEnvThrottle"
+      ],
+      "risposte": [
+        {
+          "stato": 200,
+          "ms": 249,
+          "tipo": "web",
+          "ambiente": "99f7f28a",
+          "insieme": 1,
+          "vivoDaMs": 6905
+        },
+        {
+          "stato": 200,
+          "ms": 251,
+          "tipo": "web",
+          "ambiente": "4f27d431",
+          "insieme": 1,
+          "vivoDaMs": 6898
+        },
+        {
+          "stato": 200,
+          "ms": 249,
+          "tipo": "web",
+          "ambiente": "556eb707",
+          "insieme": 1,
+          "vivoDaMs": 6969
+        },
+        {
+          "stato": 200,
+          "ms": 248,
+          "tipo": "web",
+          "ambiente": "e2d8d3e5",
+          "insieme": 1,
+          "vivoDaMs": 6913
+        },
+        {
+          "stato": 200,
+          "ms": 250,
+          "tipo": "web",
+          "ambiente": "efefc9b9",
+          "insieme": 1,
+          "vivoDaMs": 6943
+        },
+        {
+          "stato": 200,
+          "ms": 264,
+          "tipo": "web",
+          "ambiente": "bd8b3647",
+          "insieme": 1,
+          "vivoDaMs": 3239
+        },
+        {
+          "stato": 200,
+          "ms": 250,
+          "tipo": "web",
+          "ambiente": "6bc45c3c",
+          "insieme": 1,
+          "vivoDaMs": 6831
+        },
+        {
+          "stato": 200,
+          "ms": 260,
+          "tipo": "web",
+          "ambiente": "46635b4d",
+          "insieme": 1,
+          "vivoDaMs": 3212
+        },
+        {
+          "stato": 429,
+          "ms": 49,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 200,
+          "ms": 250,
+          "tipo": "web",
+          "ambiente": "c65b8967",
+          "insieme": 1,
+          "vivoDaMs": 18743
+        },
+        {
+          "stato": 200,
+          "ms": 254,
+          "tipo": "web",
+          "ambiente": "556eb707",
+          "insieme": 2,
+          "vivoDaMs": 6973
+        },
+        {
+          "stato": 200,
+          "ms": 251,
+          "tipo": "web",
+          "ambiente": "5f6b718b",
+          "insieme": 2,
+          "vivoDaMs": 6959
+        },
+        {
+          "stato": 200,
+          "ms": 251,
+          "tipo": "web",
+          "ambiente": "5f6b718b",
+          "insieme": 1,
+          "vivoDaMs": 6959
+        },
+        {
+          "stato": 200,
+          "ms": 248,
+          "tipo": "web",
+          "ambiente": "4f27d431",
+          "insieme": 2,
+          "vivoDaMs": 6901
+        },
+        {
+          "stato": 200,
+          "ms": 251,
+          "tipo": "web",
+          "ambiente": "e2d8d3e5",
+          "insieme": 2,
+          "vivoDaMs": 6915
+        },
+        {
+          "stato": 429,
+          "ms": 47,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 49,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 200,
+          "ms": 259,
+          "tipo": "web",
+          "ambiente": "46635b4d",
+          "insieme": 2,
+          "vivoDaMs": 3213
+        },
+        {
+          "stato": 200,
+          "ms": 250,
+          "tipo": "web",
+          "ambiente": "c65b8967",
+          "insieme": 2,
+          "vivoDaMs": 18744
+        },
+        {
+          "stato": 200,
+          "ms": 251,
+          "tipo": "web",
+          "ambiente": "6bc45c3c",
+          "insieme": 2,
+          "vivoDaMs": 6833
+        },
+        {
+          "stato": 429,
+          "ms": 49,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 46,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 200,
+          "ms": 250,
+          "tipo": "web",
+          "ambiente": "99f7f28a",
+          "insieme": 2,
+          "vivoDaMs": 6908
+        },
+        {
+          "stato": 429,
+          "ms": 46,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 200,
+          "ms": 247,
+          "tipo": "web",
+          "ambiente": "efefc9b9",
+          "insieme": 2,
+          "vivoDaMs": 6945
+        },
+        {
+          "stato": 429,
+          "ms": 48,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 47,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 50,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 52,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 200,
+          "ms": 259,
+          "tipo": "web",
+          "ambiente": "bd8b3647",
+          "insieme": 2,
+          "vivoDaMs": 3240
+        },
+        {
+          "stato": 429,
+          "ms": 49,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 47,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 45,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 49,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 51,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 51,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 49,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 48,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 49,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 47,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 48,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 47,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 47,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 44,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 48,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 50,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 49,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 50,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 49,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 49,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 173,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 167,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 196,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 200,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 163,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 163,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 219,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 206,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 198,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 195,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 213,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 182,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 188,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 198,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 197,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 159,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 161,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 205,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 189,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 157,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 208,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 190,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 168,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 163,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 159,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 193,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 190,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 188,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 192,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 201,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 178,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 169,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 195,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 166,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 190,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 190,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 187,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 191,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 199,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 187,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 196,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 189,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 183,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 185,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 185,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 185,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 204,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 189,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 196,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        },
+        {
+          "stato": 429,
+          "ms": 212,
+          "errore": "Platform.EndpointMaxEnvThrottle"
+        }
+      ]
+    }
+  ]
+}
