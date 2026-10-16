@@ -1,0 +1,9 @@
+{
+  "name": "depositi-tokenizzati",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "pg": "8.23.1",
+    "viem": "2.57.7"
+  }
+}

@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:18.4
+    environment:
+      POSTGRES_PASSWORD: prova
+    ports:
+      - "55432:5432"
+
+  anvil:
+    image: ghcr.io/foundry-rs/foundry:v1.5.1
+    entrypoint: ["anvil", "--host", "0.0.0.0"]
+    ports:
+      - "8545:8545"
+
+  forge:
+    image: ghcr.io/foundry-rs/foundry:v1.5.1
+    entrypoint: ["forge"]
+    working_dir: /contratto
+    volumes:
+      - ./contratto:/contratto
+    profiles: ["strumenti"]
