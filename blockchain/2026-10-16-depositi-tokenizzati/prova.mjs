@@ -1,11 +1,12 @@
 import { writeFile } from 'node:fs/promises';
-import { CONTI_A, CONTI_B, registri } from './registri.mjs';
+import { CONTI_A, CONTI_B, SALDO_INIZIALE, registri } from './registri.mjs';
 
 const BONIFICI_DI_DEFAULT = 1000;
 const IMPORTO_DEI_BONIFICI = 1000;
 const IMPORTO_DELLA_PROVA = 10_000;
 const CONTO_DI_A = CONTI_A[0];
 const CONTO_DI_B = CONTI_B[0];
+const ULTIMI_EVENTI = 5;
 const PROVE = new URL('./prove/', import.meta.url);
 
 const USO = `Uso:
@@ -13,12 +14,13 @@ const USO = `Uso:
   node prova.mjs <uno|due|chain> bonifici [quanti, default ${BONIFICI_DI_DEFAULT}]
   node prova.mjs <uno|due|chain> interrompi
   node prova.mjs <uno|due|chain> saldi
-  node prova.mjs chain intruso`;
+  node prova.mjs chain intruso
+  node prova.mjs chain storico [conto]`;
 
 const [quale, comando, argomento] = process.argv.slice(2);
 const registro = registri[quale];
-const quanti = Number(argomento ?? BONIFICI_DI_DEFAULT);
-if (!registro || !comando || !Number.isInteger(quanti) || quanti < 1) {
+const numero = argomento === undefined ? undefined : Number(argomento);
+if (!registro || !comando || (numero !== undefined && !(Number.isInteger(numero) && numero > 0))) {
     console.error(USO);
     process.exit(1);
 }
@@ -101,6 +103,26 @@ async function intruso() {
     }
 }
 
+async function storico(conto) {
+    const eventi = await registro.storico(conto);
+    if (conto === undefined) {
+        console.log(`Eventi Bonifico sulla chain: ${eventi.length}.`);
+    } else {
+        const totale = lato => eventi.filter(e => e[lato] === conto).reduce((somma, e) => somma + e.centesimi, 0);
+        const uscite = totale('da');
+        const entrate = totale('a');
+        console.log(`Eventi Bonifico del conto ${conto}: ${eventi.length}.`);
+        console.log(`Saldo ricostruito dagli eventi: ${euro(SALDO_INIZIALE)} - ${euro(uscite)} + ${euro(entrate)} = ${euro(SALDO_INIZIALE - uscite + entrate)} €`);
+        console.log(`Saldo nel contratto: ${euro(await registro.saldoDi(conto))} €`);
+    }
+    if (eventi.length > ULTIMI_EVENTI) {
+        console.log(`Gli ultimi ${ULTIMI_EVENTI}:`);
+    }
+    for (const e of eventi.slice(-ULTIMI_EVENTI)) {
+        console.log(`  blocco ${e.blocco}: dal conto ${e.da} al conto ${e.a}, ${euro(e.centesimi)} €`);
+    }
+}
+
 async function esegui() {
     if (comando === 'prepara') {
         await registro.prepara();
@@ -110,13 +132,15 @@ async function esegui() {
     }
     await registro.apri();
     if (comando === 'bonifici') {
-        await bonifici(quanti);
+        await bonifici(numero ?? BONIFICI_DI_DEFAULT);
     } else if (comando === 'saldi') {
         stampaSaldi(registro.nome, await registro.saldi());
     } else if (comando === 'interrompi') {
         await interrompi();
     } else if (comando === 'intruso' && registro.simula) {
         await intruso();
+    } else if (comando === 'storico' && registro.storico) {
+        await storico(numero);
     } else {
         console.error(USO);
         process.exitCode = 1;

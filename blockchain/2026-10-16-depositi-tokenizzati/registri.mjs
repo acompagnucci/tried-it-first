@@ -165,12 +165,24 @@ export const registroCondiviso = {
         });
     },
 
+    async storico(conto) {
+        const filtri = conto === undefined ? [undefined] : [{ da: BigInt(conto) }, { a: BigInt(conto) }];
+        const eventi = await Promise.all(filtri.map(args => chain.getContractEvents({
+            address: this.indirizzo, abi: this.abi, eventName: 'Bonifico', args, fromBlock: 0n,
+        })));
+        return eventi.flat()
+            .sort((x, y) => Number(x.blockNumber - y.blockNumber))
+            .map(e => ({ blocco: e.blockNumber, da: Number(e.args.da), a: Number(e.args.a), centesimi: Number(e.args.centesimi) }));
+    },
+
+    async saldoDi(conto) {
+        return Number(await chain.readContract({ address: this.indirizzo, abi: this.abi, functionName: 'saldo', args: [conto] }));
+    },
+
     async saldi() {
         const somma = async conti => {
-            const saldi = await Promise.all(conti.map(conto => chain.readContract({
-                address: this.indirizzo, abi: this.abi, functionName: 'saldo', args: [conto],
-            })));
-            return saldi.reduce((totale, saldo) => totale + Number(saldo), 0);
+            const saldi = await Promise.all(conti.map(conto => this.saldoDi(conto)));
+            return saldi.reduce((totale, saldo) => totale + saldo, 0);
         };
         return { A: await somma(CONTI_A), B: await somma(CONTI_B) };
     },

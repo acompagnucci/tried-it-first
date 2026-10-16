@@ -112,9 +112,18 @@ node prova.mjs chain intruso
 
 La banca B firma un bonifico dal conto 1, che è della banca A. Prima lo simula, poi lo manda lo stesso.
 
+## 8. Lo storico
+
+```sh
+node prova.mjs chain storico
+node prova.mjs chain storico 1
+```
+
+A ogni bonifico il contratto emette l'evento `Bonifico` (riga 34 di `Registro.sol`). Senza argomenti `storico` conta gli eventi e stampa gli ultimi cinque. Con un conto prende solo i bonifici di quel conto, ricostruisce il saldo partendo da 1.000 € e lo confronta con quello che c'è nel contratto.
+
 ## Risultati
 
-Tutto l'output del mio giro è in `prove/uscita.txt`.
+Tutto l'output del mio giro è in `prove/uscita.txt`. Lo storico l'ho provato a parte, su una chain nuova: l'output è in `prove/storico.txt`.
 
 ### 1000 bonifici
 
@@ -158,6 +167,22 @@ La mando lo stesso: Bonifico 1 -> 101 fallito nel blocco 3005
 ```
 
 L'indirizzo è quello della banca B. Mandata lo stesso, la transazione entra nel blocco ma viene annullata, e i saldi restano dove sono. Su Postgres la stessa regola si scrive con un utente per banca e la row level security: non l'ho provato.
+
+### Lo storico
+
+Su una chain nuova: `prepara`, 10 bonifici, il bonifico interrotto e l'intruso.
+
+```
+$ node prova.mjs chain storico 1
+Eventi Bonifico del conto 1: 3.
+Saldo ricostruito dagli eventi: 1.000,00 - 110,00 + 10,00 = 900,00 €
+Saldo nel contratto: 900,00 €
+  blocco 24: dal conto 1 al conto 101, 10,00 €
+  blocco 25: dal conto 101 al conto 1, 10,00 €
+  blocco 34: dal conto 1 al conto 101, 100,00 €
+```
+
+Il bonifico dell'intruso non c'è: la transazione è stata annullata, e gli eventi di una transazione annullata non restano. Gli eventi li legge chiunque abbia accesso alla chain, ed è così che il sistema di una banca saprebbe che le è arrivato un bonifico. Su Postgres lo stesso storico è una tabella dei movimenti, scritta nella stessa transazione del bonifico.
 
 ### Allora quando basta un database
 
