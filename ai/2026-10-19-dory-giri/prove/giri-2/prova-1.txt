@@ -1,0 +1,250 @@
+Domanda inviata a http://localhost:8080, aspetto la risposta...
+
+=== Ragionamento del modello ===
+The user wants me to find a bug in a Java program, explain it briefly, and propose the smallest possible fix.
+
+Let me analyze the code carefully.
+
+The program checks which invoices are unpaid.
+- `fatturaNonSaldate` takes lists of `Fattura` and `Pagamento`.
+- It builds a map `totalePagato` where keys are invoice numbers and values are total paid amounts.
+- Then it iterates over `fatture`, gets the total paid for each invoice, and adds the invoice number to `nonSaldate` if `!pagato.equals(f.importo())`.
+
+Now look at the specific data:
+- F-001: 120.00
+- F-002: 80.50
+- F-003: 45.00
+- Payments:
+  - F-001: 120
+  - F-002: 40.25
+  - F-002: 40.25
+  - F-003: 20.00
+
+Expected: Only F-003 should be unpaid (paid only 20, owes 45). F-001 is fully paid (120), F-002 is fully paid (40.25 + 40.25 = 80.50).
+
+But the user says it signals F-001 as not paid too? Wait, the user says "should report only F-003, but also signals F-001". Wait, let me re-read: "Questo programma Java dovrebbe segnalare come non saldata solo la fattura F-003, ma segnala anche F-001. Trova il bug...". Translation: "This Java program should report only invoice F-003 as unpaid, but also reports F-001. Find the bug..."
+
+Wait, but from my analysis, F-001 payment is `new BigDecimal("120")`. The invoice is `new BigDecimal("120.00")`. Are these equal? `BigDecimal.equals` should consider numeric value? Let's think.
+
+`BigDecimal.equals` is based on the value comparison, not string. `new BigDecimal("120")` is equal to `new BigDecimal("120.00")`? Actually, in Java, BigDecimal compares values. `new BigDecimal("120").equals(new BigDecimal("120.00"))` should return true because they represent the same numeric value? Let me recall.
+
+Wait, there's a subtlety: BigDecimal.equals compares the values. `BigDecimal` stores an exponent and coefficient. `new BigDecimal("120")` has value 120.00 with scale 2? Actually when constructing from string, it preserves the exact value but scale? Let's think.
+
+`new BigDecimal("120")`: According to BigDecimal, parsing "120" yields a value with some scale? I think `new BigDecimal("120")` equals `new BigDecimal("120.00")` in terms of value. The `equals` method checks if both are equal when compared as numbers? Actually BigDecimal.equals compares the internal value, which includes exponent and coefficient. But `new BigDecimal("120")` and `new BigDecimal("120.00")` might not be exactly equal due to scale differences? I'm not 100% sure. I know that `BigDecimal.equals` is meant to compare numeric values. In many cases, `new BigDecimal("120").equals(new BigDecimal("120.00"))` returns true? Let me verify mentally.
+
+In Java docs: `BigDecimal.equals`: "Returns true if this BigDecimal object equals another BigDecimal object or String." It compares using numeric value? Actually I recall that `BigDecimal.equals` may be tricky with scale. But likely for this code, if F-001 is reported as unpaid, the reason is something else.
+
+Let's trace the code logic again. In `main`:
+- `Fattura f1 = new Fattura("F-001", new BigDecimal("120.00"));`
+- `List<Pagamento> pagamenti = List.of(new Pagamento(f1.numero(), new BigDecimal("120")), ...)`
+- `fattureNonSaldate(List.of(f1, f2, f3), pagamenti)`
+
+In `fattureNonSaldate`:
+- `totalePagato.merge(p.numeroFattura(), p.importo(), BigDecimal::add);` accumulates.
+- For F-001, total paid = 120.
+- For F-002, total paid = 40.25 + 40.25 = 80.50? `merge` with BigDecimal addition. Since 40.25 + 40.25 should equal 80.50 exactly in BigDecimal (binary representation? BigDecimal is exact decimal). 40.25 + 40.25 = 80.5 exactly. Should be fine.
+- For F-003, total paid = 20.
+
+Then loop over fatture:
+- f1: pagato = 120 (BigDecimal from merge). `pagato.equals(f.importo())`? `f.importo()` is `120.00`. Is `120` equals `120.00`? If not, then `!pagato.equals(f.importo())` is true, so F-001 added.
+- f2: 80.50 equals 80.50? Probably yes.
+- f3: 20 equals 45.00? No, so F-003 added.
+
+If the program reports both F-001 and F-003, then F-001 is incorrectly flagged. Why? Possibly because of BigDecimal scale/precision? Let's check.
+
+Actually, `BigDecimal("120")` vs `BigDecimal("120.00")`: In Java, when you parse a string into BigDecimal, the scale is determined by the number of digits after the decimal point? For "120", there are no decimal points, so scale might be 0. For "120.00", scale is 2. When comparing with `equals`, does BigDecimal consider scale? I believe `BigDecimal.equals` returns true only if both value and scale are equal? Or is it value-only? Let's recall precisely.
+
+From Java documentation: `BigDecimal.equals` compares two BigDecimal values. I think it does numeric comparison? Let's reason: The point of BigDecimal is exact decimal arithmetic. If I have `new BigDecimal("120.00")` and `new BigDecimal("120")`, they represent the same number but different scales. In some contexts, `equals` might treat them as equal? I think in BigDecimal, `equals` does compare the underlying value including sign, scale, coefficient. But I'm not entirely sure. In many practical examples, `new BigDecimal("1").equals(new BigDecimal("1.0"))` might be false? I recall that to avoid this, people do `.compareTo` or use `BigDecimal.scale`. Hmm.
+
+Actually, I remember that `BigDecimal.equals` is meant to compare the exact decimal representation. If two BigDecimals represent the same number but with different scales, `equals` may return false? Let's think of a concrete case. If you do `new BigDecimal("120").add(new BigDecimal("0.00"))`, the result might have scale 2. But `merge` accumulates via `BigDecimal::add`. The first payment is `new BigDecimal("120")` (scale maybe 0). The merge uses `p.importo()`, so the first value added is `120` with whatever scale it has. Then for `f.importo()` = `120.00` (scale 2). The `merge` uses BigDecimal addition. When adding `120` (scale 0) + nothing else? Actually only one payment for F-001. So `totalePagato` for F-001 is just `new BigDecimal("120")` (the same object? Actually merge returns the accumulated value; when there are no existing entries, it may just put the value into the map). So `pagato` is `new BigDecimal("120")` (scale likely 0). `f.importo()` is `new BigDecimal("120.00")` (scale 2). If `BigDecimal.equals` checks scale, they are not equal, causing F-001 to be flagged.
+
+But is that the intended bug? The user likely expects a simple bug fix. The bug might be more obvious: maybe `p.numeroFattura()` vs `f.numero()`? No, those are strings. In the loop, `totalePagato.getOrDefault(f.numero(), BigDecimal.ZERO)`. That seems fine.
+
+Wait, let's look at the `merge` semantics. `HashMap.merge` with `BigDecimal::add`? The syntax is `merge(key, value, remappingFunction)`. The remapping function receives the old value (or null if not present) and the new value. Actually the signature: `V merge(K key, V value, BiFunction<? super V, ? super T, V> remappingFunction)`. For `merge(p.numeroFattura(), p.importo(), BigDecimal::add)`. The `BiFunction` is `BigDecimal -> BigDecimal -> BigDecimal`? `BigDecimal::add` is `BigDecimal add(BigDecimal other)`? Actually `BigDecimal.add` has signature `BigDecimal add(BigDecimal val)`. So `BiFunction<BigDecimal, BigDecimal, BigDecimal>`? In `merge`, the first argument is the existing value (V, which is BigDecimal), the second is the new value (T, which is BigDecimal? Wait T is inferred as BigDecimal because p.importo() is BigDecimal). The remapping function should take old value and new value and return new value. `BigDecimal::add` is a method reference to `add(BigDecimal other)`, which as a BiFunction would be `BigDecimal -> BigDecimal -> BigDecimal`. This seems correct.
+
+But there's a subtle issue: when the key is not present, the existing value is `null`. The remapping function is called with `null` and the new value? In Java's `HashMap.merge`, if the key is not present, the remapping function is NOT called? Actually, according to docs: "If the mapping for a key was already present in the map, it is returned. If not, null is returned." Wait, let's recall precisely. In Java `Map.merge` behavior: If the key is already in the map, the old value is returned and then the merge function is applied to old value and new value to produce a new value to put in the map. If the key is not already in the map, the new value is put in as-is, without applying the merge function? Or is the merge function always applied? I think for `HashMap.merge`, if absent, it just puts the new value directly. Let me recall: In `HashMap`, `merge` is typically used like `putIfAbsent` or to accumulate. I think if absent, the value is inserted directly, not transformed. But I'm not 100% sure. However, this doesn't likely cause the issue for F-001 because there is only one payment. Even if merge transforms, with null? `BigDecimal.add(null)` would throw NPE if called. So likely it's inserted directly.
+
+Another possibility: The `Pagamento` record uses `f1.numero()` but in the `List.of` for pagamenti, it's `new Pagamento(f1.numero(), ...)`. In `fattureNonSaldate`, it iterates over `fatture`. The `f` record has `numero()` method. This should match exactly the string "F-001".
+
+Wait, could the bug be that `Pagamento` doesn't have a `toString` or something? No.
+
+Let's consider the `OUT` stream. `new PrintStream(new FileOutputStream(FileDescriptor.out), true, StandardCharsets.UTF_8)`. This prints to stdout via FileOutputStream to FileDescriptor.out? Actually `FileDescriptor.out` is the current output stream. `FileOutputStream(FileDescriptor.out)` creates a new FileOutputStream opening the file descriptor for writing? It's a way to reuse stdout? Not relevant to logic.
+
+Maybe the bug is simply that `BigDecimal("120")` compared to `BigDecimal("120.00")` yields false due to scale, causing F-001 to be flagged as unpaid. The fix would be to normalize the invoice amount or the paid amount. For example, compare using `pagato.compareTo(f.importo())` or convert both to the same scale. Or use `BigDecimal.equals` after `.moveToEquals` or something? The smallest fix might be to change the condition to `!pagato.compareTo(f.importo()).equals(0)`? But `compareTo` returns 0 if equal. Or maybe use `pagato.equals(f.importo())` but ensure they are same scale by doing `new BigDecimal(pagato.toString())`? Not minimal.
+
+Alternatively, maybe the bug is in the `merge` function? If `merge` uses `BigDecimal::add`, and there are multiple payments, but for F-002 it's fine. Wait, for F-001 there is only one payment. The total paid is exactly the payment amount. The comparison `!pagato.equals(f.importo())` should be true if they are different. The only way F-001 is incorrectly flagged is if `equals` returns false for "120" vs "120.00". This is a known BigDecimal gotcha: different scales are not equal under `BigDecimal.equals`? Let's verify from memory.
+
+Actually, I recall reading that `new BigDecimal("1.00").equals(new BigDecimal("1"))` returns `false`? Let's think of `BigDecimal` internal representation. `BigDecimal` has a sign, a value (integer coefficient), and an exponent. The string "120.00" has scale 2 (two decimal places). Internally, the value is normalized? I think `BigDecimal.equals` does compare the value and the scale? According to JavaDoc: "Compares this BigDecimal object with another object for equality. ... Returns true if and only if both objects are exactly equal. Two BigDecimal objects are considered equal if they represent the same number?" Hmm. Let's search memory: I think in BigDecimal, `equals` is based on the value including scale. But in practice, `new BigDecimal("120.00").equals(new BigDecimal("120"))` might be false. To be safe, many developers use `BigDecimal.valueOnScale`. But I'm not entirely sure, so I should propose a fix that is robust regardless: compare using `pagato.compareTo(f.importo()) == 0` or convert.
+
+But the user asks: "Trova il bug, spiega in poche righe perché succede e proponi la correzione più piccola possibile." They want: Find the bug, explain briefly why, propose smallest possible fix.
+
+I need to answer in Italian? The user wrote the question in Italian. I should respond in Italian.
+
+Let's confirm by simulating mentally what the output would be. The program prints "Fatture non saldate attese: [F-003]" and "Fatture non saldate trovate: ?". If F-001 is also flagged, then ottenuta is [F-001, F-003] or similar. The user says it reports F-001 also. So yes.
+
+The bug: `BigDecimal` comparison. `new BigDecimal("120")` has a different scale/precision representation than `new BigDecimal("120.00")`. `BigDecimal.equals` treats them as not equal because the scale differs (or the internal representation differs), even though mathematically they are equal. Hence the full payment appears to be less than the invoice amount.
+
+Is that definitely the cause? Let's check if there's any other more obvious bug. The `totalePagato` map is built only from payments. For F-001, payment is "120". The invoice is "120.00". If we consider `BigDecimal.equals` semantics: I found a memory: In Java, `new BigDecimal("120").equals(new BigDecimal("120.00"))` is actually `true`? I'm uncertain. Let's reason from the implementation. The `BigDecimal.equals` method calls `compareValue`? Actually, I think BigDecimal has a `compareValue` method to compare two BigDecimals without scale. The `equals` might use `compareValue` to check if values are equal? Not sure.
+
+Let's think of a simpler case: `new BigDecimal("1").add(new BigDecimal("0.5"))` yields `1.5`. What about `new BigDecimal("15").equals(new BigDecimal("15.00"))`? I vaguely recall that in Java, `BigDecimal.equals` does not consider scale; it considers the numeric value. For example, in `BigDecimal.add`, the result has the larger scale of the operands. But `equals` might be value-based. If it were value-based, then "120" equals "120.00". If the bug were scale-related, it's a subtle bug. But maybe the intended bug is simpler: look at `pagato` variable type. `BigDecimal pagato = totalePagato.getOrDefault(...);` If not found, returns `BigDecimal.ZERO`. Then `!pagato.equals(f.importo())`. For F-001, if somehow the map doesn't contain F-001? But it should because there is a payment. Could the `merge` not work due to some map issue? No.
+
+Another angle: The record `Fattura` has `numero()` method. `Fattura f1 = new Fattura("F-001", ...)`. `f1.numero()` returns "F-001". `p.numeroFattura()` returns "F-001". String equality is exact. So no issue there.
+
+Wait, what about `BigDecimal("120")` vs `BigDecimal("120.00")`: if they are actually equal, then F-001 wouldn't be flagged. Since the user says it is flagged, we accept the premise and explain BigDecimal scale equality issue. I think it's plausible and is a classic Java trap.
+
+But the user might expect a fix that normalizes the invoice amount or the paid amount. The smallest possible fix could be to change the comparison in the condition to use `BigDecimal.compareTo` or to convert both to `BigDecimal` with same scale. For example:
+
+Current:
+```java
+if (!pagato.equals(f.importo())) {
+```
+
+Fix option 1: Use `compareTo`:
+```java
+if (!pagato.compareTo(f.importo()).equals(0)) {
+```
+But `BigDecimal.compareTo` is signed. If `pagato` is 120 and `f.importo()` is 120.00, `compareTo` should return 0 regardless of scale? Actually `compareTo` compares numerically. It should return 0 if equal values. This is a minimal change: replace `!pagato.equals(f.importo())` with `!pagato.compareTo(f.importo()).equals(0)` or `pagato.compareTo(f.importo()) != 0`. But need to be careful with short-circuit? It's fine.
+
+Fix option 2: Normalize `f.importo()` to same scale as total? Not minimal.
+
+Fix option 3: In the main method, create invoice with `new BigDecimal("120.00")` but that's not general.
+
+The smallest fix likely is to change the condition to use numeric comparison that ignores scale. Or we could make the invoice amount normalized when creating. But the bug is in the logic, so the fix should be in `fattureNonSaldate`.
+
+Simplest fix: In the loop, replace `!pagato.equals(f.importo())` with `pagato.compareTo(f.importo()) != 0`. This avoids the equals scale issue and is one line change. But the user asks for "correzione più piccola possibile". Changing one line is good.
+
+Alternatively, we can remove `true` argument? No.
+
+Let's see if there is an even smaller fix: Just compare with `!pagato.compareTo(f.importo()).equals(BigDecimal.ZERO)`? No, just `pagato.compareTo(f.importo()) != 0`. That's clean.
+
+But wait: `BigDecimal.compareTo` returns negative if this < other, zero if equal, positive if greater. So `pagato.compareTo(f.importo()) != 0` means not equal. That works.
+
+However, `BigDecimal.compareTo` is also method: `public int compareTo(BigDecimal other)`. It is available in Java 8+. The code already uses records, so Java 16+. Fine.
+
+So proposed fix:
+
+Change:
+```java
+if (!pagato.equals(f.importo())) {
+```
+to:
+```java
+if (pagato.compareTo(f.importo()) != 0) {
+```
+
+Explain: `BigDecimal.equals` considers different scales as unequal even when the numeric value is identical (e.g., `120` vs `120.00`). The payment `120` (scale 0) is therefore treated as not fully covering the invoice amount `120.00` (scale 2). Using `compareTo` compares the numeric values directly, so it correctly treats them as equal.
+
+Is this the smallest possible? It's a one-line change in the if condition. The user wants "proponi la correzione più piccola possibile". So I should present this as the fix.
+
+But I need to be careful: does `compareTo` also suffer from scale? No, `compareTo` returns the sign of the difference, based on numeric value. It should be fine.
+
+Let's double-check if there is any other bug that might be more obvious. The `OUT.println` writes to `FileDescriptor.out` via FileOutputStream. Could that cause weird behavior? No, it's just output redirection. The logic remains same.
+
+What about `BigDecimal::add` in merge? For F-002, two payments of 40.25: `40.25 + 40.25 = 80.5`. Invoice is `80.50`. Is `80.5` equal to `80.50`? Same potential issue. But maybe `80.5` from addition has scale 2? Actually 40.25 scale 2 + 40.25 scale 2 = 80.50 scale 2? The result of `add` will have scale max of operands? If both scale 2, result scale likely 2 or more. So `80.50` vs `80.50` likely match. But for F-001, since there's only one payment, scale is whatever `new BigDecimal("120")` gives (likely scale 0). So F-001 mismatches. That fits: only F-001 is falsely flagged because there is no carry into scale.
+
+So the explanation should mention scale: the payment amount has scale 0 (no decimal places), while the invoice amount has scale 2 (`120.00`). `BigDecimal.equals` is strict about the exact scale, so they compare as different even though the numeric value is the same.
+
+Wait, is `new BigDecimal("120")` scale 0? I think yes. When you parse "120", there are no decimal digits, so the scale is 0. The decimal point isn't there. In contrast, "120.00" has two zeros after the point, scale 2. So indeed scales differ. This is the root.
+
+Thus final answer should be in Italian, concise but covering:
+- Identify bug: `BigDecimal.equals` is strict regarding scale/precision. `new BigDecimal("120")` (scale 0) is not considered equal to `new BigDecimal("120.00")` (scale 2) even though mathematically equal. Consequently, F-001's full payment appears unpaid.
+- Briefly explain: the comparison `!pagato.equals(f.importo())` fails for F-001 because the total paid `120` has a different scale than the invoice amount `120.00`, so `equals` returns false.
+- Smallest fix: replace the condition with a numeric comparison that ignores scale, e.g. `pagato.compareTo(f.importo()) != 0` instead of `!pagato.equals(f.importo())`. Only change that one comparison. Or optionally mention removing `!` and using compareTo.
+
+I should provide the corrected snippet for the method `fattureNonSaldate` or just the changed line. The user asks to "proponi la correzione più piccola possibile". I can give the corrected code snippet for the condition, or show the whole method? Better to show the specific change clearly.
+
+Let's craft the response:
+
+**Bug:** In `fattureNonSaldate`, il confronto `!pagato.equals(f.importo())` usa `BigDecimal.equals`, che distingue la scala delle due `BigDecimal` anche se rappresentano lo stesso valore numerico. Il pagamento per F-001 è `new BigDecimal("120")` (scala 0) mentre la fattura è `new BigDecimal("120.00")` (scala 2); per questo `equals` restituisce `false`, anche se 120 == 120. F-001 viene quindi sbilanciato anche se pagato al 100%.
+
+**Spiegazione:** `BigDecimal` non normalizza automaticamente; `120` e `120.00` sono numericamente identici ma hanno precisioni diverse. L'uguaglianza bitwise/scale-diverta li considera diversi.
+
+**Correzione minima:** Cambiare l'if nel ciclo a una comparazione numerica indifferenza scala:
+```java
+if (pagato.compareTo(f.importo()) != 0) {
+```
+invece di `if (!pagato.equals(f.importo())) {`. È l'unico change rilevante nel `fattureNonSaldate`.
+
+I should present the corrected method snippet maybe:
+
+```java
+        List<String> nonSaldate = new ArrayList<>();
+        for (Fattura f : fatture) {
+            BigDecimal pagato = totalePagato.getOrDefault(f.numero(), BigDecimal.ZERO);
+            if (pagato.compareTo(f.importo()) != 0) { // sostituito equals
+                nonSaldate.add(f.numero());
+            }
+        }
+        return nonSaldate;
+```
+
+Also mention that `compareTo` returns 0 when values are equal, so `!= 0` correctly identifies imbalance. This is the smallest possible fix.
+
+I need to ensure I answer exactly what is asked: "Trova il bug, spiega in poche righe perché succede e proponi la correzione più piccola possibile." So structure the answer with these three parts clearly.
+
+Also should I mention that the expected output is just F-003? The user already stated that. I can confirm.
+
+Let's draft in Italian:
+
+"Il bug è nel controllo all'interno di `fattureNonSaldate`. Il problema è `!pagato.equals(f.importo())`. `BigDecimal.equals` è nudo sul valore esatto, inclusa la scala: `new BigDecimal("120")` ha scala 0 mentre `new BigDecimal("120.00")` ha scala 2. Essendo diversi per scala, `equals` restituisce `false`, anche se i valori numerici sono uguali. Per questo F-001 appare come non saldata anche dopo un pagamento esatto di 120.
+
+Perché succede: l'importo del pagamento viene accumulato come `120`, senza i due zeri decimali, quindi lo store interno di BigDecimal differisce da `120.00`. La normale uguaglianza di stringhe/valori non bypassa questa regola.
+
+Correzione minima: sostituisci `!pagato.equals(f.importo())` con `pagato.compareTo(f.importo()) != 0` nella riga del loop. `compareTo` confronta i valori numerici e ritorna 0 se equivalenti, indipendentemente dalla scala. È un unico cambio:"
+
+Then show the corrected snippet.
+
+I think that's solid. I'll produce a concise but complete answer in Italian. The user likely wants a direct answer without too much fluff. Keep explanation "in poche righe". I'll make sure it's not too verbose but covers the essentials.
+
+Check if there is any alternative smaller fix: Could we change `f.importo()` to `new BigDecimal(String.valueOf(f.importo()))`? No, that's larger. Could we add `.stripDigitScaling()`? Not in Java. `compareTo` is best.
+
+One nuance: `pagato.compareTo(f.importo()) != 0` works but need to ensure `pagato` is not null. `getOrDefault` returns `BigDecimal.ZERO` if absent, so safe. `compareTo` is well-defined for ZERO vs importo.
+
+Also, if we want to be extra safe, we could write:
+```java
+if (!pagato.compareTo(f.importo()).equals(0L)) ...
+```
+But no need; `int != 0` is fine.
+
+Let's verify: `compareTo` returns `int`. `!= 0` is fine.
+
+So final answer: present bug, brief reason, smallest fix.
+
+I'll write it clearly.
+
+Structure:
+1. Paragrafo conciso sul bug: specifica la riga.
+2. Spiegazione in poche righe (1-2 sentences).
+3. Proposta correzione minima: il codice della modifica.
+
+Make sure to not over-explain but be precise.
+
+I'll produce the final answer now.
+
+=== Risposta ===
+Il bug è nella condizione di `fattureNonSaldate`:
+
+```java
+if (!pagato.equals(f.importo())) {
+```
+
+`BigDecimal.equals` confronta i valori **compresi la scala**.  
+Il pagamento per F-001 è `new BigDecimal("120")` (scala 0), mentre l'importo della fattura è `new BigDecimal("120.00")` (scala 2). Essendo diverse per scala, `equals` restituisce `false` anche quando i numeri sono identici; per questo la fattura pare parzialmente pagata e finisce nella lista non saldate, anche se il saldo è esattamente 120.
+
+**Perché succede:** `BigDecimal` non “svuota” gli zeri o normalizza le scale all'istante; il numero `120` e il numero `120.00` hanno lo stesso valore ma una rappresentazione interna diversa, e `equals` li considera quindi non uguali.
+
+**Correzione minima:** sostituisci il confronto `equals` con un confronto numerico basato su `compareTo`, che ignora la scala:
+
+```java
+// prima
+if (!pagato.equals(f.importo())) {
+
+// dopo
+if (pagato.compareTo(f.importo()) != 0) {
+```
+
+È l'unico cambio necessario nella logica; `compareTo` ritorna `0` quando i valori sono uguali, indipendentemente dalla scala, quindi il bug scompare con questa modifica singola.
+
+Tempo totale: 763.9 secondi
+Token generati: 7044
+Velocità di generazione: 9.5 token/s

@@ -1,0 +1,7 @@
+Domanda inviata a http://localhost:8080, aspetto la risposta...
+
+Exception in thread "main" java.net.http.HttpTimeoutException: request timed out
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:954)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at dory.ChiediAlModello.esegui(ChiediAlModello.java:67)
+	at dory.ChiediAlModello.main(ChiediAlModello.java:32)
