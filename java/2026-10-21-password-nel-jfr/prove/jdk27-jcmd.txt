@@ -1,0 +1,7 @@
+jcmd VM.system_properties:
+db.pass=SEGRETO3
+db.password=SEGRETO2
+db.url=jdbc\:postgresql\://db\:5432/pratiche?user\=app&password\=SEGRETO1
+
+jcmd VM.command_line:
+jvm_args: -XX:StartFlightRecording:filename=prove/jdk27-jcmd.jfr -Ddb.url=jdbc:postgresql://db:5432/pratiche?user=app&password=SEGRETO1 -Ddb.password=SEGRETO2 -Ddb.pass=SEGRETO3 --add-modules=ALL-DEFAULT 

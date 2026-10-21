@@ -1,0 +1,20 @@
+Java 21.0.12.1+12-LTS
+-Ddb.url       jdbc:postgresql://db:5432/pratiche?user=app&password=SEGRETO1
+-Ddb.password  SEGRETO2
+-Ddb.pass      SEGRETO3
+DATABASE_URL   postgres://app:SEGRETO4@db:5432/pratiche
+DB_PASSWORD    SEGRETO5
+DB_PASS        SEGRETO6
+
+Nella registrazione prove/jdk21.jfr:
+  jvmArguments = "-XX:StartFlightRecording:filename=prove/jdk21.jfr -Ddb.url=jdbc:postgresql://db:5432/pratiche?user=app&password=SEGRETO1 -Ddb.password=SEGRETO2 -Ddb.pass=SEGRETO3 --add-modules=ALL-DEFAULT"
+  javaArguments = "jdk.compiler/com.sun.tools.javac.launcher.Main servizio/Servizio.java 0"
+  db.url = "jdbc:postgresql://db:5432/pratiche?user=app&password=SEGRETO1"
+  db.password = "SEGRETO2"
+  db.pass = "SEGRETO3"
+  PWD = "<cartella>"
+  DATABASE_URL = "postgres://app:SEGRETO4@db:5432/pratiche"
+  DB_PASSWORD = "SEGRETO5"
+  DB_PASS = "SEGRETO6"
+
+Segreti che si leggono nel file: SEGRETO1 SEGRETO2 SEGRETO3 SEGRETO4 SEGRETO5 SEGRETO6

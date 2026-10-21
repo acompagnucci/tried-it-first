@@ -1,0 +1,20 @@
+Java 27+35-FR
+-Ddb.url       jdbc:postgresql://db:5432/pratiche?user=app&password=SEGRETO1
+-Ddb.password  SEGRETO2
+-Ddb.pass      SEGRETO3
+DATABASE_URL   postgres://app:SEGRETO4@db:5432/pratiche
+DB_PASSWORD    SEGRETO5
+DB_PASS        SEGRETO6
+
+Nella registrazione prove/jdk27.jfr:
+  jvmArguments = "-XX:StartFlightRecording:filename=prove/jdk27.jfr [REDACTED] [REDACTED] -Ddb.pass=SEGRETO3 --add-modules=ALL-DEFAULT"
+  javaArguments = "jdk.compiler/com.sun.tools.javac.launcher.SourceLauncher servizio/Servizio.java 0"
+  db.pass = "SEGRETO3"
+  db.password = "[REDACTED]"
+  db.url = "jdbc:postgresql://db:5432/pratiche?user=app&password=SEGRETO1"
+  DATABASE_URL = "postgres://app:SEGRETO4@db:5432/pratiche"
+  PWD = "[REDACTED]"
+  DB_PASSWORD = "[REDACTED]"
+  DB_PASS = "SEGRETO6"
+
+Segreti che si leggono nel file: SEGRETO1 SEGRETO3 SEGRETO4 SEGRETO6
