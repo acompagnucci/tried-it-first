@@ -1,0 +1,266 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Tried It First - una Lambda che pubblica sullo stesso bus EventBridge che la attiva.
+  Cinque copie: protezione dai loop attiva o tolta, SDK Java di versioni diverse.
+
+Globals:
+  Function:
+    Runtime: java21
+    Architectures: [arm64]
+    Handler: giro.Giro::handleRequest
+    MemorySize: 512
+    Timeout: 30
+    Environment:
+      Variables:
+        BUS: !Ref Bus
+    EventInvokeConfig:
+      MaximumRetryAttempts: 0
+      DestinationConfig:
+        OnFailure:
+          Type: SQS
+          Destination: !GetAtt Fermati.Arn
+
+Resources:
+  Bus:
+    Type: AWS::Events::EventBus
+    Properties:
+      Name: tried-it-first-giro
+
+  Fermati:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: tried-it-first-fermati
+      MessageRetentionPeriod: 86400
+
+  Coda:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: tried-it-first-giro-sqs
+      MessageRetentionPeriod: 86400
+      VisibilityTimeout: 30
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt Fermati.Arn
+        maxReceiveCount: 2
+
+  Ruolo:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: giro
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: events:PutEvents
+                Resource: !GetAtt Bus.Arn
+              - Effect: Allow
+                Action: sqs:SendMessage
+                Resource:
+                  - !GetAtt Fermati.Arn
+                  - !GetAtt Coda.Arn
+              - Effect: Allow
+                Action:
+                  - sqs:ReceiveMessage
+                  - sqs:DeleteMessage
+                  - sqs:GetQueueAttributes
+                Resource: !GetAtt Coda.Arn
+
+  LogProtetta:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-protetta
+      RetentionInDays: 1
+
+  Protetta:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-protetta
+      CodeUri: pacchetti/giro-2.46.7.jar
+      Role: !GetAtt Ruolo.Arn
+      LoggingConfig:
+        LogGroup: !Ref LogProtetta
+      Events:
+        Giro:
+          Type: EventBridgeRule
+          Properties:
+            EventBusName: !Ref Bus
+            Pattern:
+              source: [tried-it-first]
+              detail:
+                prova: [protetta]
+            RetryPolicy:
+              MaximumRetryAttempts: 0
+
+  LogLibera:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-libera
+      RetentionInDays: 1
+
+  Libera:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-libera
+      CodeUri: pacchetti/giro-2.46.7.jar
+      Role: !GetAtt Ruolo.Arn
+      RecursiveLoop: Allow
+      LoggingConfig:
+        LogGroup: !Ref LogLibera
+      Events:
+        Giro:
+          Type: EventBridgeRule
+          Properties:
+            EventBusName: !Ref Bus
+            Pattern:
+              source: [tried-it-first]
+              detail:
+                prova: [libera]
+            RetryPolicy:
+              MaximumRetryAttempts: 0
+
+  LogSdk217135:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-sdk-2-17-135
+      RetentionInDays: 1
+
+  Sdk217135:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-sdk-2-17-135
+      CodeUri: pacchetti/giro-2.17.135.jar
+      Role: !GetAtt Ruolo.Arn
+      LoggingConfig:
+        LogGroup: !Ref LogSdk217135
+      Events:
+        Giro:
+          Type: EventBridgeRule
+          Properties:
+            EventBusName: !Ref Bus
+            Pattern:
+              source: [tried-it-first]
+              detail:
+                prova: [sdk-2.17.135]
+            RetryPolicy:
+              MaximumRetryAttempts: 0
+
+  LogSdk22123:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-sdk-2-21-23
+      RetentionInDays: 1
+
+  Sdk22123:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-sdk-2-21-23
+      CodeUri: pacchetti/giro-2.21.23.jar
+      Role: !GetAtt Ruolo.Arn
+      LoggingConfig:
+        LogGroup: !Ref LogSdk22123
+      Events:
+        Giro:
+          Type: EventBridgeRule
+          Properties:
+            EventBusName: !Ref Bus
+            Pattern:
+              source: [tried-it-first]
+              detail:
+                prova: [sdk-2.21.23]
+            RetryPolicy:
+              MaximumRetryAttempts: 0
+
+  LogSdk22124:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-sdk-2-21-24
+      RetentionInDays: 1
+
+  Sdk22124:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-sdk-2-21-24
+      CodeUri: pacchetti/giro-2.21.24.jar
+      Role: !GetAtt Ruolo.Arn
+      LoggingConfig:
+        LogGroup: !Ref LogSdk22124
+      Events:
+        Giro:
+          Type: EventBridgeRule
+          Properties:
+            EventBusName: !Ref Bus
+            Pattern:
+              source: [tried-it-first]
+              detail:
+                prova: [sdk-2.21.24]
+            RetryPolicy:
+              MaximumRetryAttempts: 0
+
+  LogNode:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-node
+      RetentionInDays: 1
+
+  Node:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-node
+      CodeUri: giro-node/
+      Runtime: nodejs24.x
+      Handler: index.handler
+      Role: !GetAtt Ruolo.Arn
+      LoggingConfig:
+        LogGroup: !Ref LogNode
+      Events:
+        Giro:
+          Type: EventBridgeRule
+          Properties:
+            EventBusName: !Ref Bus
+            Pattern:
+              source: [tried-it-first]
+              detail:
+                prova: [node]
+            RetryPolicy:
+              MaximumRetryAttempts: 0
+
+  LogSqs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-sqs
+      RetentionInDays: 1
+
+  Sqs:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-sqs
+      CodeUri: pacchetti/giro-2.46.7.jar
+      Handler: giro.GiroSqs::handleRequest
+      Role: !GetAtt Ruolo.Arn
+      Environment:
+        Variables:
+          CODA: !Ref Coda
+      LoggingConfig:
+        LogGroup: !Ref LogSqs
+      Events:
+        Giro:
+          Type: SQS
+          Properties:
+            Queue: !GetAtt Coda.Arn
+            BatchSize: 1
+
+Outputs:
+  Bus:
+    Value: !Ref Bus
+  CodaFermati:
+    Value: !Ref Fermati

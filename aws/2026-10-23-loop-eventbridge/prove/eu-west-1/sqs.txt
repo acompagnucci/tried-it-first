@@ -1,0 +1,16 @@
+1792737413064	prova=sqs giro=1 sdk=2.46.7 variabile=null proprieta=Root=1-6adb0083-3577425e46c8ecb020f29dda;Parent=5b58581651a3fdc4;Sampled=0;Lineage=1:42cef882:0
+1792737417615	prova=sqs giro=2 sdk=2.46.7 variabile=null proprieta=Root=1-6adb0087-4dd6f1bf1be2af9be697be76;Parent=2c9d16b77cba4fce;Sampled=0;Lineage=2:42cef882:1
+1792737420419	prova=sqs giro=3 sdk=2.46.7 variabile=null proprieta=Root=1-6adb008c-2af49f75638e01b4dbdf8616;Parent=6662670238ee4603;Sampled=0;Lineage=3:42cef882:2
+1792737420451	prova=sqs giro=4 sdk=2.46.7 variabile=null proprieta=Root=1-6adb008c-dc3b1cc5af38c0cdf5097d67;Parent=05737b5a3cf69ddc;Sampled=0;Lineage=4:42cef882:3
+1792737420475	prova=sqs giro=5 sdk=2.46.7 variabile=null proprieta=Root=1-6adb008c-460e34e20512949a29a5df30;Parent=180ff4815b85744d;Sampled=0;Lineage=5:42cef882:4
+1792737420505	prova=sqs giro=6 sdk=2.46.7 variabile=null proprieta=Root=1-6adb008c-b3ca8a1a4150fc1c8843ea76;Parent=40f18f15639bd999;Sampled=0;Lineage=6:42cef882:5
+1792737420667	prova=sqs giro=7 sdk=2.46.7 variabile=null proprieta=Root=1-6adb008c-c83d47d6bd287fae4ef2e576;Parent=26ef846cf9ae4f19;Sampled=0;Lineage=7:42cef882:6
+1792737420696	prova=sqs giro=8 sdk=2.46.7 variabile=null proprieta=Root=1-6adb008c-2caabad95db3de268c94041d;Parent=292049173c8df73f;Sampled=0;Lineage=8:42cef882:7
+1792737420762	prova=sqs giro=9 sdk=2.46.7 variabile=null proprieta=Root=1-6adb008c-15ff2bedf858381114b273fa;Parent=65eba9a27565dfbf;Sampled=0;Lineage=9:42cef882:8
+1792737420779	prova=sqs giro=10 sdk=2.46.7 variabile=null proprieta=Root=1-6adb008c-29732725159cdf8aec6b3d4f;Parent=2deabe57a493ff06;Sampled=0;Lineage=10:42cef882:9
+1792737420796	prova=sqs giro=11 sdk=2.46.7 variabile=null proprieta=Root=1-6adb008c-4fa9cfa935ebf3f876af1716;Parent=22363a1ee1b6ffa1;Sampled=0;Lineage=11:42cef882:10
+1792737420856	prova=sqs giro=12 sdk=2.46.7 variabile=null proprieta=Root=1-6adb008c-13892c9671028410833c2bb0;Parent=7b91e78cacee7f75;Sampled=0;Lineage=12:42cef882:11
+1792737420881	prova=sqs giro=13 sdk=2.46.7 variabile=null proprieta=Root=1-6adb008c-53960a1adabbc82ee57fd2b4;Parent=615c6aae23c2483b;Sampled=0;Lineage=13:42cef882:12
+1792737420899	prova=sqs giro=14 sdk=2.46.7 variabile=null proprieta=Root=1-6adb008c-2aa82bc3ac7946ab28270d4e;Parent=3298edac5df6f1c3;Sampled=0;Lineage=14:42cef882:13
+1792737420929	prova=sqs giro=15 sdk=2.46.7 variabile=null proprieta=Root=1-6adb008c-705429dd68bbc930d3c7fd91;Parent=51954329533724a4;Sampled=0;Lineage=15:42cef882:14
+1792737420953	prova=sqs giro=16 sdk=2.46.7 variabile=null proprieta=Root=1-6adb008c-d905e95be86b43fd94514084;Parent=6c97d2fef9229554;Sampled=0;Lineage=16:42cef882:15

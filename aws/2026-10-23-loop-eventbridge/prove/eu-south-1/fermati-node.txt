@@ -1,0 +1,10 @@
+RecursiveInvocationsDropped dalle 2026-10-23T04:12:00Z alle 2026-10-23T07:12:00Z
+  tried-it-first-protetta: None
+  tried-it-first-libera: None
+  tried-it-first-sdk-2-17-135: None
+  tried-it-first-sdk-2-21-23: None
+  tried-it-first-sdk-2-21-24: None
+  tried-it-first-node: None
+  tried-it-first-sqs: 2.0
+Corpo dei messaggi nella coda tried-it-first-fermati:
+None

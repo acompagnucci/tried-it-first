@@ -1,0 +1,16 @@
+1792737043095	prova=sqs giro=1 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff11-79999bba5a51af847e366310;Parent=0e61209cef5b6679;Sampled=0;Lineage=1:693b1a96:0
+1792737046896	prova=sqs giro=2 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff15-c887476937e19100e552e0d9;Parent=454768ad12931d36;Sampled=0;Lineage=2:693b1a96:1
+1792737049315	prova=sqs giro=3 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff19-b007e71b95e4a74aaff2b4f8;Parent=101d541601691f11;Sampled=0;Lineage=3:693b1a96:2
+1792737049343	prova=sqs giro=4 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff19-31fbc23ad2a1dad1e03a2cbe;Parent=38e407dccb5eb934;Sampled=0;Lineage=4:693b1a96:3
+1792737049377	prova=sqs giro=5 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff19-015ac4efeacb21645a8ab255;Parent=55a8864cfcbb5e9d;Sampled=0;Lineage=5:693b1a96:4
+1792737049403	prova=sqs giro=6 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff19-87cef741f65214995a311f17;Parent=7e1aa0ac38f10c7a;Sampled=0;Lineage=6:693b1a96:5
+1792737049425	prova=sqs giro=7 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff19-1aceff2b67476fabfa8c2a98;Parent=1641cf71af10c886;Sampled=0;Lineage=7:693b1a96:6
+1792737049513	prova=sqs giro=8 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff19-d82e93ad253745a1a1b20fbb;Parent=14ebd3dadf902a59;Sampled=0;Lineage=8:693b1a96:7
+1792737049629	prova=sqs giro=9 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff19-f45cb5da54fdb7aed71fab16;Parent=51e9e7b0d6fe6540;Sampled=0;Lineage=9:693b1a96:8
+1792737049656	prova=sqs giro=10 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff19-52943a39503443b274e193cb;Parent=295145e38826d430;Sampled=0;Lineage=10:693b1a96:9
+1792737049675	prova=sqs giro=11 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff19-cb005a01f58c2fa32acedd27;Parent=3be5775e2fe99575;Sampled=0;Lineage=11:693b1a96:10
+1792737049746	prova=sqs giro=12 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff19-9626f5b340ce53a8113314c5;Parent=3ad9bd74c4ecf587;Sampled=0;Lineage=12:693b1a96:11
+1792737049762	prova=sqs giro=13 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff19-7553d4f8ea08af33a80d806c;Parent=383f8f49b4237190;Sampled=0;Lineage=13:693b1a96:12
+1792737049806	prova=sqs giro=14 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff19-488d48b61e9e7b8dca8ea29c;Parent=1974077f8edfe81a;Sampled=0;Lineage=14:693b1a96:13
+1792737049822	prova=sqs giro=15 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff19-c9167eef7a5dbb682f033db6;Parent=50ec70b9f41d6977;Sampled=0;Lineage=15:693b1a96:14
+1792737049840	prova=sqs giro=16 sdk=2.46.7 variabile=null proprieta=Root=1-6adaff19-bcac0d8028785a93b8c68c1e;Parent=66bdb7275a140755;Sampled=0;Lineage=16:693b1a96:15
