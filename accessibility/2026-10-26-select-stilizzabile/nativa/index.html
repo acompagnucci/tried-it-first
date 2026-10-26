@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuovo bonifico</title>
+<link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+<main class="app">
+  <header class="barra">
+    <h1 class="titolo">Nuovo bonifico</h1>
+  </header>
+
+  <form onsubmit="alert('Paghi dal conto ' + this.conto.value); return false;">
+    <div class="campo">
+      <label for="conto">Paga dal conto</label>
+      <select id="conto" name="conto" class="conto">
+        <button><selectedcontent></selectedcontent></button>
+        <option value="4821" selected>
+          <img src="../img/icona-corrente.svg" alt="" width="40" height="40">
+          <span class="nome">Conto corrente <span class="cifre">•••• 4821</span></span>
+          <span class="saldo">1.250,40 €</span>
+        </option>
+        <option value="1093">
+          <img src="../img/icona-deposito.svg" alt="" width="40" height="40">
+          <span class="nome">Conto deposito <span class="cifre">•••• 1093</span></span>
+          <span class="saldo">12.000,00 €</span>
+        </option>
+        <option value="7710">
+          <img src="../img/icona-prepagata.svg" alt="" width="40" height="40">
+          <span class="nome">Carta prepagata <span class="cifre">•••• 7710</span></span>
+          <span class="saldo">86,15 €</span>
+        </option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="importo">Importo in euro</label>
+      <input id="importo" type="text" inputmode="decimal">
+    </div>
+    <button class="bottone" type="submit">Continua</button>
+  </form>
+</main>
+</body>
+</html>

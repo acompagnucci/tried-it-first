@@ -1,0 +1,7 @@
+Titolo: "heading level 1, Nuovo bonifico"
+Paga dal conto, chiusa: "Carta prepagata •••• 7710 86,15 €, Paga dal conto, collapsed, pop up button, group"
+Paga dal conto, aperta: "Carta prepagata •••• 7710 86,15 €, Paga dal conto, expanded, pop up button, group"
+Conto deposito: "Conto deposito •••• 1093 12.000,00 €, menu item"
+Paga dal conto, dopo la scelta: "Conto deposito •••• 1093 12.000,00 €, Paga dal conto, collapsed, pop up button, group"
+Importo: "Importo in euro, edit text"
+Continua: "Continua, button"

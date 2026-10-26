@@ -1,0 +1,8 @@
+Titolo: "Nuovo bonifico"
+Paga dal conto, chiusa: "86,15 €, Paga dal conto, collapsed, pop up button, group"
+Paga dal conto, aperta: "86,15 €, Paga dal conto, expanded, pop up button, group"
+Conto deposito: "12.000,00 €, menu item"
+Conto corrente: "1.250,40 €, menu item"
+Paga dal conto, dopo la scelta: "1.250,40 €, Paga dal conto, collapsed, pop up button, group"
+Importo: "Importo in euro, edit text"
+Continua: "Continua, button"

@@ -1,0 +1,108 @@
+{
+  "fatta-a-mano": {
+    "violazioni": [],
+    "chiusa": [
+      "heading: \"Nuovo bonifico\"",
+      "StaticText: \"Paga dal conto\"",
+      "StaticText: \"Conto corrente\"",
+      "StaticText: \"•••• 4821\"",
+      "StaticText: \"1.250,40 €\"",
+      "StaticText: \"Importo in euro\"",
+      "textbox: \"Importo in euro\"",
+      "button: \"Continua\""
+    ],
+    "aperta": [
+      "heading: \"Nuovo bonifico\"",
+      "StaticText: \"Paga dal conto\"",
+      "StaticText: \"Conto corrente\"",
+      "StaticText: \"•••• 4821\"",
+      "StaticText: \"1.250,40 €\"",
+      "StaticText: \"Conto corrente\"",
+      "StaticText: \"•••• 4821\"",
+      "StaticText: \"1.250,40 €\"",
+      "StaticText: \"Conto deposito\"",
+      "StaticText: \"•••• 1093\"",
+      "StaticText: \"12.000,00 €\"",
+      "StaticText: \"Carta prepagata\"",
+      "StaticText: \"•••• 7710\"",
+      "StaticText: \"86,15 €\"",
+      "StaticText: \"Importo in euro\"",
+      "textbox: \"Importo in euro\"",
+      "button: \"Continua\""
+    ],
+    "tab": [
+      "Importo in euro",
+      "Continua"
+    ],
+    "tastiera": "non raggiungibile: il primo Tab va su \"Importo in euro\""
+  },
+  "nativa": {
+    "violazioni": [],
+    "chiusa": [
+      "heading: \"Nuovo bonifico\"",
+      "StaticText: \"Paga dal conto\"",
+      "combobox: \"Paga dal conto\"",
+      "option: \"Conto corrente •••• 4821 1.250,40 €\"",
+      "option: \"Conto deposito •••• 1093 12.000,00 €\"",
+      "option: \"Carta prepagata •••• 7710 86,15 €\"",
+      "StaticText: \"Importo in euro\"",
+      "textbox: \"Importo in euro\"",
+      "button: \"Continua\""
+    ],
+    "aperta": [
+      "heading: \"Nuovo bonifico\"",
+      "StaticText: \"Paga dal conto\"",
+      "combobox: \"Paga dal conto\"",
+      "option: \"Conto corrente •••• 4821 1.250,40 €\"",
+      "option: \"Conto deposito •••• 1093 12.000,00 €\"",
+      "option: \"Carta prepagata •••• 7710 86,15 €\"",
+      "StaticText: \"Importo in euro\"",
+      "textbox: \"Importo in euro\"",
+      "button: \"Continua\""
+    ],
+    "tab": [
+      "Paga dal conto",
+      "Importo in euro",
+      "Continua"
+    ],
+    "tastiera": "Spazio, freccia giù, Invio: conto 1093"
+  },
+  "solo-immagini": {
+    "violazioni": [
+      {
+        "regola": "image-alt",
+        "impatto": "critical",
+        "descrizione": "Images must have alternative text",
+        "elementi": 4
+      }
+    ],
+    "chiusa": [
+      "heading: \"Nuovo bonifico\"",
+      "StaticText: \"Paga dal conto\"",
+      "combobox: \"Paga dal conto\"",
+      "option: \"1.250,40 €\"",
+      "option: \"12.000,00 €\"",
+      "option: \"86,15 €\"",
+      "StaticText: \"Importo in euro\"",
+      "textbox: \"Importo in euro\"",
+      "button: \"Continua\""
+    ],
+    "aperta": [
+      "heading: \"Nuovo bonifico\"",
+      "StaticText: \"Paga dal conto\"",
+      "combobox: \"Paga dal conto\"",
+      "option: \"1.250,40 €\"",
+      "option: \"12.000,00 €\"",
+      "option: \"86,15 €\"",
+      "StaticText: \"Importo in euro\"",
+      "textbox: \"Importo in euro\"",
+      "button: \"Continua\""
+    ],
+    "tab": [
+      "Paga dal conto",
+      "Importo in euro",
+      "Continua"
+    ],
+    "tastiera": "Spazio, freccia giù, Invio: conto 1093"
+  }
+}

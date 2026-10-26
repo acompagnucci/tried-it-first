@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuovo bonifico</title>
+<link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+<main class="app">
+  <header class="barra">
+    <h1 class="titolo">Nuovo bonifico</h1>
+  </header>
+
+  <form onsubmit="alert('Paghi dal conto ' + this.conto.value); return false;">
+    <input type="hidden" name="conto" value="4821">
+    <div class="campo">
+      <div class="etichetta">Paga dal conto</div>
+      <div class="conto tendina" onclick="apriChiudi()">
+        <div class="voce" id="scelto">
+          <img src="../img/icona-corrente.svg" alt="" width="40" height="40">
+          <span class="nome">Conto corrente <span class="cifre">•••• 4821</span></span>
+          <span class="saldo">1.250,40 €</span>
+        </div>
+        <span class="freccia"></span>
+      </div>
+      <div class="elenco" id="elenco" hidden>
+        <div class="voce scelta" data-conto="4821" onclick="scegli(this)">
+          <img src="../img/icona-corrente.svg" alt="" width="40" height="40">
+          <span class="nome">Conto corrente <span class="cifre">•••• 4821</span></span>
+          <span class="saldo">1.250,40 €</span>
+        </div>
+        <div class="voce" data-conto="1093" onclick="scegli(this)">
+          <img src="../img/icona-deposito.svg" alt="" width="40" height="40">
+          <span class="nome">Conto deposito <span class="cifre">•••• 1093</span></span>
+          <span class="saldo">12.000,00 €</span>
+        </div>
+        <div class="voce" data-conto="7710" onclick="scegli(this)">
+          <img src="../img/icona-prepagata.svg" alt="" width="40" height="40">
+          <span class="nome">Carta prepagata <span class="cifre">•••• 7710</span></span>
+          <span class="saldo">86,15 €</span>
+        </div>
+      </div>
+    </div>
+    <div class="campo">
+      <label for="importo">Importo in euro</label>
+      <input id="importo" type="text" inputmode="decimal">
+    </div>
+    <button class="bottone" type="submit">Continua</button>
+  </form>
+</main>
+<script>
+  const elenco = document.getElementById("elenco");
+
+  function apriChiudi() {
+    elenco.hidden = !elenco.hidden;
+  }
+
+  function scegli(voce) {
+    document.querySelector(".elenco .scelta").classList.remove("scelta");
+    voce.classList.add("scelta");
+    document.getElementById("scelto").replaceChildren(...voce.cloneNode(true).childNodes);
+    document.forms[0].conto.value = voce.dataset.conto;
+    elenco.hidden = true;
+  }
+</script>
+</body>
+</html>

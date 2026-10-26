@@ -16,3 +16,4 @@ Se qualcosa non funziona, apritemi una issue.
 | 2026-10-19 | ai | [Un modello AI con la manopola: Dory a 1, 2 e 4 giri](ai/2026-10-19-dory-giri/) |
 | 2026-10-21 | java | [La password nel file JFR, su JDK 21 e su JDK 27](java/2026-10-21-password-nel-jfr/) |
 | 2026-10-23 | aws | [Il loop su EventBridge che Lambda dovrebbe fermare](aws/2026-10-23-loop-eventbridge/) |
+| 2026-10-26 | accessibility | [La tendina del conto letta da VoiceOver](accessibility/2026-10-26-select-stilizzabile/) |

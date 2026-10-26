@@ -1,0 +1,89 @@
+
+> misura
+> node misura.mjs
+
+
+=== fatta-a-mano ===
+Violazioni axe-core (WCAG 2.2 A/AA): 0 regole, 0 elementi
+Albero di accessibilità, tendina chiusa:
+  heading: "Nuovo bonifico"
+  StaticText: "Paga dal conto"
+  StaticText: "Conto corrente"
+  StaticText: "•••• 4821"
+  StaticText: "1.250,40 €"
+  StaticText: "Importo in euro"
+  textbox: "Importo in euro"
+  button: "Continua"
+Albero di accessibilità, tendina aperta:
+  heading: "Nuovo bonifico"
+  StaticText: "Paga dal conto"
+  StaticText: "Conto corrente"
+  StaticText: "•••• 4821"
+  StaticText: "1.250,40 €"
+  StaticText: "Conto corrente"
+  StaticText: "•••• 4821"
+  StaticText: "1.250,40 €"
+  StaticText: "Conto deposito"
+  StaticText: "•••• 1093"
+  StaticText: "12.000,00 €"
+  StaticText: "Carta prepagata"
+  StaticText: "•••• 7710"
+  StaticText: "86,15 €"
+  StaticText: "Importo in euro"
+  textbox: "Importo in euro"
+  button: "Continua"
+Raggiungibili con Tab (2): Importo in euro → Continua
+Secondo conto solo con la tastiera: non raggiungibile: il primo Tab va su "Importo in euro"
+
+=== nativa ===
+Violazioni axe-core (WCAG 2.2 A/AA): 0 regole, 0 elementi
+Albero di accessibilità, tendina chiusa:
+  heading: "Nuovo bonifico"
+  StaticText: "Paga dal conto"
+  combobox: "Paga dal conto"
+  option: "Conto corrente •••• 4821 1.250,40 €"
+  option: "Conto deposito •••• 1093 12.000,00 €"
+  option: "Carta prepagata •••• 7710 86,15 €"
+  StaticText: "Importo in euro"
+  textbox: "Importo in euro"
+  button: "Continua"
+Albero di accessibilità, tendina aperta:
+  heading: "Nuovo bonifico"
+  StaticText: "Paga dal conto"
+  combobox: "Paga dal conto"
+  option: "Conto corrente •••• 4821 1.250,40 €"
+  option: "Conto deposito •••• 1093 12.000,00 €"
+  option: "Carta prepagata •••• 7710 86,15 €"
+  StaticText: "Importo in euro"
+  textbox: "Importo in euro"
+  button: "Continua"
+Raggiungibili con Tab (3): Paga dal conto → Importo in euro → Continua
+Secondo conto solo con la tastiera: Spazio, freccia giù, Invio: conto 1093
+
+=== solo-immagini ===
+Violazioni axe-core (WCAG 2.2 A/AA): 1 regole, 4 elementi
+  [critical] image-alt: Images must have alternative text (4)
+Albero di accessibilità, tendina chiusa:
+  heading: "Nuovo bonifico"
+  StaticText: "Paga dal conto"
+  combobox: "Paga dal conto"
+  option: "1.250,40 €"
+  option: "12.000,00 €"
+  option: "86,15 €"
+  StaticText: "Importo in euro"
+  textbox: "Importo in euro"
+  button: "Continua"
+Albero di accessibilità, tendina aperta:
+  heading: "Nuovo bonifico"
+  StaticText: "Paga dal conto"
+  combobox: "Paga dal conto"
+  option: "1.250,40 €"
+  option: "12.000,00 €"
+  option: "86,15 €"
+  StaticText: "Importo in euro"
+  textbox: "Importo in euro"
+  button: "Continua"
+Raggiungibili con Tab (3): Paga dal conto → Importo in euro → Continua
+Secondo conto solo con la tastiera: Spazio, freccia giù, Invio: conto 1093
+
+Risultati completi in prove/misura.json, screenshot in prove/

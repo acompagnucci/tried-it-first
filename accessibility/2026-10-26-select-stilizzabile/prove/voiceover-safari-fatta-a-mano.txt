@@ -1,0 +1,5 @@
+Pagina: "Nuovo bonifico, web content"
+Titolo: "heading level 1, Nuovo bonifico, section header"
+Paga dal conto: mai annunciato, dal titolo si passa all'importo
+Importo: "Importo in euro, edit text"
+Continua: "Continua, button"
