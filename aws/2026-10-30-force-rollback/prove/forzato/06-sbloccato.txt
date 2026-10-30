@@ -1,0 +1,6 @@
+tried-it-first-forzato	UPDATE_ROLLBACK_COMPLETE	One or more resources were skipped during UpdateRollback. These resources were not rolled back and may have drifted from the template. Run drift detection (DetectStackDrift) to review their current state before your next update.
+    Bonifici	UPDATE_COMPLETE	Resource skipped during UpdateRollback
+    Configurazione	UPDATE_COMPLETE	Resource skipped during UpdateRollback
+    Notifiche	UPDATE_COMPLETE	None
+tried-it-first-forzato-Notifiche-YQ91K6EWZGNC	UPDATE_ROLLBACK_COMPLETE	None
+    Avvisi	CREATE_COMPLETE	None

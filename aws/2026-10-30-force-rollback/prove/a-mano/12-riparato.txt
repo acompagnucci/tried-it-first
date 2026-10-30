@@ -1,0 +1,8 @@
+tried-it-first-a-mano	UPDATE_COMPLETE	None
+    Bonifici	CREATE_COMPLETE	None
+    Configurazione	UPDATE_COMPLETE	None
+    Notifiche	UPDATE_COMPLETE	None
+tried-it-first-a-mano-Notifiche-H5Y1XF8L6YOI	UPDATE_COMPLETE	None
+    Avvisi	UPDATE_COMPLETE	None
+https://sqs.eu-south-1.amazonaws.com/<account>/tried-it-first-a-mano-Bonifici-E4njziloIy1W 60
+https://sqs.eu-south-1.amazonaws.com/<account>/tried-it-first-a-mano-Notifiche-H5Y1XF8L6YOI-Avvisi-tqTfddnkyT6v 60

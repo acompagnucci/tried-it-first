@@ -1,0 +1,8 @@
+tried-it-first-forzato	UPDATE_ROLLBACK_COMPLETE	None
+    Bonifici	UPDATE_COMPLETE	None
+    Configurazione	UPDATE_COMPLETE	None
+    Notifiche	UPDATE_COMPLETE	None
+tried-it-first-forzato-Notifiche-YQ91K6EWZGNC	UPDATE_ROLLBACK_COMPLETE	One or more resources were skipped during UpdateRollback. These resources were not rolled back and may have drifted from the template. Run drift detection (DetectStackDrift) to review their current state before your next update.
+    Avvisi	UPDATE_COMPLETE	Resource skipped during UpdateRollback
+DELETE_COMPLETE	None
+DELETE_IN_PROGRESS	Resource was originally deleted outside CloudFormation; deleting recreated resource to match resource state before deployment.

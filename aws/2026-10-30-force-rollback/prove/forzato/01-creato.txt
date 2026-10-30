@@ -1,0 +1,6 @@
+tried-it-first-forzato	CREATE_COMPLETE	None
+    Bonifici	CREATE_COMPLETE	None
+    Configurazione	CREATE_COMPLETE	None
+    Notifiche	CREATE_COMPLETE	None
+tried-it-first-forzato-Notifiche-YQ91K6EWZGNC	CREATE_COMPLETE	None
+    Avvisi	CREATE_COMPLETE	None

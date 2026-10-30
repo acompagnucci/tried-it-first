@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Tried It First - una coda, un parametro e uno stack annidato con un'altra coda.
+
+Parameters:
+  Attesa:
+    Type: Number
+    Default: 30
+
+Resources:
+  Bonifici:
+    Type: AWS::SQS::Queue
+    Properties:
+      VisibilityTimeout: !Ref Attesa
+
+  Configurazione:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Type: String
+      Value: !Sub attesa=${Attesa}
+
+  Notifiche:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: annidato.yaml
+      Parameters:
+        Attesa: !Ref Attesa

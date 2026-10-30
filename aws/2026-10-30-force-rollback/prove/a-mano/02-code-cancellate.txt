@@ -1,0 +1,3 @@
+Cancellate a mano, fuori da CloudFormation:
+  https://sqs.eu-south-1.amazonaws.com/<account>/tried-it-first-a-mano-Bonifici-LJRXw9XG0704
+  https://sqs.eu-south-1.amazonaws.com/<account>/tried-it-first-a-mano-Notifiche-H5Y1XF8L6YOI-Avvisi-DEcmU2SU1iy1

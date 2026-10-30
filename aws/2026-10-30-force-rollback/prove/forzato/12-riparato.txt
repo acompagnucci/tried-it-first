@@ -1,0 +1,8 @@
+tried-it-first-forzato	UPDATE_COMPLETE	None
+    Bonifici	CREATE_COMPLETE	None
+    Configurazione	UPDATE_COMPLETE	None
+    Notifiche	UPDATE_COMPLETE	None
+tried-it-first-forzato-Notifiche-YQ91K6EWZGNC	UPDATE_COMPLETE	None
+    Avvisi	UPDATE_COMPLETE	None
+https://sqs.eu-south-1.amazonaws.com/<account>/tried-it-first-forzato-Bonifici-kJk28PSgcOHl 60
+https://sqs.eu-south-1.amazonaws.com/<account>/tried-it-first-forzato-Notifiche-YQ91K6EWZGNC-Avvisi-B6oFbfSgUyGn 60

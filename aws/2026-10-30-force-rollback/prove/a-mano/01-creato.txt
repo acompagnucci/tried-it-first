@@ -1,0 +1,6 @@
+tried-it-first-a-mano	CREATE_COMPLETE	None
+    Bonifici	CREATE_COMPLETE	None
+    Configurazione	CREATE_COMPLETE	None
+    Notifiche	CREATE_COMPLETE	None
+tried-it-first-a-mano-Notifiche-H5Y1XF8L6YOI	CREATE_COMPLETE	None
+    Avvisi	CREATE_COMPLETE	None

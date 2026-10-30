@@ -1,0 +1,6 @@
+tried-it-first-forzato	UPDATE_ROLLBACK_FAILED	The following resource(s) failed to update: [Notifiche]. 
+    Bonifici	CREATE_FAILED	Resource creation cancelled
+    Configurazione	UPDATE_COMPLETE	None
+    Notifiche	UPDATE_FAILED	Embedded stack arn:aws:cloudformation:eu-south-1:<account>:stack/tried-it-first-forzato-Notifiche-YQ91K6EWZGNC/760175a0-d42d-11f1-9bad-0effea801c89 was not successfully updated. Currently in UPDATE_ROLLBACK_FAILED with reason: The following resource(s) failed to update: [Avvisi]. 
+tried-it-first-forzato-Notifiche-YQ91K6EWZGNC	UPDATE_ROLLBACK_FAILED	The following resource(s) failed to update: [Avvisi]. 
+    Avvisi	UPDATE_FAILED	Resource handler returned message: "The specified queue does not exist. (Service: Sqs, Status Code: 400, Request ID: 21a2d00c-a2a7-5d14-9490-b352e2e640c4) (SDK Attempt Count: 1)" (RequestToken: 58aa65ec-e5e2-1490-d974-b77376f88c0d, HandlerErrorCode: NotFound)

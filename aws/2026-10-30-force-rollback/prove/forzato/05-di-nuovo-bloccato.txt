@@ -1,0 +1,6 @@
+tried-it-first-forzato	UPDATE_ROLLBACK_FAILED	The following resource(s) failed to update: [Notifiche, Configurazione, Bonifici]. 
+    Bonifici	UPDATE_FAILED	Resource handler returned message: "The specified queue does not exist. (Service: Sqs, Status Code: 400, Request ID: cf70f3e4-29cd-50d3-8d0b-90ba16126c65) (SDK Attempt Count: 1)" (RequestToken: 507707eb-8d30-6976-5427-3d69387af662, HandlerErrorCode: NotFound)
+    Configurazione	UPDATE_FAILED	Resource update cancelled
+    Notifiche	UPDATE_FAILED	Resource update cancelled
+tried-it-first-forzato-Notifiche-YQ91K6EWZGNC	UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS	None
+    Avvisi	CREATE_COMPLETE	None

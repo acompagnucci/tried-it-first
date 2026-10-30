@@ -1,0 +1,6 @@
+tried-it-first-a-mano	UPDATE_ROLLBACK_FAILED	The following resource(s) failed to update: [Notifiche]. 
+    Bonifici	CREATE_FAILED	Resource creation cancelled
+    Configurazione	UPDATE_COMPLETE	None
+    Notifiche	UPDATE_FAILED	Embedded stack arn:aws:cloudformation:eu-south-1:<account>:stack/tried-it-first-a-mano-Notifiche-H5Y1XF8L6YOI/6a220fb0-d42d-11f1-9b2a-0eb44097d5b1 was not successfully updated. Currently in UPDATE_ROLLBACK_FAILED with reason: The following resource(s) failed to update: [Avvisi]. 
+tried-it-first-a-mano-Notifiche-H5Y1XF8L6YOI	UPDATE_ROLLBACK_FAILED	The following resource(s) failed to update: [Avvisi]. 
+    Avvisi	UPDATE_FAILED	Resource handler returned message: "The specified queue does not exist. (Service: Sqs, Status Code: 400, Request ID: 6cbc4dc6-8a4f-5bde-9107-2e98ca626802) (SDK Attempt Count: 1)" (RequestToken: be6eb528-404a-1d01-e3d6-e7eff5351f16, HandlerErrorCode: NotFound)

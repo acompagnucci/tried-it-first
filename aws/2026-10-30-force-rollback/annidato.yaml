@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Tried It First - stack annidato con una coda.
+
+Parameters:
+  Attesa:
+    Type: Number
+
+Resources:
+  Avvisi:
+    Type: AWS::SQS::Queue
+    Properties:
+      VisibilityTimeout: !Ref Attesa

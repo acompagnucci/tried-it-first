@@ -1,0 +1,3 @@
+Add	Bonifici	DELETED
+Modify	Configurazione	IN_SYNC
+Modify	Notifiche	UNSUPPORTED
