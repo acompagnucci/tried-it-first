@@ -1,0 +1,17 @@
+Domanda inviata a http://127.0.0.1:1976, aspetto la risposta...
+
+=== Risposta ===
+Il bug risiede nel confronto tra il valore di pagamento e il valore dell'importo. Poiché i numeri reali (`BigDecimal`) non vengono confrontati direttamente con il metodo `equals()`, il risultato dipende dalla loro rappresentazione numerica interna. Di conseguenza, `F-001` viene considerato non saldato perché il valore `120.0` di `totalePagato` corrisponde a `120.0` (anche se con precisione diversa), mentre `F-003` viene escluso perché `45.0` non corrisponde a `20.0`.
+
+La correzione più piccola possibile è usare il metodo `compareTo()` per confrontare i valori:
+
+```java
+if (!f.numero().compareTo(totalePagato.get(f.numero())) == 0) {
+    nonSaldate.add(f.numero());
+}
+```
+
+Questo confronto diretto sfrutta la gerarchia dei numeri reali e risolve il problema in modo semplice.
+
+Tempo totale: 5.8 secondi
+Token generati: 219

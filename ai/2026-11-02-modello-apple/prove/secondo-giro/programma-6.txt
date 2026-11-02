@@ -1,0 +1,27 @@
+Domanda inviata a http://127.0.0.1:1976, aspetto la risposta...
+
+=== Risposta ===
+Il bug è nella condizione `if (!pagato.equals(f.importo()))`. Il metodo `equals()` per oggetti di tipo `BigDecimal` confronta solo il valore numerico, ignorando il segno. Di conseguenza, `120.0` viene considerato uguale a `120`, quindi la fattura `F-001` viene erroneamente inclusa nella lista delle fatture non saldate.
+
+La correzione più piccola possibile è usare il metodo `compareTo()` per confrontare i valori con il segno:
+
+```java
+static List<String> fattureNonSaldate(List<Fattura> fatture, List<Pagamento> pagamenti) {
+    Map<String, BigDecimal> totalePagato = new HashMap<>();
+    for (Pagamento p : pagamenti) {
+        totalePagato.merge(p.numeroFattura(), p.importo(), BigDecimal::add);
+    }
+
+    List<String> nonSaldate = new ArrayList<>();
+    for (Fattura f : fatture) {
+        BigDecimal pagato = totalePagato.getOrDefault(f.numero(), BigDecimal.ZERO);
+        if (!pagato.compareTo(f.importo()) == 0) {
+            nonSaldate.add(f.numero());
+        }
+    }
+    return nonSaldate;
+}
+```
+
+Tempo totale: 6.8 secondi
+Token generati: 299

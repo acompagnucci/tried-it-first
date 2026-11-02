@@ -1,0 +1,36 @@
+Domanda inviata a http://127.0.0.1:1976, aspetto la risposta...
+
+=== Risposta ===
+Il bug risiede nel confronto tra `pagato` e `f.importo()`. Poiché `BigDecimal` non implementa il metodo `equals()`, viene usato `equals()` che causa un confronto di valori numerici senza considerare la precisione, producendo false positivi.
+
+La correzione minima è usare il metodo `compareTo()` per confrontare i valori di `BigDecimal`.
+
+```java
+import static java.math.BigDecimal.ZERO;
+
+public class ControlloPagamenti {
+
+    // ... (resto del codice)
+
+    static List<String> fattureNonSaldate(List<Fattura> fatture, List<Pagamento> pagamenti) {
+        Map<String, BigDecimal> totalePagato = new HashMap<>();
+        for (Pagamento p : pagamenti) {
+            totalePagato.merge(p.numeroFattura(), p.importo(), BigDecimal::add);
+        }
+
+        List<String> nonSaldate = new ArrayList<>();
+        for (Fattura f : fatture) {
+            BigDecimal pagato = totalePagato.getOrDefault(f.numero(), ZERO);
+            if (pagato.compareTo(f.importo()) != 0) {
+                nonSaldate.add(f.numero());
+            }
+        }
+        return nonSaldate;
+    }
+
+    // ... (resto del codice)
+}
+```
+
+Tempo totale: 7.0 secondi
+Token generati: 303

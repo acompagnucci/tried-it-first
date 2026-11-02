@@ -1,0 +1,34 @@
+Domanda inviata a http://127.0.0.1:1976, aspetto la risposta...
+
+=== Risposta ===
+Il bug è nel confronto tra il valore totale pagato e il valore della fattura. Il metodo `equals` di `BigDecimal` viene utilizzato, che confronta solo l'identità dei valori, non i loro valori numerici. Di conseguenza, il controllo `if (!pagato.equals(f.importo()))` risulta falso anche quando il valore pagato è diverso dal valore della fattura.
+
+La correzione più piccola possibile è sostituire `equals` con `compareTo`.
+
+```java
+public class ControlloPagamenti {
+
+    // ... (il resto del codice rimane invariato)
+
+    static List<String> fattureNonSaldate(List<Fattura> fatture, List<Pagamento> pagamenti) {
+        Map<String, BigDecimal> totalePagato = new HashMap<>();
+        for (Pagamento p : pagamenti) {
+            totalePagato.merge(p.numeroFattura(), p.importo(), BigDecimal::add);
+        }
+
+        List<String> nonSaldate = new ArrayList<>();
+        for (Fattura f : fatture) {
+            BigDecimal pagato = totalePagato.getOrDefault(f.numero(), BigDecimal.ZERO);
+            if (!pagato.compareTo(f.importo()) != 0) {
+                nonSaldate.add(f.numero());
+            }
+        }
+        return nonSaldate;
+    }
+
+    // ... (il resto del codice rimane invariato)
+}
+```
+
+Tempo totale: 7.4 secondi
+Token generati: 323

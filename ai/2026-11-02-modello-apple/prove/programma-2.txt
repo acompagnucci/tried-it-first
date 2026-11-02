@@ -1,0 +1,17 @@
+Domanda inviata a http://127.0.0.1:1976, aspetto la risposta...
+
+=== Risposta ===
+Il bug è nel confronto tra il totale pagato e l'importo della fattura. Il metodo `equals()` di `BigDecimal` confronta solo il valore numerico, ignorando il segno. Di conseguenza, `BigDecimal(120)` è considerato uguale a `BigDecimal("120.00")`, facendo passare inesaminati i casi in cui il pagamento è negativo.
+
+La correzione minima è invertire il confronto:
+
+```java
+if (pagato.compareTo(f.importo()) != 0) {
+    nonSaldate.add(f.numero());
+}
+```
+
+Questo cambia il confronto in `>` per rilevare differenze anche con segni diversi.
+
+Tempo totale: 4.8 secondi
+Token generati: 155

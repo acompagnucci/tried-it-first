@@ -1,0 +1,63 @@
+=== Prova 1
+            if (!pagato.equals(f.importo())) {
+Fatture non saldate attese:   [F-003]
+Fatture non saldate trovate:  [F-001, F-003]
+ERRORE: il risultato non è quello atteso
+
+=== Prova 2
+            if (pagato.compareTo(f.importo()) != 0) {
+Fatture non saldate attese:   [F-003]
+Fatture non saldate trovate:  [F-003]
+OK
+
+=== Prova 3
+            if (!pagato.compareTo(f.importo()) == 0) {
+fm/ControlloPagamenti.java:31: error: bad operand type int for unary operator '!'
+            if (!pagato.compareTo(f.importo()) == 0) {
+                ^
+
+=== Prova 4
+            if (!pagato.compareTo(f.importo()) == 0) {
+fm/ControlloPagamenti.java:31: error: bad operand type int for unary operator '!'
+            if (!pagato.compareTo(f.importo()) == 0) {
+                ^
+
+=== Prova 5
+            if (!f.numero().compareTo(totalePagato.get(f.numero())) == 0) {
+fm/ControlloPagamenti.java:31: error: method compareTo in class String cannot be applied to given types;
+            if (!f.numero().compareTo(totalePagato.get(f.numero())) == 0) {
+                           ^
+  required: String
+  found:    BigDecimal
+  reason: argument mismatch; BigDecimal cannot be converted to String
+
+=== Prova 6
+            if (!pagato.compareTo(f.importo()) == 0) {
+fm/ControlloPagamenti.java:31: error: bad operand type int for unary operator '!'
+            if (!pagato.compareTo(f.importo()) == 0) {
+                ^
+
+=== Prova 7
+            if (!pagato.compareTo(f.importo()).equals(0)) {
+fm/ControlloPagamenti.java:31: error: int cannot be dereferenced
+            if (!pagato.compareTo(f.importo()).equals(0)) {
+                                              ^
+
+=== Prova 8
+            if (!pagato.compareTo(f.importo()) < 0) {
+fm/ControlloPagamenti.java:31: error: bad operand type int for unary operator '!'
+            if (!pagato.compareTo(f.importo()) < 0) {
+                ^
+
+=== Prova 9
+            if (pagato.compareTo(f.importo()) != 0) {
+Fatture non saldate attese:   [F-003]
+Fatture non saldate trovate:  [F-003]
+OK
+
+=== Prova 10
+            if (!pagato.compareTo(f.importo()) == 0) {
+fm/ControlloPagamenti.java:31: error: bad operand type int for unary operator '!'
+            if (!pagato.compareTo(f.importo()) == 0) {
+                ^
+

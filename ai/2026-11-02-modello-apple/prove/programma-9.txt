@@ -1,0 +1,17 @@
+Domanda inviata a http://127.0.0.1:1976, aspetto la risposta...
+
+=== Risposta ===
+Il bug risiede nel confronto tra `pagato` e `f.importo()`. Poiché `BigDecimal` non implementa il metodo `equals()`, viene usato `equals()` che confronta solo il valore numerico, ignorando il segno. Di conseguenza, viene considerato saldato anche `F-003`, dove l'importo è `45.00`, mentre il pagamento corrisponde a `20.00`.
+
+La correzione minima è sostituire `equals()` con `compareTo()`, che considera il segno:
+
+```java
+if (pagato.compareTo(f.importo()) != 0) {
+    nonSaldate.add(f.numero());
+}
+```
+
+Questa modifica risolve il problema senza alterare il comportamento per gli altri casi.
+
+Tempo totale: 4.9 secondi
+Token generati: 177

@@ -1,0 +1,18 @@
+Domanda inviata a http://127.0.0.1:1976, aspetto la risposta...
+
+=== Risposta ===
+Il bug è nella verifica del saldo: il metodo `if (!pagato.equals(f.importo()))` confronta valori di tipo `BigDecimal` usando l'operatore di uguaglianza (`==`), che verifica solo l'identità dei valori, non i valori stessi. Di conseguenza, viene considerato saldo un importo pari a `120.00` (che è uguale a `120`) anziché `120.00`.
+
+La correzione è usare l'operatore di uguaglianza (`==`) sui valori:
+
+```java
+BigDecimal pagato = totalePagato.getOrDefault(f.numero(), BigDecimal.ZERO);
+if (!pagato.compareTo(f.importo()) == 0) {
+    nonSaldate.add(f.numero());
+}
+```
+
+Questa modifica verifica effettivamente se l'importo pagato è diverso da quello dovuto.
+
+Tempo totale: 5.4 secondi
+Token generati: 199

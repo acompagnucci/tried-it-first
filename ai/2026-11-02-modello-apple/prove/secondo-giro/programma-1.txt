@@ -1,0 +1,17 @@
+Domanda inviata a http://127.0.0.1:1976, aspetto la risposta...
+
+=== Risposta ===
+Il bug risiede nel confronto tra `pagato` e `f.importo()`. Poiché `BigDecimal` non implementa l'operatore di uguaglianza (`==`) come previsto, il controllo `if (!pagato.equals(f.importo()))` risulta falso anche quando esiste una discrepanza minima (es. `120.0` vs `120`).
+
+La correzione minima è usare l'operatore di confronto `!=`:
+
+```java
+if (!pagato.notEquals(f.importo())) {
+    nonSaldate.add(f.numero());
+}
+```
+
+Questa modifica risolve il problema senza alterare il comportamento previsto.
+
+Tempo totale: 4.6 secondi
+Token generati: 155

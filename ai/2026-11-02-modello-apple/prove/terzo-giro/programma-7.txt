@@ -1,0 +1,17 @@
+Domanda inviata a http://127.0.0.1:1976, aspetto la risposta...
+
+=== Risposta ===
+Il bug risiede nel confronto tra `pagato` e `f.importo()`. Poiché `BigDecimal` non implementa `==`, il confronto restituisce `false` anche quando i valori sono uguali. Questo causa un falso positivo per la fattura F-001, poiché `pagato` è uguale a `f.importo()` (entrambi 120.00).
+
+La correzione minima è usare `.compareTo()` per confrontare i valori:
+
+```java
+if (pagato.compareTo(f.importo()) != 0) {
+    nonSaldate.add(f.numero());
+}
+```
+
+Questo corregge il confronto senza modificare la logica principale.
+
+Tempo totale: 4.4 secondi
+Token generati: 155

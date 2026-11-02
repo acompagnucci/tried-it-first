@@ -1,0 +1,23 @@
+Domanda: In Java, does new BigDecimal("1.0").equals(new BigDecimal("1.00")) return true or false? Answer with one word.
+Risposta giusta (verificata con jshell): false
+
+Prova  1: False
+Prova  2: True
+Prova  3: True
+Prova  4: True
+Prova  5: True
+Prova  6: True
+Prova  7: True
+Prova  8: True
+Prova  9: False
+Prova 10: False
+Prova 11: True
+Prova 12: True
+Prova 13: True
+Prova 14: True
+Prova 15: True
+Prova 16: False
+Prova 17: False
+Prova 18: False
+Prova 19: True
+Prova 20: True

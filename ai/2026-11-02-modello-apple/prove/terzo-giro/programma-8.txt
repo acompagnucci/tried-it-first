@@ -1,0 +1,34 @@
+Domanda inviata a http://127.0.0.1:1976, aspetto la risposta...
+
+=== Risposta ===
+Il bug risiede nel confronto tra `pagato` e `f.importo()`. Poiché `BigDecimal` non implementa il metodo `equals()` per oggetti di tipo diverso (es. un oggetto `Fattura` e un oggetto `BigDecimal`), il confronto restituisce sempre `false`. Di conseguenza, il codice segnala solo la fattura `F-003`.
+
+La correzione più piccola possibile è usare il metodo `compareTo()` per confrontare i valori numerici:
+
+```java
+public class ControlloPagamenti {
+
+    // ... (il resto del codice rimane invariato)
+
+    static List<String> fattureNonSaldate(List<Fattura> fatture, List<Pagamento> pagamenti) {
+        Map<String, BigDecimal> totalePagato = new HashMap<>();
+        for (Pagamento p : pagamenti) {
+            totalePagato.merge(p.numeroFattura(), p.importo(), BigDecimal::add);
+        }
+
+        List<String> nonSaldate = new ArrayList<>();
+        for (Fattura f : fatture) {
+            BigDecimal pagato = totalePagato.getOrDefault(f.numero(), BigDecimal.ZERO);
+            if (!pagato.compareTo(f.importo()) == 0) {
+                nonSaldate.add(f.numero());
+            }
+        }
+        return nonSaldate;
+    }
+
+    // ... (il resto del codice rimane invariato)
+}
+```
+
+Tempo totale: 7.3 secondi
+Token generati: 325

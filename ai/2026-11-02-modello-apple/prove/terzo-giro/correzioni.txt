@@ -1,0 +1,60 @@
+=== Prova 1
+            if (pagato.compareTo(f.importo()) < 0) {
+Fatture non saldate attese:   [F-003]
+Fatture non saldate trovate:  [F-003]
+OK
+
+=== Prova 2
+            if (!pagato.compareTo(f.importo()) == 0) {
+fm/ControlloPagamenti.java:31: error: bad operand type int for unary operator '!'
+            if (!pagato.compareTo(f.importo()) == 0) {
+                ^
+
+=== Prova 3
+            if (!pagato.equals(BigDecimal.valueOf(0).add(f.importo()))) {
+Fatture non saldate attese:   [F-003]
+Fatture non saldate trovate:  [F-001, F-003]
+ERRORE: il risultato non è quello atteso
+
+=== Prova 4
+            if (!pagato.compareTo(f.importo()) == 0) {
+fm/ControlloPagamenti.java:31: error: bad operand type int for unary operator '!'
+            if (!pagato.compareTo(f.importo()) == 0) {
+                ^
+
+=== Prova 5
+            if (!pagato.compareTo(f.importo()) == 0) {
+fm/ControlloPagamenti.java:31: error: bad operand type int for unary operator '!'
+            if (!pagato.compareTo(f.importo()) == 0) {
+                ^
+
+=== Prova 6
+            if (pagato.compareTo(f.importo()) != 0) {
+Fatture non saldate attese:   [F-003]
+Fatture non saldate trovate:  [F-003]
+OK
+
+=== Prova 7
+            if (pagato.compareTo(f.importo()) != 0) {
+Fatture non saldate attese:   [F-003]
+Fatture non saldate trovate:  [F-003]
+OK
+
+=== Prova 8
+            if (!pagato.compareTo(f.importo()) == 0) {
+fm/ControlloPagamenti.java:31: error: bad operand type int for unary operator '!'
+            if (!pagato.compareTo(f.importo()) == 0) {
+                ^
+
+=== Prova 9
+            if (!pagato.compareTo(f.importo()) == 0) {
+fm/ControlloPagamenti.java:31: error: bad operand type int for unary operator '!'
+            if (!pagato.compareTo(f.importo()) == 0) {
+                ^
+
+=== Prova 10
+            if (!pagato.doubleValue().equals(f.importo().doubleValue())) {
+fm/ControlloPagamenti.java:31: error: double cannot be dereferenced
+            if (!pagato.doubleValue().equals(f.importo().doubleValue())) {
+                                     ^
+

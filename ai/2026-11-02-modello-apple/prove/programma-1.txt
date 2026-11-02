@@ -1,0 +1,15 @@
+Domanda inviata a http://127.0.0.1:1976, aspetto la risposta...
+
+=== Risposta ===
+Il bug risiede nel confronto tra i valori di importo: il controllo verifica `!pagato.equals(f.importo())`, ma invece dovrebbe verificare l'uguaglianza esatta (`.equals()`) poiché si sta confrontando con un valore di tipo `BigDecimal`.
+
+La correzione minima è modificare il confronto in questo modo:
+
+```java
+if (!pagato.equals(f.importo())) {
+```
+
+Questa modifica risolve il problema senza alterare il comportamento complessivo del programma.
+
+Tempo totale: 4.0 secondi
+Token generati: 115
