@@ -1,0 +1,8 @@
+Java 28-ea+22-1799
+1.200.000 rate in memoria
+   1:       1200000       28800000  rate.Rate$Rata
+   2:       1200292       19204672  java.lang.Integer (java.base@28-ea)
+   3:       1200256       19204096  java.lang.Long (java.base@28-ea)
+   4:       1190004       19040064  java.time.LocalDate (java.base@28-ea)
+Total       4893797       95445632
+prima rata: Rata[idPratica=1000000, scadenza=2027-01-27, centesimi=25000]

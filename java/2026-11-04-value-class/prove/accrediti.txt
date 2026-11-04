@@ -1,0 +1,10 @@
+accrediti/Accrediti.java:25: warning: [identity] attempt to synchronize on an instance of a value-based class
+        synchronized (idConto) {
+        ^
+1 warning
+conto 100: saldo 20.000,00 €, atteso 20.000,00 €
+conto 500: saldo 11.927,25 €, atteso 20.000,00 €
+conto 500: saldo 12.287,46 €, atteso 20.000,00 €
+conto 500: saldo 12.225,01 €, atteso 20.000,00 €
+conto 500: saldo 10.792,58 €, atteso 20.000,00 €
+conto 500: saldo 12.523,65 €, atteso 20.000,00 €

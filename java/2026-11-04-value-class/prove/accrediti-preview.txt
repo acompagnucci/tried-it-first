@@ -1,0 +1,7 @@
+accrediti/Accrediti.java:25: error: unexpected type
+        synchronized (idConto) {
+        ^
+  required: identity class
+  found:    Long
+1 error
+error: compilation failed

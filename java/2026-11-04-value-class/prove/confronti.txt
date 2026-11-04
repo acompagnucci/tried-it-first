@@ -1,0 +1,10 @@
+confronti/Confronti.java:39: warning: [identity] use of a value-based class with an operation that expects reliable identity
+        Map<LocalDate, String> cache = new WeakHashMap<>();
+                                                      ^
+1 warning
+Java 28-ea+22-1799
+pratica 100 == pratica 100: true
+pratica 500 == pratica 500: false
+scadenza == scadenza letta da testo: false
+IdentityHashMap dopo due put con Long 500, chiavi: 2
+WeakHashMap dopo un put con una LocalDate, chiavi: 1

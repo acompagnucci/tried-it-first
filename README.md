@@ -19,3 +19,4 @@ Se qualcosa non funziona, apritemi una issue.
 | 2026-10-26 | accessibility | [La tendina del conto letta da VoiceOver](accessibility/2026-10-26-select-stilizzabile/) |
 | 2026-10-30 | aws | [Lo stack bloccato e il force rollback di CloudFormation](aws/2026-10-30-force-rollback/) |
 | 2026-11-02 | ai | [Il modello AI che c'è già nel Mac, contro lo stesso bug Java](ai/2026-11-02-modello-apple/) |
+| 2026-11-04 | java | [Integer e LocalDate senza identità, su JDK 28](java/2026-11-04-value-class/) |
