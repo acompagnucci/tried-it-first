@@ -1,0 +1,64 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Tried It First - quattro tabelle DynamoDB e un bucket per provare il bulk put items.
+
+Resources:
+  File:
+    Type: AWS::S3::Bucket
+    Properties:
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  SenzaReport:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: tried-it-first-senza-report
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+
+  ConReport:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: tried-it-first-con-report
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+
+  PutItem:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: tried-it-first-put-item
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+
+  RigheRotte:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: tried-it-first-righe-rotte
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+
+Outputs:
+  Bucket:
+    Value: !Ref File

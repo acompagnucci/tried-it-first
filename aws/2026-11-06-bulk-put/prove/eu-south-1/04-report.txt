@@ -1,0 +1,8 @@
+1 righe  01-iniziali-con-report/AWSDynamoDB/BulkOperation/account:01793953656345-94e26cbf/manifest-files.json
+1 righe  01-iniziali-put-item/AWSDynamoDB/BulkOperation/account:01793953656317-9ea8a42c/manifest-files.json
+1 righe  01-iniziali-senza-report/AWSDynamoDB/BulkOperation/account:01793953656308-361a5250/manifest-files.json
+3000 righe  02-giorno-con-report/AWSDynamoDB/BulkOperation/account:01793953922824-a328a8e4-0/output/condition-check-failures/output-00000.json
+1 righe  02-giorno-con-report/AWSDynamoDB/BulkOperation/account:01793953922824-a328a8e4/manifest-files.json
+1 righe  02-giorno-senza-report/AWSDynamoDB/BulkOperation/account:01793953922851-ac09c540/manifest-files.json
+2 righe  02-righe-rotte-righe-rotte/AWSDynamoDB/BulkOperation/account:01793953922853-2bcd2092-0/output/errors/output-00000.json
+2 righe  02-righe-rotte-righe-rotte/AWSDynamoDB/BulkOperation/account:01793953922853-2bcd2092/manifest-files.json

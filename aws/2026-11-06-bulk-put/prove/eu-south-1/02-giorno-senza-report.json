@@ -1,0 +1,44 @@
+{
+    "BulkOperationDescription": {
+        "BulkOperationArn": "arn:aws:dynamodb:eu-south-1:<account>:bulk-operation/01793953922851-ac09c540",
+        "BulkOperationStatus": "COMPLETED",
+        "TableDetails": [
+            {
+                "TableName": "tried-it-first-senza-report",
+                "TableId": "2f46be3c-cdad-45b5-9bc4-69b0bc07c1c9"
+            }
+        ],
+        "ClientToken": "e72199d3-1773-40c8-b362-0c9fb0ba0c3f",
+        "InputS3Configuration": {
+            "S3BucketOwner": "<account>",
+            "S3Bucket": "tried-it-first-bulk-put-file-utfkhblboybx",
+            "S3KeyPrefix": "ingresso/giorno/",
+            "InputFormat": "DYNAMODB_JSON",
+            "InputCompressionType": "NONE"
+        },
+        "OutputS3Configuration": {
+            "S3BucketOwner": "<account>",
+            "S3Bucket": "tried-it-first-bulk-put-file-utfkhblboybx",
+            "S3KeyPrefix": "report/02-giorno-senza-report/",
+            "OutputType": [
+                "ERROR"
+            ]
+        },
+        "StartTime": "2026-11-06T09:32:02.851000+01:00",
+        "EndTime": "2026-11-06T09:34:10.527000+01:00",
+        "ProcessedItemCount": 10000,
+        "ProcessedInputBytes": 1904000,
+        "TotalInputBytes": 1904000,
+        "BulkOperationUsage": [
+            {
+                "TableName": "tried-it-first-senza-report",
+                "BulkPutBytes": 10240000,
+                "Table": {
+                    "BulkPutBytes": 10240000
+                }
+            }
+        ],
+        "FailedItemCount": 0,
+        "PerformanceTier": "STANDARD"
+    }
+}

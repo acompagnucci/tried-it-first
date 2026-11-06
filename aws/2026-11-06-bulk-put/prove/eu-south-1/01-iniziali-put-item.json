@@ -1,0 +1,44 @@
+{
+    "BulkOperationDescription": {
+        "BulkOperationArn": "arn:aws:dynamodb:eu-south-1:<account>:bulk-operation/01793953656317-9ea8a42c",
+        "BulkOperationStatus": "COMPLETED",
+        "TableDetails": [
+            {
+                "TableName": "tried-it-first-put-item",
+                "TableId": "25ebc7bb-3000-4348-a6e4-5b759deb0dbe"
+            }
+        ],
+        "ClientToken": "8a22ff19-3199-4bf1-95e3-a95e6c69ca47",
+        "InputS3Configuration": {
+            "S3BucketOwner": "<account>",
+            "S3Bucket": "tried-it-first-bulk-put-file-utfkhblboybx",
+            "S3KeyPrefix": "ingresso/iniziali/",
+            "InputFormat": "DYNAMODB_JSON",
+            "InputCompressionType": "NONE"
+        },
+        "OutputS3Configuration": {
+            "S3BucketOwner": "<account>",
+            "S3Bucket": "tried-it-first-bulk-put-file-utfkhblboybx",
+            "S3KeyPrefix": "report/01-iniziali-put-item/",
+            "OutputType": [
+                "ERROR"
+            ]
+        },
+        "StartTime": "2026-11-06T09:27:36.317000+01:00",
+        "EndTime": "2026-11-06T09:29:12.375000+01:00",
+        "ProcessedItemCount": 10000,
+        "ProcessedInputBytes": 1211001,
+        "TotalInputBytes": 1211001,
+        "BulkOperationUsage": [
+            {
+                "TableName": "tried-it-first-put-item",
+                "BulkPutBytes": 10240000,
+                "Table": {
+                    "BulkPutBytes": 10240000
+                }
+            }
+        ],
+        "FailedItemCount": 0,
+        "PerformanceTier": "STANDARD"
+    }
+}

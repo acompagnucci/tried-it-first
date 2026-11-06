@@ -1,0 +1,4 @@
+righe: 10000
+scritte: 7000
+scartate dalla condizione: 3000
+tempo: 11,210 secondi

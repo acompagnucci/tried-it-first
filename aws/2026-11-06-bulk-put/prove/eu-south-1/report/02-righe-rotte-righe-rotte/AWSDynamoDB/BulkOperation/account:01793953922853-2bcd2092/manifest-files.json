@@ -1,0 +1,2 @@
+{"inputSourceArn":"arn:aws:s3:::tried-it-first-bulk-put-file-utfkhblboybx/ingresso/righe-rotte/senza-chiave.json","fileProcessingStatus":"FULLY_PROCESSED","processedRanges":[[0,9999]],"etag":"e45c7e990d5bdc2e39b70f350d964f8a"}
+{"inputSourceArn":"arn:aws:s3:::tried-it-first-bulk-put-file-utfkhblboybx/ingresso/righe-rotte/troncata.json","fileProcessingStatus":"PARTIALLY_PROCESSED","processedRanges":[[0,4998]],"etag":"b479821ed1c509452c249f7831b6f5d2"}

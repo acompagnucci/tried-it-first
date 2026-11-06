@@ -1,0 +1,4 @@
+senza-report: 16000 movimenti, 7000 dal file del giorno, 1000 alla versione 2
+con-report: 16000 movimenti, 7000 dal file del giorno, 1000 alla versione 2
+put-item: 16000 movimenti, 7000 dal file del giorno, 1000 alla versione 2
+righe-rotte: 14998 movimenti, 9999 da senza-chiave.json, 4999 da troncata.json

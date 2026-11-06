@@ -1,0 +1,4 @@
+tried-it-first-con-report, bulk put: 10000 righe lette, 10240000 byte, 0.00113 dollari
+tried-it-first-senza-report, bulk put: 10000 righe lette, 10240000 byte, 0.00113 dollari
+tried-it-first-righe-rotte, bulk put: 15000 righe lette, 15357952 byte, 0.00169 dollari
+tried-it-first-put-item, PutItem: 10000.0 unità di scrittura, 0.00740 dollari

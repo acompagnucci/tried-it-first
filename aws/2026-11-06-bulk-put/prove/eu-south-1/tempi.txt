@@ -1,0 +1,7 @@
+01-iniziali put-item: 107 secondi
+01-iniziali senza-report: 107 secondi
+01-iniziali con-report: 265 secondi
+02-righe-rotte righe-rotte: 106 secondi
+02-giorno con-report: 117 secondi
+02-giorno senza-report: 138 secondi
+02-giorno put-item: 12 secondi

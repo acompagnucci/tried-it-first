@@ -1,0 +1,47 @@
+{
+    "BulkOperationDescription": {
+        "BulkOperationArn": "arn:aws:dynamodb:eu-south-1:<account>:bulk-operation/01793953922853-2bcd2092",
+        "BulkOperationStatus": "FAILED",
+        "TableDetails": [
+            {
+                "TableName": "tried-it-first-righe-rotte",
+                "TableId": "41632b4f-c15c-4050-82c7-2499fe4b54bb"
+            }
+        ],
+        "ClientToken": "ec23ec4b-d19c-45ff-aa7c-9514cd17a530",
+        "InputS3Configuration": {
+            "S3BucketOwner": "<account>",
+            "S3Bucket": "tried-it-first-bulk-put-file-utfkhblboybx",
+            "S3KeyPrefix": "ingresso/righe-rotte/",
+            "InputFormat": "DYNAMODB_JSON",
+            "InputCompressionType": "NONE"
+        },
+        "OutputS3Configuration": {
+            "S3BucketOwner": "<account>",
+            "S3Bucket": "tried-it-first-bulk-put-file-utfkhblboybx",
+            "S3KeyPrefix": "report/02-righe-rotte-righe-rotte/",
+            "OutputType": [
+                "ERROR",
+                "CONDITION_CHECK_FAILURE"
+            ]
+        },
+        "StartTime": "2026-11-06T09:32:02.853000+01:00",
+        "EndTime": "2026-11-06T09:33:46.936000+01:00",
+        "ProcessedItemCount": 15000,
+        "ProcessedInputBytes": 1858981,
+        "TotalInputBytes": 2461922,
+        "BulkOperationUsage": [
+            {
+                "TableName": "tried-it-first-righe-rotte",
+                "BulkPutBytes": 15357952,
+                "Table": {
+                    "BulkPutBytes": 15357952
+                }
+            }
+        ],
+        "FailedItemCount": 2,
+        "FailureCode": "ValidationException",
+        "FailureMessage": "Some of the items failed validation checks and were not ingested",
+        "PerformanceTier": "STANDARD"
+    }
+}
