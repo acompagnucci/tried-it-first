@@ -21,4 +21,4 @@ Se qualcosa non funziona, apritemi una issue.
 | 2026-11-02 | ai | [Il modello AI che c'è già nel Mac, contro lo stesso bug Java](ai/2026-11-02-modello-apple/) |
 | 2026-11-04 | java | [Integer e LocalDate senza identità, su JDK 28](java/2026-11-04-value-class/) |
 | 2026-11-06 | aws | [3.000 movimenti scartati e lo stato dice COMPLETED: il bulk put di DynamoDB](aws/2026-11-06-bulk-put/) |
-| 2026-11-09 | java | [Un bonifico in JSON con l'importo scritto due volte: Jackson e il JDK 28](java/2026-11-09-json-nel-jdk/) |
+| 2026-11-09 | java | [Un bonifico in JSON con l'importo scritto due volte: Jackson e il parser di Java 28](java/2026-11-09-json-nel-jdk/) |

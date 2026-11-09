@@ -1,6 +1,6 @@
-# Un bonifico in JSON con l'importo scritto due volte: Jackson e il JDK 28
+# Un bonifico in JSON con l'importo scritto due volte: Jackson e il parser di Java 28
 
-Il JDK 28, che uscirà a marzo 2027, ha un parser JSON suo, nel modulo `jdk.incubator.json` ([JEP 540](https://openjdk.org/jeps/540)). Legge un testo JSON e restituisce un albero di valori (`JsonObject`, `JsonArray`, `JsonNumber`...). Non trasforma il JSON in un record o in una classe, e il JEP dice che non vuole prendere il posto di Jackson o delle altre librerie.
+Java 28, che uscirà a marzo 2027, avrà un parser JSON nel JDK, nel modulo `jdk.incubator.json` ([JEP 540](https://openjdk.org/jeps/540)). Legge un testo JSON e restituisce un albero di valori (`JsonObject`, `JsonArray`, `JsonNumber`...). Non trasforma il JSON in un record o in una classe, e il JEP dice che non vuole prendere il posto di Jackson o delle altre librerie.
 
 Volevo vedere come si comporta con i JSON fatti male che prima o poi arrivano a un servizio, e confrontarlo con Jackson. Ho scritto sei file con un bonifico e li ho fatti leggere da tre programmi che riempiono lo stesso record:
 
@@ -31,7 +31,7 @@ Le due versioni di Jackson sono uscite tutte e due l'8 novembre 2026. I due prog
 
 ```
 bonifici/                      i sei file JSON
-jdk28/LeggiBonifico.java       legge i file con il parser del JDK 28
+jdk28/LeggiBonifico.java       legge i file con il parser di Java 28
 jackson2/LeggiBonifico.java    li legge con Jackson 2.23.0, normale o severo
 jackson3/LeggiBonifico.java    li legge con Jackson 3.3.0, normale o severo
 scarica-jackson.sh             scarica i jar di Jackson da Maven Central in lib/
@@ -129,7 +129,7 @@ macOS e Linux, dalla cartella di questo README e nello stesso terminale dove ave
 ./prova.sh
 ```
 
-Ci mette pochi secondi. Lancia il programma del JDK una volta e ognuno dei due programmi Jackson due volte, `normale` e `severo`, sempre su tutti i file di `bonifici/`. Gli output completi vanno in `prove/`, e alla fine lo script stampa un riassunto senza le righe `at [Source: ...]` dei messaggi di Jackson.
+Ci mette pochi secondi. Lancia una volta il programma con il parser di Java 28 e ognuno dei due programmi Jackson due volte, `normale` e `severo`, sempre su tutti i file di `bonifici/`. Gli output completi vanno in `prove/`, e alla fine lo script stampa un riassunto senza le righe `at [Source: ...]` dei messaggi di Jackson.
 
 Windows (PowerShell):
 
@@ -201,7 +201,7 @@ Jackson con il mapper di default, cioè `JsonMapper.builder().build()`.
 
 ### La chiave doppia
 
-Il parser del JDK rifiuta ogni oggetto con un nome ripetuto, in qualunque punto sia:
+Il parser di Java 28 rifiuta ogni oggetto con un nome ripetuto, in qualunque punto sia:
 
 ```
 importo-doppio.json: errore: Duplicate member name: "importo" was already parsed. Path: "{". Location: line 4, position 2.
@@ -221,7 +221,7 @@ Se lo stesso JSON passa da due servizi che usano librerie diverse, e una tiene i
 
 ### Il campo mancante
 
-Senza `"importo"` il parser del JDK si ferma su `bonifico.get("importo")`:
+Senza `"importo"` il parser di Java 28 si ferma su `bonifico.get("importo")`:
 
 ```
 importo-mancante.json: errore: JsonObject member "importo" does not exist. Path: "". Location: line 0, position 0.
@@ -252,7 +252,7 @@ Con Jackson leggere il bonifico è una riga:
 mapper.readValue(testo, Bonifico.class)
 ```
 
-Con il JDK il record si riempie a mano, campo per campo:
+Con il parser di Java 28 il record si riempie a mano, campo per campo:
 
 ```java
 private static Bonifico leggi(String testo) {
@@ -273,7 +273,7 @@ private static BigDecimal importo(JsonValue valore) {
 
 `JsonNumber` ha `asInt()`, `asLong()` e `asDouble()`, ma non un metodo per avere un `BigDecimal`. Però `toString()` restituisce il numero come era scritto nel file (`250.00` resta `250.00`), quindi `new BigDecimal(numero.toString())` è esatto. Con `asDouble()` sui decimali si torna ai soliti problemi: 0.10 più 0.20 fa 0.30000000000000004. Questo l'ho provato a parte, non è nello script.
 
-### Cosa non c'è nel JDK
+### Cosa non c'è nel parser di Java 28
 
 - Niente conversione verso record o classi: si legge l'albero e si costruisce l'oggetto a mano.
 - Niente lettura a pezzi di file grandi (streaming): `Json.parse` vuole tutto il testo, come `String` o `char[]`.
@@ -282,7 +282,7 @@ private static BigDecimal importo(JsonValue valore) {
 
 I messaggi di errore dicono dove si trova il problema, con il percorso dentro il JSON e la posizione. Riga e colonna però partono da 0: `line 4, position 2` in `importo-doppio.json` è la riga 5, terza colonna, dove inizia il secondo `"importo"`.
 
-Non ho fatto misure serie dei tempi di lettura, né del parser del JDK né di Jackson.
+Non ho fatto misure serie dei tempi di lettura, né del parser di Java 28 né di Jackson.
 
 ### Quanto pesa Jackson
 
@@ -294,7 +294,7 @@ Non ho fatto misure serie dei tempi di lettura, né del parser del JDK né di Ja
 
 ## Sui JDK di oggi
 
-Il parser del JDK c'è solo dal 28. Anche i due programmi Jackson li ho lanciati solo sul JDK 28; Jackson 3 chiede almeno il JDK 17.
+Il parser JSON c'è solo da Java 28. Anche i due programmi Jackson li ho lanciati solo sul JDK 28; Jackson 3 chiede almeno il JDK 17.
 
 ## Problemi comuni
 
