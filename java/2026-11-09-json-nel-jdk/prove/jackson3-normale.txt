@@ -1,0 +1,7 @@
+bonifico.json: Bonifico[iban=IT60X0542811101000000123456, importo=250.00, causale=Affitto novembre]
+iban-doppio.json: Bonifico[iban=IT99X9999999999000000999999, importo=250.00, causale=Affitto novembre]
+importo-doppio-a-meta.json: Bonifico[iban=IT60X0542811101000000123456, importo=25000.00, causale=Affitto novembre]
+importo-doppio.json: Bonifico[iban=IT60X0542811101000000123456, importo=25000.00, causale=Affitto novembre]
+importo-mancante.json: Bonifico[iban=IT60X0542811101000000123456, importo=null, causale=Affitto novembre]
+virgola-in-piu.json: errore: Unexpected character ('}' (code 125)): was expecting double-quote to start property name
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #UNKNOWN]

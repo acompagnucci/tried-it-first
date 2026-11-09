@@ -1,0 +1,11 @@
+bonifico.json: Bonifico[iban=IT60X0542811101000000123456, importo=250.00, causale=Affitto novembre]
+iban-doppio.json: errore: Duplicate field 'iban'
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 5, column: 9]
+importo-doppio-a-meta.json: errore: Duplicate field 'importo'
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 4, column: 12]
+importo-doppio.json: errore: Duplicate field 'importo'
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 5, column: 12]
+importo-mancante.json: errore: Missing creator property 'importo' (index 1); `DeserializationFeature.FAIL_ON_MISSING_CREATOR_PROPERTIES` enabled
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 4, column: 1] (through reference chain: jackson2.LeggiBonifico$Bonifico["importo"])
+virgola-in-piu.json: errore: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 5, column: 1]

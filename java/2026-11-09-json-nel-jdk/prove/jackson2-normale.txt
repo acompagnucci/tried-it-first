@@ -1,0 +1,7 @@
+bonifico.json: Bonifico[iban=IT60X0542811101000000123456, importo=250.00, causale=Affitto novembre]
+iban-doppio.json: errore: No fallback setter/field defined for creator property 'iban' (of `jackson2.LeggiBonifico$Bonifico`) (through reference chain: jackson2.LeggiBonifico$Bonifico["iban"])
+importo-doppio-a-meta.json: Bonifico[iban=IT60X0542811101000000123456, importo=25000.00, causale=Affitto novembre]
+importo-doppio.json: errore: No fallback setter/field defined for creator property 'importo' (of `jackson2.LeggiBonifico$Bonifico`) (through reference chain: jackson2.LeggiBonifico$Bonifico["importo"])
+importo-mancante.json: Bonifico[iban=IT60X0542811101000000123456, importo=null, causale=Affitto novembre]
+virgola-in-piu.json: errore: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 5, column: 1]

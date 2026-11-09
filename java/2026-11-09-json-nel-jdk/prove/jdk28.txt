@@ -1,0 +1,7 @@
+WARNING: Using incubator modules: jdk.incubator.json
+bonifico.json: Bonifico[iban=IT60X0542811101000000123456, importo=250.00, causale=Affitto novembre]
+iban-doppio.json: errore: Duplicate member name: "iban" was already parsed. Path: "{". Location: line 4, position 2.
+importo-doppio-a-meta.json: errore: Duplicate member name: "importo" was already parsed. Path: "{". Location: line 3, position 2.
+importo-doppio.json: errore: Duplicate member name: "importo" was already parsed. Path: "{". Location: line 4, position 2.
+importo-mancante.json: errore: JsonObject member "importo" does not exist. Path: "". Location: line 0, position 0.
+virgola-in-piu.json: errore: Expecting a JSON Object member name. Path: "{". Location: line 4, position 0.
