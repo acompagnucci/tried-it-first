@@ -1,0 +1,10 @@
+Java 28-ea+23-1886, executor-per-richiesta: un ExecutorService per richiesta in try-with-resources, get() prima sull'antifrode
+bonifico da 250,00 €: autorizzato dopo 2.079 ms
+  limite giornaliero alla risposta:  finiti 1, interrotti 0, in corso 0
+  limite giornaliero 3 secondi dopo: finiti 1, interrotti 0, in corso 0
+bonifico da 5.000,00 €: rifiutato dopo 2.057 ms (antifrode: bonifico sospetto)
+  limite giornaliero alla risposta:  finiti 1, interrotti 0, in corso 0
+  limite giornaliero 3 secondi dopo: finiti 1, interrotti 0, in corso 0
+1.000 bonifici da 5.000,00 € insieme: 1.000 rifiutati, risposte tra 2.069 e 2.090 ms
+  limite giornaliero alla risposta:  finiti 1.000, interrotti 0, in corso 0
+  limite giornaliero 3 secondi dopo: finiti 1.000, interrotti 0, in corso 0

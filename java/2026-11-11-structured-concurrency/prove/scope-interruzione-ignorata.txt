@@ -1,0 +1,10 @@
+Java 28-ea+23-1886, scope-interruzione-ignorata: StructuredTaskScope, il controllo del limite ignora l'interruzione
+bonifico da 250,00 €: autorizzato dopo 2.077 ms
+  limite giornaliero alla risposta:  finiti 1, interrotti 0, in corso 0
+  limite giornaliero 3 secondi dopo: finiti 1, interrotti 0, in corso 0
+bonifico da 5.000,00 €: rifiutato dopo 1.989 ms (antifrode: bonifico sospetto)
+  limite giornaliero alla risposta:  finiti 1, interrotti 0, in corso 0, interruzioni ignorate 1
+  limite giornaliero 3 secondi dopo: finiti 1, interrotti 0, in corso 0, interruzioni ignorate 1
+1.000 bonifici da 5.000,00 € insieme: 1.000 rifiutati, risposte tra 1.965 e 2.077 ms
+  limite giornaliero alla risposta:  finiti 1.000, interrotti 0, in corso 0, interruzioni ignorate 1.000
+  limite giornaliero 3 secondi dopo: finiti 1.000, interrotti 0, in corso 0, interruzioni ignorate 1.000
