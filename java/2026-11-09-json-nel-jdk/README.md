@@ -256,7 +256,7 @@ Con il parser di Java 28 il record si riempie a mano, campo per campo:
 
 ```java
 private static Bonifico leggi(String testo) {
-    JsonValue bonifico = Json.parse(testo);
+    var bonifico = Json.parse(testo);
     return new Bonifico(
             bonifico.get("iban").asString(),
             importo(bonifico.get("importo")),

@@ -35,7 +35,7 @@ public class LeggiBonifico {
 
     private static String esito(JsonMapper mapper, String testo) {
         try {
-            Bonifico bonifico = mapper.readValue(testo, Bonifico.class);
+            var bonifico = mapper.readValue(testo, Bonifico.class);
             return bonifico.toString();
         } catch (JacksonException e) {
             return "errore: " + e.getMessage();
@@ -47,8 +47,8 @@ public class LeggiBonifico {
             OUT.println("Uso: java --class-path 'lib/jackson3/*' jackson3/LeggiBonifico.java normale|severo <file json>...");
             return;
         }
-        JsonMapper mapper = mapper(args[0]);
-        for (String nomeFile : Arrays.copyOfRange(args, 1, args.length)) {
+        var mapper = mapper(args[0]);
+        for (var nomeFile : Arrays.copyOfRange(args, 1, args.length)) {
             var file = Path.of(nomeFile);
             OUT.println(file.getFileName() + ": " + esito(mapper, Files.readString(file)));
         }

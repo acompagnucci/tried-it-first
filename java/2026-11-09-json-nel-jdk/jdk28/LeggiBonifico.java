@@ -23,7 +23,7 @@ public class LeggiBonifico {
     }
 
     private static Bonifico leggi(String testo) {
-        JsonValue bonifico = Json.parse(testo);
+        var bonifico = Json.parse(testo);
         return new Bonifico(
                 bonifico.get("iban").asString(),
                 importo(bonifico.get("importo")),
@@ -50,7 +50,7 @@ public class LeggiBonifico {
             OUT.println("Uso: java --add-modules jdk.incubator.json jdk28/LeggiBonifico.java <file json>...");
             return;
         }
-        for (String nomeFile : args) {
+        for (var nomeFile : args) {
             var file = Path.of(nomeFile);
             OUT.println(file.getFileName() + ": " + esito(Files.readString(file)));
         }
