@@ -1,0 +1,2 @@
+B2, saldo insufficiente: TransactionCanceledException: Transaction cancelled, please refer cancellation reasons for specific reasons [ConditionalCheckFailed, None]
+B3, conto 999 inesistente: TransactionCanceledException: Transaction cancelled, please refer cancellation reasons for specific reasons [None, ConditionalCheckFailed]

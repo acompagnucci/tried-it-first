@@ -1,0 +1,3 @@
+Contabili archiviate da S3                     1 su 1 dopo 1 secondi
+Notifiche arrivate da EventBridge              1 su 3 dopo 181 secondi
+Messaggi finiti tra gli scartati               3 su 1 dopo 182 secondi

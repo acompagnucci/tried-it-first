@@ -1,0 +1,201 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Tried It First - il giro di un bonifico: API Gateway, Lambda, SQS FIFO,
+  DynamoDB, S3 ed EventBridge. Lo stesso template va su AWS e su AWS Emulator.
+
+Globals:
+  Function:
+    Runtime: nodejs24.x
+    Architectures: [arm64]
+    MemorySize: 256
+    Timeout: 5
+
+Resources:
+  Conti:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: conto
+          AttributeType: S
+      KeySchema:
+        - AttributeName: conto
+          KeyType: HASH
+
+  Contabili:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: bonifico
+          AttributeType: S
+      KeySchema:
+        - AttributeName: bonifico
+          KeyType: HASH
+
+  BucketContabili:
+    Type: AWS::S3::Bucket
+    DependsOn: ArchiviaDaS3
+    Properties:
+      BucketName: !Sub ${AWS::StackName}-contabili-${AWS::AccountId}-${AWS::Region}
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      NotificationConfiguration:
+        LambdaConfigurations:
+          - Event: s3:ObjectCreated:*
+            Function: !GetAtt Archivia.Arn
+            Filter:
+              S3Key:
+                Rules:
+                  - Name: prefix
+                    Value: contabili/
+                  - Name: suffix
+                    Value: .txt
+
+  ArchiviaDaS3:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Ref Archivia
+      Principal: s3.amazonaws.com
+      SourceAccount: !Ref AWS::AccountId
+      SourceArn: !Sub arn:${AWS::Partition}:s3:::${AWS::StackName}-contabili-${AWS::AccountId}-${AWS::Region}
+
+  Bonifici:
+    Type: AWS::SQS::Queue
+    Properties:
+      FifoQueue: true
+      VisibilityTimeout: 10
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt Scartati.Arn
+        maxReceiveCount: 3
+
+  Scartati:
+    Type: AWS::SQS::Queue
+    Properties:
+      FifoQueue: true
+
+  Notifiche:
+    Type: AWS::SQS::Queue
+
+  BonificiConclusi:
+    Type: AWS::Events::Rule
+    Properties:
+      EventPattern:
+        source: [tried-it-first.banca]
+        detail-type: [BonificoEseguito, BonificoRifiutato]
+      Targets:
+        - Id: notifiche
+          Arn: !GetAtt Notifiche.Arn
+
+  NotificheDaEventBridge:
+    Type: AWS::SQS::QueuePolicy
+    Properties:
+      Queues: [!Ref Notifiche]
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: events.amazonaws.com
+            Action: sqs:SendMessage
+            Resource: !GetAtt Notifiche.Arn
+            Condition:
+              ArnEquals:
+                aws:SourceArn: !GetAtt BonificiConclusi.Arn
+
+  Ricevi:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-ricevi
+      CodeUri: lambda/
+      Handler: ricevi.handler
+      Environment:
+        Variables:
+          CODA_BONIFICI: !Ref Bonifici
+      Policies:
+        - SQSSendMessagePolicy:
+            QueueName: !GetAtt Bonifici.QueueName
+      Events:
+        Bonifico:
+          Type: Api
+          Properties:
+            Path: /bonifici
+            Method: post
+
+  Esegui:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-esegui
+      CodeUri: lambda/
+      Handler: esegui.handler
+      Environment:
+        Variables:
+          TABELLA_CONTI: !Ref Conti
+          BUCKET_CONTABILI: !Ref BucketContabili
+      Policies:
+        - DynamoDBWritePolicy:
+            TableName: !Ref Conti
+        - S3WritePolicy:
+            BucketName: !Ref BucketContabili
+        - EventBridgePutEventsPolicy:
+            EventBusName: default
+      Events:
+        Bonifico:
+          Type: SQS
+          Properties:
+            Queue: !GetAtt Bonifici.Arn
+            BatchSize: 1
+
+  Archivia:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-archivia
+      CodeUri: lambda/
+      Handler: archivia.handler
+      Environment:
+        Variables:
+          TABELLA_CONTABILI: !Ref Contabili
+      Policies:
+        - S3ReadPolicy:
+            BucketName: !Sub ${AWS::StackName}-contabili-${AWS::AccountId}-${AWS::Region}
+        - DynamoDBWritePolicy:
+            TableName: !Ref Contabili
+
+  LogRicevi:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-ricevi
+      RetentionInDays: 1
+
+  LogEsegui:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-esegui
+      RetentionInDays: 1
+
+  LogArchivia:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-archivia
+      RetentionInDays: 1
+
+Outputs:
+  ApiHost:
+    Value: !Sub ${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com
+  Conti:
+    Value: !Ref Conti
+  Contabili:
+    Value: !Ref Contabili
+  BucketContabili:
+    Value: !Ref BucketContabili
+  Bonifici:
+    Value: !Ref Bonifici
+  Scartati:
+    Value: !Ref Scartati
+  Notifiche:
+    Value: !Ref Notifiche

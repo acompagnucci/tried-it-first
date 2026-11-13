@@ -1,0 +1,1 @@
+Deploy dello stack: 7 secondi

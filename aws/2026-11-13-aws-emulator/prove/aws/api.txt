@@ -1,0 +1,5 @@
+B1: dal 100 al 200, 250.00 euro                202 {"id":"B1","stato":"in coda"} in 797 ms
+B1 di nuovo, stesso id                         202 {"id":"B1","stato":"in coda"} in 97 ms
+B2: dal 200 al 100, 5000.00 euro               202 {"id":"B2","stato":"in coda"} in 97 ms
+B3: dal 100 al conto 999, che non esiste       202 {"id":"B3","stato":"in coda"} in 91 ms
+B4: importo negativo                           400 {"errore":"importo non valido"} in 78 ms

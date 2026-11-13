@@ -1,0 +1,14 @@
+Saldo del conto numero 100: 750
+Saldo del conto numero 200: 300
+File nel bucket delle contabili: contabili/B1.txt
+Contabile archiviata in DynamoDB:
+    Bonifico B1
+    Dal conto 100 al conto 200
+    Importo: 250.00 EUR
+    
+Notifiche:
+    BonificoEseguito B1 
+Scartati:
+    "bonifico scritto a mano", letto 4 volte
+    "{"id":"B2","da":"200","a":"100","importo":"5000.00"}", letto 4 volte
+    "{"id":"B3","da":"100","a":"999","importo":"10.00"}", letto 4 volte
