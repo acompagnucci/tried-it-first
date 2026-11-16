@@ -1,0 +1,13 @@
+Java 28-ea+24-1988, con-codice.aot addestrata con G1, usata con -XX:AOTMode=required
+-XX:+UseG1GC
+[0.029s][info][aot,codecache,init] Loaded 13523 AOT code entries from AOT Code Cache
+-XX:+UseParallelGC
+[0.030s][error][aot,codecache,init] AOT Code Cache disabled: it was created with UseCondCardMark = true vs current false
+Error occurred during initialization of VM
+Unable to use AOT Code Cache.
+-XX:+UseZGC
+[0.004s][warning][aot] Unable to use AOT cache.
+[                    ] The saved state of UseCompressedOops (1) is different from runtime (0), CDS will be disabled.
+[0.004s][error  ][aot] Unable to map shared spaces
+Error occurred during initialization of VM
+Unable to use AOT cache.: servizio/target/aot/con-codice.aot

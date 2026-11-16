@@ -1,0 +1,4 @@
+Java 28-ea+24-1988, addestramento
+senza-codice.aot: 148 MB, pronta dopo 12.994 ms, risposte 1.027 con codice 200, 8.539 con codice 201, 307 con codice 400, 127 con codice 422
+con-codice.aot: 198 MB, pronta dopo 19.928 ms, risposte 1.027 con codice 200, 8.539 con codice 201, 307 con codice 400, 127 con codice 422
+solo-avvio.aot: 140 MB, pronta dopo 9.267 ms, nessuna richiesta

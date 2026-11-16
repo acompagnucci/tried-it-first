@@ -1,0 +1,45 @@
+Java 28-ea+24-1988, 7 corse per ogni modo, alternate
+
+nessuna-cache: senza cache AOT
+corsa 1: prima risposta dopo 1.959 ms, ultima dopo 6.416 ms, lotti in ms 934 450 329 271 253 213 173 178 177 149 166 149 133 136 139 140 122 124 97 113
+corsa 2: prima risposta dopo 1.957 ms, ultima dopo 5.629 ms, lotti in ms 773 366 262 204 185 170 158 164 152 140 119 122 110 105 112 114 108 107 95 95
+corsa 3: prima risposta dopo 1.980 ms, ultima dopo 5.641 ms, lotti in ms 775 356 280 209 178 175 161 141 150 135 125 126 105 114 110 118 105 102 88 98
+corsa 4: prima risposta dopo 1.991 ms, ultima dopo 5.660 ms, lotti in ms 783 367 268 211 181 169 156 148 146 137 121 117 113 109 115 116 103 109 97 92
+corsa 5: prima risposta dopo 1.991 ms, ultima dopo 5.704 ms, lotti in ms 791 365 267 213 192 177 163 156 160 129 118 120 107 111 112 111 104 111 97 100
+corsa 6: prima risposta dopo 1.990 ms, ultima dopo 5.721 ms, lotti in ms 788 369 265 221 192 190 167 156 149 127 125 125 110 118 111 107 101 100 96 103
+corsa 7: prima risposta dopo 1.949 ms, ultima dopo 5.599 ms, lotti in ms 774 356 262 202 182 182 157 158 149 136 130 116 106 123 117 110 96 106 93 87
+mediana: prima risposta dopo 1.980 ms, ultima dopo 5.660 ms, lotti in ms 783 366 267 211 185 177 161 156 150 136 125 122 110 114 112 114 104 107 96 98
+risposte, uguali in tutte le corse: 1.027 con codice 200, 8.539 con codice 201, 307 con codice 400, 127 con codice 422
+
+cache-senza-codice: cache AOT con classi e profili, senza codice compilato
+corsa 1: prima risposta dopo 816 ms, ultima dopo 3.841 ms, lotti in ms 703 254 185 158 138 123 118 118 111 103 109 97 105 103 108 95 98 92 98 98
+corsa 2: prima risposta dopo 704 ms, ultima dopo 3.606 ms, lotti in ms 697 234 161 143 126 110 110 107 105 109 101 97 102 99 109 100 102 95 94 89
+corsa 3: prima risposta dopo 729 ms, ultima dopo 3.635 ms, lotti in ms 692 229 158 141 129 114 117 114 112 101 101 102 96 109 105 98 95 99 92 92
+corsa 4: prima risposta dopo 724 ms, ultima dopo 3.650 ms, lotti in ms 705 235 168 143 124 108 114 115 115 101 103 100 104 101 96 96 100 91 92 104
+corsa 5: prima risposta dopo 713 ms, ultima dopo 3.661 ms, lotti in ms 702 245 170 156 145 120 122 108 112 103 104 102 99 99 101 97 90 84 89 89
+corsa 6: prima risposta dopo 712 ms, ultima dopo 3.615 ms, lotti in ms 700 239 165 152 122 105 118 112 115 101 104 99 96 100 94 95 97 94 89 97
+corsa 7: prima risposta dopo 730 ms, ultima dopo 3.668 ms, lotti in ms 705 239 164 152 148 120 109 113 114 103 106 96 94 100 99 104 92 89 89 92
+mediana: prima risposta dopo 724 ms, ultima dopo 3.650 ms, lotti in ms 702 239 165 152 129 114 117 113 112 103 104 99 99 100 101 97 97 92 92 92
+risposte, uguali in tutte le corse: 1.027 con codice 200, 8.539 con codice 201, 307 con codice 400, 127 con codice 422
+
+cache-con-codice: cache AOT con classi, profili e codice compilato
+corsa 1: prima risposta dopo 640 ms, ultima dopo 3.000 ms, lotti in ms 268 154 150 128 128 120 112 108 94 109 99 96 95 102 102 101 103 98 93 91
+corsa 2: prima risposta dopo 643 ms, ultima dopo 2.963 ms, lotti in ms 267 159 146 129 124 112 105 105 99 99 97 95 91 102 99 97 101 93 91 100
+corsa 3: prima risposta dopo 652 ms, ultima dopo 3.030 ms, lotti in ms 272 147 143 146 140 117 114 101 96 107 95 94 90 102 105 102 94 103 91 107
+corsa 4: prima risposta dopo 672 ms, ultima dopo 3.079 ms, lotti in ms 279 160 147 131 119 118 110 102 102 106 98 100 98 138 106 98 102 95 89 98
+corsa 5: prima risposta dopo 645 ms, ultima dopo 3.023 ms, lotti in ms 271 154 144 136 127 110 110 98 110 106 99 99 95 110 112 95 106 101 88 98
+corsa 6: prima risposta dopo 679 ms, ultima dopo 3.059 ms, lotti in ms 272 151 152 142 127 119 111 110 103 99 96 96 97 109 104 98 102 99 91 94
+corsa 7: prima risposta dopo 649 ms, ultima dopo 3.020 ms, lotti in ms 276 159 153 145 129 117 101 110 98 98 102 92 85 104 106 105 99 95 86 100
+mediana: prima risposta dopo 649 ms, ultima dopo 3.023 ms, lotti in ms 272 154 147 136 127 117 110 105 99 106 98 96 95 104 105 98 102 98 91 98
+risposte, uguali in tutte le corse: 1.027 con codice 200, 8.539 con codice 201, 307 con codice 400, 127 con codice 422
+
+cache-solo-avvio: cache AOT con codice, addestrata solo con l'avvio, senza richieste
+corsa 1: prima risposta dopo 736 ms, ultima dopo 4.536 ms, lotti in ms 802 378 266 231 191 173 164 156 135 152 130 162 117 116 122 111 103 93 88 101
+corsa 2: prima risposta dopo 744 ms, ultima dopo 4.538 ms, lotti in ms 801 381 275 213 194 185 163 173 160 145 127 138 117 112 115 105 101 101 84 94
+corsa 3: prima risposta dopo 724 ms, ultima dopo 4.476 ms, lotti in ms 794 387 272 214 199 176 163 162 148 130 115 133 121 116 120 115 95 105 85 92
+corsa 4: prima risposta dopo 738 ms, ultima dopo 4.526 ms, lotti in ms 804 393 268 219 195 180 168 156 148 147 134 142 108 117 116 107 97 96 92 90
+corsa 5: prima risposta dopo 746 ms, ultima dopo 4.497 ms, lotti in ms 798 385 269 220 191 175 167 161 148 132 128 132 113 111 116 111 98 107 85 93
+corsa 6: prima risposta dopo 760 ms, ultima dopo 4.539 ms, lotti in ms 808 388 282 232 192 171 168 155 138 125 127 131 111 114 112 115 100 107 92 102
+corsa 7: prima risposta dopo 741 ms, ultima dopo 4.522 ms, lotti in ms 800 378 265 221 199 180 164 160 152 126 138 152 110 115 113 109 102 99 89 98
+mediana: prima risposta dopo 741 ms, ultima dopo 4.526 ms, lotti in ms 801 385 269 220 194 176 164 160 148 132 128 138 113 115 116 111 100 101 88 94
+risposte, uguali in tutte le corse: 1.027 con codice 200, 8.539 con codice 201, 307 con codice 400, 127 con codice 422
