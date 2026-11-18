@@ -1,0 +1,12 @@
+PetClinic, 1 corsa per ogni scenario, alternate
+carico: da 20 a 600 richieste al secondo in 10 secondi, poi 600 al secondo per 120 secondi
+pagine, a turno: /owners/1 /owners?lastName=Davis /vets.html /owners/5 /owners?lastName=
+java25-heap-piccolo: openjdk version "25.0.2" 2026-01-20, -XX:+UseZGC -Xms2M -Xmx8G
+java25-heap-grande: openjdk version "25.0.2" 2026-01-20, -XX:+UseZGC -Xms8G -Xmx8G -XX:+AlwaysPreTouch
+java28-heap-piccolo: openjdk version "28-ea" 2027-03-23, -XX:+UseZGC -Xms2M -Xmx8G
+java28-adattivo: openjdk version "28-ea" 2027-03-23, -XX:+UseZGC -XX:+ZAdaptiveHeapSizing
+
+java25-heap-piccolo-1: prima risposta dopo 3.845 ms, P99 sopra 20 ms in 28 secondi su 130, sempre sotto dal secondo 130, heap fino a 7.822 MB, alla fine 7.822 MB, errori 0
+java25-heap-grande-1: prima risposta dopo 4.211 ms, P99 sopra 20 ms in 13 secondi su 130, sempre sotto dal secondo 118, heap fino a 8.192 MB, alla fine 8.192 MB, errori 0
+java28-heap-piccolo-1: prima risposta dopo 3.636 ms, P99 sopra 20 ms in 5 secondi su 130, sempre sotto dal secondo 115, heap fino a 7.816 MB, alla fine 7.816 MB, errori 0
+java28-adattivo-1: prima risposta dopo 3.297 ms, P99 sopra 20 ms in 5 secondi su 130, sempre sotto dal secondo 83, heap fino a 1.442 MB, alla fine 898 MB, errori 0

@@ -1,0 +1,539 @@
+[0.005s][info][gc] Using The Z Garbage Collector
+[0.028s][info][gc] GC(0) Major Collection (Warmup)
+[0.030s][info][gc] GC(0) Major Collection (Warmup) 2M(100%)->4M(200%) 0.002s
+[0.040s][info][gc] GC(1) Minor Collection (Allocation Rate)
+[0.044s][info][gc] GC(1) Minor Collection (Allocation Rate) 4M(50%)->6M(75%) 0.003s
+[0.044s][info][gc] GC(2) Major Collection (Warmup)
+[0.047s][info][gc] GC(2) Major Collection (Warmup) 6M(38%)->10M(62%) 0.003s
+[0.057s][info][gc] GC(3) Minor Collection (High Usage)
+[0.059s][info][gc] GC(3) Minor Collection (High Usage) 10M(20%)->14M(28%) 0.002s
+[0.112s][info][gc] GC(4) Minor Collection (Allocation Rate)
+[0.115s][info][gc] GC(4) Minor Collection (Allocation Rate) 54M(60%)->50M(56%) 0.003s
+[0.311s][info][gc] GC(5) Minor Collection (High Usage)
+[0.320s][info][gc] GC(5) Minor Collection (High Usage) 114M(71%)->26M(16%) 0.009s
+[0.617s][info][gc] GC(6) Major Collection (Metadata GC Threshold)
+[0.658s][info][gc] GC(6) Major Collection (Metadata GC Threshold) 196M(72%)->62M(23%) 0.041s
+[0.967s][info][gc] GC(7) Major Collection (Warmup)
+[1.026s][info][gc] GC(7) Major Collection (Warmup) 208M(76%)->56M(20%) 0.059s
+[1.668s][info][gc] GC(8) Major Collection (Metadata GC Threshold)
+[1.758s][info][gc] GC(8) Major Collection (Metadata GC Threshold) 324M(57%)->106M(19%) 0.090s
+[2.701s][info][gc] GC(9) Minor Collection (Allocation Rate)
+[2.785s][info][gc] GC(9) Minor Collection (Allocation Rate) 472M(83%)->162M(28%) 0.084s
+[2.818s][info][gc] GC(10) Major Collection (Metadata GC Threshold)
+[2.946s][info][gc] GC(10) Major Collection (Metadata GC Threshold) 210M(32%)->154M(23%) 0.129s
+[4.709s][info][gc] GC(11) Minor Collection (Allocation Rate)
+[4.751s][info][gc] GC(11) Minor Collection (Allocation Rate) 572M(87%)->144M(22%) 0.042s
+[6.204s][info][gc] GC(12) Minor Collection (High Usage)
+[6.250s][info][gc] GC(12) Minor Collection (High Usage) 644M(90%)->150M(21%) 0.046s
+[7.277s][info][gc] GC(13) Minor Collection (Allocation Rate)
+[7.300s][info][gc] GC(13) Minor Collection (Allocation Rate) 680M(90%)->148M(20%) 0.023s
+[8.171s][info][gc] GC(14) Minor Collection (High Usage)
+[8.195s][info][gc] GC(14) Minor Collection (High Usage) 706M(90%)->152M(19%) 0.024s
+[8.932s][info][gc] GC(15) Minor Collection (Allocation Rate)
+[8.957s][info][gc] GC(15) Minor Collection (Allocation Rate) 706M(91%)->160M(21%) 0.025s
+[9.321s][info][gc] GC(16) Major Collection (Proactive)
+[9.480s][info][gc] GC(16) Major Collection (Proactive) 460M(59%)->224M(29%) 0.159s
+[9.928s][info][gc] GC(17) Minor Collection (High Usage)
+[9.953s][info][gc] GC(17) Minor Collection (High Usage) 626M(90%)->112M(16%) 0.025s
+[10.478s][info][gc] GC(18) Minor Collection (Allocation Rate)
+[10.503s][info][gc] GC(18) Minor Collection (Allocation Rate) 620M(90%)->118M(17%) 0.024s
+[10.982s][info][gc] GC(19) Minor Collection (High Usage)
+[11.006s][info][gc] GC(19) Minor Collection (High Usage) 614M(90%)->116M(17%) 0.024s
+[11.453s][info][gc] GC(20) Minor Collection (High Usage)
+[11.475s][info][gc] GC(20) Minor Collection (High Usage) 608M(89%)->116M(17%) 0.022s
+[11.898s][info][gc] GC(21) Minor Collection (High Usage)
+[11.922s][info][gc] GC(21) Minor Collection (High Usage) 606M(90%)->120M(18%) 0.024s
+[12.319s][info][gc] GC(22) Minor Collection (High Usage)
+[12.344s][info][gc] GC(22) Minor Collection (High Usage) 604M(90%)->128M(19%) 0.026s
+[12.711s][info][gc] GC(23) Minor Collection (Allocation Rate)
+[12.735s][info][gc] GC(23) Minor Collection (Allocation Rate) 594M(89%)->128M(19%) 0.023s
+[13.100s][info][gc] GC(24) Minor Collection (High Usage)
+[13.126s][info][gc] GC(24) Minor Collection (High Usage) 610M(89%)->136M(20%) 0.026s
+[13.491s][info][gc] GC(25) Minor Collection (High Usage)
+[13.515s][info][gc] GC(25) Minor Collection (High Usage) 630M(90%)->132M(19%) 0.025s
+[13.895s][info][gc] GC(26) Minor Collection (Allocation Rate)
+[13.921s][info][gc] GC(26) Minor Collection (Allocation Rate) 650M(89%)->134M(18%) 0.026s
+[14.320s][info][gc] GC(27) Minor Collection (High Usage)
+[14.347s][info][gc] GC(27) Minor Collection (High Usage) 678M(91%)->134M(18%) 0.026s
+[14.767s][info][gc] GC(28) Minor Collection (High Usage)
+[14.795s][info][gc] GC(28) Minor Collection (High Usage) 706M(91%)->136M(17%) 0.028s
+[15.234s][info][gc] GC(29) Minor Collection (Allocation Rate)
+[15.261s][info][gc] GC(29) Minor Collection (Allocation Rate) 734M(90%)->138M(17%) 0.027s
+[15.727s][info][gc] GC(30) Minor Collection (High Usage)
+[15.754s][info][gc] GC(30) Minor Collection (High Usage) 772M(91%)->140M(17%) 0.028s
+[16.239s][info][gc] GC(31) Minor Collection (Allocation Rate)
+[16.266s][info][gc] GC(31) Minor Collection (Allocation Rate) 800M(91%)->140M(16%) 0.027s
+[16.775s][info][gc] GC(32) Minor Collection (Allocation Rate)
+[16.811s][info][gc] GC(32) Minor Collection (Allocation Rate) 832M(91%)->156M(17%) 0.036s
+[17.310s][info][gc] GC(33) Minor Collection (Allocation Rate)
+[17.339s][info][gc] GC(33) Minor Collection (Allocation Rate) 834M(89%)->146M(16%) 0.029s
+[17.876s][info][gc] GC(34) Minor Collection (High Usage)
+[17.905s][info][gc] GC(34) Minor Collection (High Usage) 876M(91%)->146M(15%) 0.029s
+[18.455s][info][gc] GC(35) Minor Collection (High Usage)
+[18.481s][info][gc] GC(35) Minor Collection (High Usage) 896M(91%)->140M(14%) 0.026s
+[19.049s][info][gc] GC(36) Minor Collection (High Usage)
+[19.075s][info][gc] GC(36) Minor Collection (High Usage) 912M(92%)->144M(15%) 0.026s
+[19.644s][info][gc] GC(37) Minor Collection (High Usage)
+[19.672s][info][gc] GC(37) Minor Collection (High Usage) 916M(91%)->148M(15%) 0.028s
+[20.239s][info][gc] GC(38) Minor Collection (High Usage)
+[20.267s][info][gc] GC(38) Minor Collection (High Usage) 920M(91%)->152M(15%) 0.028s
+[20.830s][info][gc] GC(39) Minor Collection (High Usage)
+[20.858s][info][gc] GC(39) Minor Collection (High Usage) 916M(91%)->152M(15%) 0.028s
+[21.422s][info][gc] GC(40) Minor Collection (High Usage)
+[21.449s][info][gc] GC(40) Minor Collection (High Usage) 920M(92%)->150M(15%) 0.026s
+[22.013s][info][gc] GC(41) Minor Collection (High Usage)
+[22.040s][info][gc] GC(41) Minor Collection (High Usage) 916M(92%)->154M(15%) 0.028s
+[22.598s][info][gc] GC(42) Minor Collection (High Usage)
+[22.626s][info][gc] GC(42) Minor Collection (High Usage) 912M(92%)->154M(15%) 0.027s
+[23.182s][info][gc] GC(43) Minor Collection (High Usage)
+[23.210s][info][gc] GC(43) Minor Collection (High Usage) 910M(92%)->158M(16%) 0.028s
+[23.757s][info][gc] GC(44) Minor Collection (High Usage)
+[23.786s][info][gc] GC(44) Minor Collection (High Usage) 902M(91%)->158M(16%) 0.028s
+[24.335s][info][gc] GC(45) Minor Collection (Allocation Rate)
+[24.364s][info][gc] GC(45) Minor Collection (Allocation Rate) 904M(92%)->160M(16%) 0.029s
+[24.905s][info][gc] GC(46) Minor Collection (High Usage)
+[24.936s][info][gc] GC(46) Minor Collection (High Usage) 896M(91%)->164M(17%) 0.030s
+[25.297s][info][gc] GC(47) Major Collection (Proactive)
+[25.438s][info][gc] GC(47) Major Collection (Proactive) 656M(67%)->284M(29%) 0.141s
+[25.805s][info][gc] GC(48) Minor Collection (Allocation Rate)
+[25.827s][info][gc] GC(48) Minor Collection (Allocation Rate) 786M(90%)->118M(13%) 0.022s
+[26.330s][info][gc] GC(49) Minor Collection (High Usage)
+[26.351s][info][gc] GC(49) Minor Collection (High Usage) 800M(91%)->120M(14%) 0.021s
+[26.851s][info][gc] GC(50) Minor Collection (High Usage)
+[26.874s][info][gc] GC(50) Minor Collection (High Usage) 800M(92%)->126M(14%) 0.024s
+[27.367s][info][gc] GC(51) Minor Collection (High Usage)
+[27.389s][info][gc] GC(51) Minor Collection (High Usage) 794M(91%)->128M(15%) 0.022s
+[27.876s][info][gc] GC(52) Minor Collection (High Usage)
+[27.898s][info][gc] GC(52) Minor Collection (High Usage) 790M(91%)->128M(15%) 0.022s
+[28.388s][info][gc] GC(53) Minor Collection (High Usage)
+[28.409s][info][gc] GC(53) Minor Collection (High Usage) 792M(91%)->128M(15%) 0.021s
+[28.900s][info][gc] GC(54) Minor Collection (High Usage)
+[28.923s][info][gc] GC(54) Minor Collection (High Usage) 794M(91%)->132M(15%) 0.023s
+[29.414s][info][gc] GC(55) Minor Collection (High Usage)
+[29.436s][info][gc] GC(55) Minor Collection (High Usage) 798M(91%)->128M(15%) 0.022s
+[29.933s][info][gc] GC(56) Minor Collection (High Usage)
+[29.956s][info][gc] GC(56) Minor Collection (High Usage) 804M(91%)->132M(15%) 0.022s
+[30.455s][info][gc] GC(57) Minor Collection (High Usage)
+[30.478s][info][gc] GC(57) Minor Collection (High Usage) 810M(91%)->132M(15%) 0.022s
+[30.976s][info][gc] GC(58) Minor Collection (High Usage)
+[30.999s][info][gc] GC(58) Minor Collection (High Usage) 808M(91%)->134M(15%) 0.023s
+[31.499s][info][gc] GC(59) Minor Collection (High Usage)
+[31.522s][info][gc] GC(59) Minor Collection (High Usage) 812M(91%)->130M(15%) 0.023s
+[32.022s][info][gc] GC(60) Minor Collection (High Usage)
+[32.045s][info][gc] GC(60) Minor Collection (High Usage) 810M(91%)->130M(15%) 0.023s
+[32.551s][info][gc] GC(61) Minor Collection (High Usage)
+[32.574s][info][gc] GC(61) Minor Collection (High Usage) 818M(91%)->134M(15%) 0.023s
+[33.077s][info][gc] GC(62) Minor Collection (High Usage)
+[33.101s][info][gc] GC(62) Minor Collection (High Usage) 818M(91%)->136M(15%) 0.024s
+[33.602s][info][gc] GC(63) Minor Collection (High Usage)
+[33.627s][info][gc] GC(63) Minor Collection (High Usage) 816M(91%)->142M(16%) 0.025s
+[34.127s][info][gc] GC(64) Minor Collection (High Usage)
+[34.150s][info][gc] GC(64) Minor Collection (High Usage) 820M(91%)->140M(16%) 0.023s
+[34.651s][info][gc] GC(65) Minor Collection (High Usage)
+[34.674s][info][gc] GC(65) Minor Collection (High Usage) 820M(91%)->138M(15%) 0.023s
+[35.177s][info][gc] GC(66) Minor Collection (High Usage)
+[35.201s][info][gc] GC(66) Minor Collection (High Usage) 822M(92%)->142M(16%) 0.024s
+[35.696s][info][gc] GC(67) Minor Collection (High Usage)
+[35.720s][info][gc] GC(67) Minor Collection (High Usage) 814M(91%)->138M(15%) 0.024s
+[36.221s][info][gc] GC(68) Minor Collection (High Usage)
+[36.245s][info][gc] GC(68) Minor Collection (High Usage) 818M(91%)->140M(16%) 0.024s
+[36.742s][info][gc] GC(69) Minor Collection (High Usage)
+[36.766s][info][gc] GC(69) Minor Collection (High Usage) 816M(91%)->142M(16%) 0.024s
+[37.256s][info][gc] GC(70) Minor Collection (High Usage)
+[37.279s][info][gc] GC(70) Minor Collection (High Usage) 808M(91%)->142M(16%) 0.024s
+[37.768s][info][gc] GC(71) Minor Collection (High Usage)
+[37.792s][info][gc] GC(71) Minor Collection (High Usage) 806M(91%)->146M(16%) 0.024s
+[37.960s][info][gc] GC(72) Major Collection (Proactive)
+[38.064s][info][gc] GC(72) Major Collection (Proactive) 376M(42%)->230M(26%) 0.104s
+[38.426s][info][gc] GC(73) Minor Collection (High Usage)
+[38.452s][info][gc] GC(73) Minor Collection (High Usage) 724M(91%)->126M(16%) 0.026s
+[38.881s][info][gc] GC(74) Minor Collection (Allocation Rate)
+[38.903s][info][gc] GC(74) Minor Collection (Allocation Rate) 710M(88%)->122M(15%) 0.022s
+[39.357s][info][gc] GC(75) Minor Collection (High Usage)
+[39.379s][info][gc] GC(75) Minor Collection (High Usage) 740M(91%)->118M(15%) 0.022s
+[39.844s][info][gc] GC(76) Minor Collection (High Usage)
+[39.866s][info][gc] GC(76) Minor Collection (High Usage) 750M(91%)->122M(15%) 0.022s
+[40.332s][info][gc] GC(77) Minor Collection (High Usage)
+[40.354s][info][gc] GC(77) Minor Collection (High Usage) 754M(91%)->124M(15%) 0.023s
+[40.824s][info][gc] GC(78) Minor Collection (High Usage)
+[40.846s][info][gc] GC(78) Minor Collection (High Usage) 762M(90%)->126M(15%) 0.022s
+[41.325s][info][gc] GC(79) Minor Collection (High Usage)
+[41.348s][info][gc] GC(79) Minor Collection (High Usage) 776M(91%)->128M(15%) 0.023s
+[41.837s][info][gc] GC(80) Minor Collection (High Usage)
+[41.861s][info][gc] GC(80) Minor Collection (High Usage) 790M(91%)->126M(15%) 0.023s
+[42.357s][info][gc] GC(81) Minor Collection (High Usage)
+[42.380s][info][gc] GC(81) Minor Collection (High Usage) 800M(91%)->126M(14%) 0.023s
+[42.887s][info][gc] GC(82) Minor Collection (High Usage)
+[42.911s][info][gc] GC(82) Minor Collection (High Usage) 814M(91%)->132M(15%) 0.025s
+[43.417s][info][gc] GC(83) Minor Collection (High Usage)
+[43.440s][info][gc] GC(83) Minor Collection (High Usage) 818M(91%)->132M(15%) 0.024s
+[43.946s][info][gc] GC(84) Minor Collection (High Usage)
+[43.969s][info][gc] GC(84) Minor Collection (High Usage) 818M(91%)->128M(14%) 0.022s
+[44.476s][info][gc] GC(85) Minor Collection (High Usage)
+[44.497s][info][gc] GC(85) Minor Collection (High Usage) 816M(91%)->126M(14%) 0.022s
+[45.009s][info][gc] GC(86) Minor Collection (High Usage)
+[45.033s][info][gc] GC(86) Minor Collection (High Usage) 822M(92%)->132M(15%) 0.024s
+[45.541s][info][gc] GC(87) Minor Collection (High Usage)
+[45.564s][info][gc] GC(87) Minor Collection (High Usage) 822M(92%)->132M(15%) 0.023s
+[46.071s][info][gc] GC(88) Minor Collection (High Usage)
+[46.094s][info][gc] GC(88) Minor Collection (High Usage) 820M(92%)->136M(15%) 0.023s
+[46.594s][info][gc] GC(89) Minor Collection (High Usage)
+[46.618s][info][gc] GC(89) Minor Collection (High Usage) 814M(91%)->136M(15%) 0.024s
+[47.118s][info][gc] GC(90) Minor Collection (High Usage)
+[47.142s][info][gc] GC(90) Minor Collection (High Usage) 816M(91%)->138M(15%) 0.024s
+[47.637s][info][gc] GC(91) Minor Collection (High Usage)
+[47.661s][info][gc] GC(91) Minor Collection (High Usage) 810M(91%)->138M(16%) 0.024s
+[48.011s][info][gc] GC(92) Major Collection (Proactive)
+[48.115s][info][gc] GC(92) Major Collection (Proactive) 614M(69%)->238M(27%) 0.105s
+[48.465s][info][gc] GC(93) Minor Collection (Allocation Rate)
+[48.489s][info][gc] GC(93) Minor Collection (Allocation Rate) 714M(89%)->122M(15%) 0.024s
+[48.922s][info][gc] GC(94) Minor Collection (Allocation Rate)
+[48.945s][info][gc] GC(94) Minor Collection (Allocation Rate) 710M(89%)->122M(15%) 0.023s
+[49.388s][info][gc] GC(95) Minor Collection (High Usage)
+[49.409s][info][gc] GC(95) Minor Collection (High Usage) 724M(90%)->124M(15%) 0.021s
+[49.859s][info][gc] GC(96) Minor Collection (High Usage)
+[49.883s][info][gc] GC(96) Minor Collection (High Usage) 734M(91%)->128M(16%) 0.023s
+[50.329s][info][gc] GC(97) Minor Collection (High Usage)
+[50.352s][info][gc] GC(97) Minor Collection (High Usage) 732M(90%)->132M(16%) 0.023s
+[50.799s][info][gc] GC(98) Minor Collection (High Usage)
+[50.822s][info][gc] GC(98) Minor Collection (High Usage) 740M(91%)->130M(16%) 0.022s
+[51.279s][info][gc] GC(99) Minor Collection (High Usage)
+[51.302s][info][gc] GC(99) Minor Collection (High Usage) 750M(91%)->132M(16%) 0.023s
+[51.763s][info][gc] GC(100) Minor Collection (High Usage)
+[51.786s][info][gc] GC(100) Minor Collection (High Usage) 758M(91%)->122M(15%) 0.023s
+[52.265s][info][gc] GC(101) Minor Collection (High Usage)
+[52.288s][info][gc] GC(101) Minor Collection (High Usage) 772M(91%)->124M(15%) 0.023s
+[52.777s][info][gc] GC(102) Minor Collection (High Usage)
+[52.801s][info][gc] GC(102) Minor Collection (High Usage) 788M(91%)->128M(15%) 0.024s
+[53.296s][info][gc] GC(103) Minor Collection (High Usage)
+[53.321s][info][gc] GC(103) Minor Collection (High Usage) 800M(91%)->130M(15%) 0.025s
+[53.822s][info][gc] GC(104) Minor Collection (High Usage)
+[53.844s][info][gc] GC(104) Minor Collection (High Usage) 812M(91%)->130M(15%) 0.022s
+[54.359s][info][gc] GC(105) Minor Collection (High Usage)
+[54.382s][info][gc] GC(105) Minor Collection (High Usage) 830M(91%)->134M(15%) 0.023s
+[54.905s][info][gc] GC(106) Minor Collection (High Usage)
+[54.929s][info][gc] GC(106) Minor Collection (High Usage) 842M(91%)->132M(14%) 0.025s
+[55.466s][info][gc] GC(107) Minor Collection (High Usage)
+[55.489s][info][gc] GC(107) Minor Collection (High Usage) 862M(92%)->134M(14%) 0.023s
+[56.027s][info][gc] GC(108) Minor Collection (High Usage)
+[56.051s][info][gc] GC(108) Minor Collection (High Usage) 864M(91%)->138M(15%) 0.025s
+[56.439s][info][gc] GC(109) Major Collection (Proactive)
+[56.535s][info][gc] GC(109) Major Collection (Proactive) 664M(70%)->228M(24%) 0.097s
+[56.934s][info][gc] GC(110) Minor Collection (High Usage)
+[56.942s][info][gc] GC(110) Minor Collection (High Usage) 770M(91%)->104M(12%) 0.008s
+[57.434s][info][gc] GC(111) Minor Collection (High Usage)
+[57.441s][info][gc] GC(111) Minor Collection (High Usage) 774M(91%)->102M(12%) 0.007s
+[57.932s][info][gc] GC(112) Minor Collection (High Usage)
+[57.939s][info][gc] GC(112) Minor Collection (High Usage) 772M(91%)->104M(12%) 0.007s
+[58.425s][info][gc] GC(113) Minor Collection (High Usage)
+[58.433s][info][gc] GC(113) Minor Collection (High Usage) 766M(91%)->108M(13%) 0.008s
+[58.914s][info][gc] GC(114) Minor Collection (High Usage)
+[58.920s][info][gc] GC(114) Minor Collection (High Usage) 764M(91%)->106M(13%) 0.007s
+[59.405s][info][gc] GC(115) Minor Collection (High Usage)
+[59.412s][info][gc] GC(115) Minor Collection (High Usage) 764M(91%)->108M(13%) 0.007s
+[59.893s][info][gc] GC(116) Minor Collection (High Usage)
+[59.900s][info][gc] GC(116) Minor Collection (High Usage) 764M(91%)->104M(12%) 0.007s
+[60.382s][info][gc] GC(117) Minor Collection (High Usage)
+[60.389s][info][gc] GC(117) Minor Collection (High Usage) 764M(91%)->108M(13%) 0.007s
+[60.870s][info][gc] GC(118) Minor Collection (High Usage)
+[60.878s][info][gc] GC(118) Minor Collection (High Usage) 762M(90%)->112M(13%) 0.008s
+[61.360s][info][gc] GC(119) Minor Collection (High Usage)
+[61.367s][info][gc] GC(119) Minor Collection (High Usage) 770M(91%)->102M(12%) 0.007s
+[61.851s][info][gc] GC(120) Minor Collection (High Usage)
+[61.859s][info][gc] GC(120) Minor Collection (High Usage) 770M(91%)->110M(13%) 0.008s
+[62.344s][info][gc] GC(121) Minor Collection (High Usage)
+[62.352s][info][gc] GC(121) Minor Collection (High Usage) 774M(91%)->108M(13%) 0.008s
+[62.839s][info][gc] GC(122) Minor Collection (High Usage)
+[62.846s][info][gc] GC(122) Minor Collection (High Usage) 776M(91%)->108M(13%) 0.007s
+[63.339s][info][gc] GC(123) Minor Collection (High Usage)
+[63.346s][info][gc] GC(123) Minor Collection (High Usage) 782M(91%)->110M(13%) 0.007s
+[63.843s][info][gc] GC(124) Minor Collection (High Usage)
+[63.850s][info][gc] GC(124) Minor Collection (High Usage) 790M(91%)->114M(13%) 0.007s
+[63.850s][info][gc] GC(125) Major Collection (Proactive)
+[63.921s][info][gc] GC(125) Major Collection (Proactive) 114M(13%)->198M(22%) 0.071s
+[64.306s][info][gc] GC(126) Minor Collection (High Usage)
+[64.313s][info][gc] GC(126) Minor Collection (High Usage) 724M(91%)->100M(13%) 0.007s
+[64.788s][info][gc] GC(127) Minor Collection (High Usage)
+[64.795s][info][gc] GC(127) Minor Collection (High Usage) 750M(91%)->102M(12%) 0.007s
+[65.294s][info][gc] GC(128) Minor Collection (High Usage)
+[65.300s][info][gc] GC(128) Minor Collection (High Usage) 782M(91%)->100M(12%) 0.007s
+[65.832s][info][gc] GC(129) Minor Collection (High Usage)
+[65.839s][info][gc] GC(129) Minor Collection (High Usage) 826M(91%)->104M(11%) 0.007s
+[66.408s][info][gc] GC(130) Minor Collection (High Usage)
+[66.415s][info][gc] GC(130) Minor Collection (High Usage) 880M(91%)->96M(10%) 0.007s
+[67.039s][info][gc] GC(131) Minor Collection (High Usage)
+[67.046s][info][gc] GC(131) Minor Collection (High Usage) 950M(92%)->98M(9%) 0.007s
+[67.726s][info][gc] GC(132) Minor Collection (High Usage)
+[67.733s][info][gc] GC(132) Minor Collection (High Usage) 1026M(92%)->100M(9%) 0.007s
+[68.473s][info][gc] GC(133) Minor Collection (High Usage)
+[68.484s][info][gc] GC(133) Minor Collection (High Usage) 1110M(93%)->104M(9%) 0.011s
+[69.287s][info][gc] GC(134) Minor Collection (High Usage)
+[69.295s][info][gc] GC(134) Minor Collection (High Usage) 1198M(93%)->102M(8%) 0.008s
+[70.156s][info][gc] GC(135) Minor Collection (High Usage)
+[70.164s][info][gc] GC(135) Minor Collection (High Usage) 1278M(93%)->100M(7%) 0.007s
+[70.339s][info][gc] GC(136) Major Collection (Proactive)
+[70.411s][info][gc] GC(136) Major Collection (Proactive) 344M(24%)->194M(14%) 0.072s
+[71.146s][info][gc] GC(137) Minor Collection (High Usage)
+[71.154s][info][gc] GC(137) Minor Collection (High Usage) 1190M(92%)->100M(8%) 0.008s
+[71.984s][info][gc] GC(138) Minor Collection (High Usage)
+[71.992s][info][gc] GC(138) Minor Collection (High Usage) 1232M(93%)->98M(7%) 0.008s
+[72.835s][info][gc] GC(139) Minor Collection (High Usage)
+[72.843s][info][gc] GC(139) Minor Collection (High Usage) 1248M(93%)->100M(7%) 0.007s
+[73.677s][info][gc] GC(140) Minor Collection (High Usage)
+[73.685s][info][gc] GC(140) Minor Collection (High Usage) 1238M(92%)->102M(8%) 0.008s
+[74.512s][info][gc] GC(141) Minor Collection (High Usage)
+[74.520s][info][gc] GC(141) Minor Collection (High Usage) 1230M(92%)->106M(8%) 0.008s
+[75.338s][info][gc] GC(142) Minor Collection (High Usage)
+[75.346s][info][gc] GC(142) Minor Collection (High Usage) 1218M(93%)->108M(8%) 0.008s
+[75.534s][info][gc] GC(143) Major Collection (Proactive)
+[75.603s][info][gc] GC(143) Major Collection (Proactive) 368M(28%)->194M(15%) 0.069s
+[76.257s][info][gc] GC(144) Minor Collection (High Usage)
+[76.265s][info][gc] GC(144) Minor Collection (High Usage) 1082M(92%)->98M(8%) 0.008s
+[76.978s][info][gc] GC(145) Minor Collection (High Usage)
+[76.985s][info][gc] GC(145) Minor Collection (High Usage) 1070M(92%)->100M(9%) 0.007s
+[77.681s][info][gc] GC(146) Minor Collection (High Usage)
+[77.687s][info][gc] GC(146) Minor Collection (High Usage) 1050M(92%)->102M(9%) 0.007s
+[78.376s][info][gc] GC(147) Minor Collection (High Usage)
+[78.383s][info][gc] GC(147) Minor Collection (High Usage) 1042M(92%)->100M(9%) 0.007s
+[79.057s][info][gc] GC(148) Minor Collection (High Usage)
+[79.064s][info][gc] GC(148) Minor Collection (High Usage) 1024M(92%)->98M(9%) 0.006s
+[79.738s][info][gc] GC(149) Minor Collection (High Usage)
+[79.746s][info][gc] GC(149) Minor Collection (High Usage) 1018M(92%)->102M(9%) 0.008s
+[80.115s][info][gc] GC(150) Major Collection (Proactive)
+[80.183s][info][gc] GC(150) Major Collection (Proactive) 608M(56%)->190M(17%) 0.068s
+[80.704s][info][gc] GC(151) Minor Collection (High Usage)
+[80.712s][info][gc] GC(151) Minor Collection (High Usage) 894M(91%)->102M(10%) 0.007s
+[81.289s][info][gc] GC(152) Minor Collection (High Usage)
+[81.295s][info][gc] GC(152) Minor Collection (High Usage) 890M(92%)->96M(10%) 0.007s
+[81.871s][info][gc] GC(153) Minor Collection (High Usage)
+[81.878s][info][gc] GC(153) Minor Collection (High Usage) 880M(91%)->102M(11%) 0.007s
+[82.447s][info][gc] GC(154) Minor Collection (High Usage)
+[82.454s][info][gc] GC(154) Minor Collection (High Usage) 878M(92%)->100M(10%) 0.007s
+[83.019s][info][gc] GC(155) Minor Collection (High Usage)
+[83.026s][info][gc] GC(155) Minor Collection (High Usage) 872M(92%)->100M(11%) 0.007s
+[83.582s][info][gc] GC(156) Minor Collection (High Usage)
+[83.589s][info][gc] GC(156) Minor Collection (High Usage) 862M(91%)->100M(11%) 0.007s
+[84.140s][info][gc] GC(157) Minor Collection (High Usage)
+[84.147s][info][gc] GC(157) Minor Collection (High Usage) 854M(91%)->104M(11%) 0.006s
+[84.280s][info][gc] GC(158) Major Collection (Proactive)
+[84.347s][info][gc] GC(158) Major Collection (Proactive) 290M(31%)->186M(20%) 0.067s
+[84.769s][info][gc] GC(159) Minor Collection (High Usage)
+[84.776s][info][gc] GC(159) Minor Collection (High Usage) 760M(91%)->98M(12%) 0.007s
+[85.257s][info][gc] GC(160) Minor Collection (High Usage)
+[85.264s][info][gc] GC(160) Minor Collection (High Usage) 758M(91%)->98M(12%) 0.007s
+[85.744s][info][gc] GC(161) Minor Collection (High Usage)
+[85.750s][info][gc] GC(161) Minor Collection (High Usage) 756M(91%)->100M(12%) 0.007s
+[86.232s][info][gc] GC(162) Minor Collection (High Usage)
+[86.239s][info][gc] GC(162) Minor Collection (High Usage) 760M(91%)->104M(12%) 0.007s
+[86.716s][info][gc] GC(163) Minor Collection (High Usage)
+[86.723s][info][gc] GC(163) Minor Collection (High Usage) 758M(91%)->104M(13%) 0.007s
+[87.199s][info][gc] GC(164) Minor Collection (High Usage)
+[87.205s][info][gc] GC(164) Minor Collection (High Usage) 756M(91%)->108M(13%) 0.007s
+[87.680s][info][gc] GC(165) Minor Collection (High Usage)
+[87.686s][info][gc] GC(165) Minor Collection (High Usage) 758M(91%)->106M(13%) 0.006s
+[88.105s][info][gc] GC(166) Major Collection (Proactive)
+[88.184s][info][gc] GC(166) Major Collection (Proactive) 682M(81%)->190M(23%) 0.078s
+[88.543s][info][gc] GC(167) Minor Collection (High Usage)
+[88.550s][info][gc] GC(167) Minor Collection (High Usage) 686M(91%)->98M(13%) 0.008s
+[88.987s][info][gc] GC(168) Minor Collection (High Usage)
+[88.994s][info][gc] GC(168) Minor Collection (High Usage) 696M(91%)->100M(13%) 0.007s
+[89.430s][info][gc] GC(169) Minor Collection (High Usage)
+[89.437s][info][gc] GC(169) Minor Collection (High Usage) 698M(90%)->102M(13%) 0.007s
+[89.879s][info][gc] GC(170) Minor Collection (High Usage)
+[89.886s][info][gc] GC(170) Minor Collection (High Usage) 706M(91%)->100M(13%) 0.008s
+[90.333s][info][gc] GC(171) Minor Collection (High Usage)
+[90.340s][info][gc] GC(171) Minor Collection (High Usage) 714M(91%)->98M(12%) 0.007s
+[90.797s][info][gc] GC(172) Minor Collection (High Usage)
+[90.804s][info][gc] GC(172) Minor Collection (High Usage) 726M(91%)->100M(13%) 0.007s
+[91.264s][info][gc] GC(173) Minor Collection (High Usage)
+[91.270s][info][gc] GC(173) Minor Collection (High Usage) 730M(91%)->102M(13%) 0.007s
+[91.736s][info][gc] GC(174) Minor Collection (High Usage)
+[91.743s][info][gc] GC(174) Minor Collection (High Usage) 740M(91%)->98M(12%) 0.008s
+[92.213s][info][gc] GC(175) Minor Collection (High Usage)
+[92.219s][info][gc] GC(175) Minor Collection (High Usage) 744M(91%)->104M(13%) 0.006s
+[92.696s][info][gc] GC(176) Minor Collection (High Usage)
+[92.703s][info][gc] GC(176) Minor Collection (High Usage) 756M(91%)->108M(13%) 0.007s
+[92.824s][info][gc] GC(177) Major Collection (Proactive)
+[92.898s][info][gc] GC(177) Major Collection (Proactive) 276M(33%)->196M(23%) 0.075s
+[93.257s][info][gc] GC(178) Minor Collection (High Usage)
+[93.265s][info][gc] GC(178) Minor Collection (High Usage) 688M(91%)->98M(13%) 0.007s
+[93.705s][info][gc] GC(179) Minor Collection (High Usage)
+[93.711s][info][gc] GC(179) Minor Collection (High Usage) 700M(91%)->98M(13%) 0.006s
+[94.162s][info][gc] GC(180) Minor Collection (High Usage)
+[94.168s][info][gc] GC(180) Minor Collection (High Usage) 716M(91%)->100M(13%) 0.006s
+[94.622s][info][gc] GC(181) Minor Collection (High Usage)
+[94.629s][info][gc] GC(181) Minor Collection (High Usage) 724M(90%)->102M(13%) 0.007s
+[95.092s][info][gc] GC(182) Minor Collection (High Usage)
+[95.099s][info][gc] GC(182) Minor Collection (High Usage) 736M(90%)->104M(13%) 0.007s
+[95.572s][info][gc] GC(183) Minor Collection (High Usage)
+[95.579s][info][gc] GC(183) Minor Collection (High Usage) 754M(91%)->96M(12%) 0.006s
+[96.069s][info][gc] GC(184) Minor Collection (High Usage)
+[96.076s][info][gc] GC(184) Minor Collection (High Usage) 766M(91%)->96M(11%) 0.007s
+[96.575s][info][gc] GC(185) Minor Collection (High Usage)
+[96.582s][info][gc] GC(185) Minor Collection (High Usage) 782M(91%)->100M(12%) 0.006s
+[97.087s][info][gc] GC(186) Minor Collection (High Usage)
+[97.094s][info][gc] GC(186) Minor Collection (High Usage) 790M(91%)->104M(12%) 0.007s
+[97.601s][info][gc] GC(187) Minor Collection (High Usage)
+[97.609s][info][gc] GC(187) Minor Collection (High Usage) 798M(91%)->104M(12%) 0.008s
+[97.797s][info][gc] GC(188) Major Collection (Proactive)
+[97.865s][info][gc] GC(188) Major Collection (Proactive) 368M(42%)->188M(21%) 0.067s
+[98.256s][info][gc] GC(189) Minor Collection (High Usage)
+[98.263s][info][gc] GC(189) Minor Collection (High Usage) 720M(90%)->92M(12%) 0.007s
+[98.726s][info][gc] GC(190) Minor Collection (High Usage)
+[98.733s][info][gc] GC(190) Minor Collection (High Usage) 726M(90%)->92M(11%) 0.007s
+[99.204s][info][gc] GC(191) Minor Collection (High Usage)
+[99.210s][info][gc] GC(191) Minor Collection (High Usage) 740M(91%)->96M(12%) 0.006s
+[99.684s][info][gc] GC(192) Minor Collection (High Usage)
+[99.692s][info][gc] GC(192) Minor Collection (High Usage) 746M(91%)->96M(12%) 0.007s
+[100.171s][info][gc] GC(193) Minor Collection (High Usage)
+[100.180s][info][gc] GC(193) Minor Collection (High Usage) 752M(91%)->102M(12%) 0.009s
+[100.659s][info][gc] GC(194) Minor Collection (High Usage)
+[100.665s][info][gc] GC(194) Minor Collection (High Usage) 758M(91%)->98M(12%) 0.006s
+[101.147s][info][gc] GC(195) Minor Collection (High Usage)
+[101.154s][info][gc] GC(195) Minor Collection (High Usage) 760M(90%)->104M(12%) 0.007s
+[101.639s][info][gc] GC(196) Minor Collection (High Usage)
+[101.645s][info][gc] GC(196) Minor Collection (High Usage) 770M(91%)->100M(12%) 0.007s
+[102.143s][info][gc] GC(197) Minor Collection (High Usage)
+[102.150s][info][gc] GC(197) Minor Collection (High Usage) 782M(91%)->94M(11%) 0.007s
+[102.279s][info][gc] GC(198) Major Collection (Proactive)
+[102.343s][info][gc] GC(198) Major Collection (Proactive) 276M(32%)->180M(21%) 0.063s
+[102.730s][info][gc] GC(199) Minor Collection (High Usage)
+[102.737s][info][gc] GC(199) Minor Collection (High Usage) 706M(91%)->96M(12%) 0.007s
+[103.189s][info][gc] GC(200) Minor Collection (High Usage)
+[103.195s][info][gc] GC(200) Minor Collection (High Usage) 716M(91%)->96M(12%) 0.007s
+[103.650s][info][gc] GC(201) Minor Collection (High Usage)
+[103.657s][info][gc] GC(201) Minor Collection (High Usage) 718M(90%)->98M(12%) 0.007s
+[104.117s][info][gc] GC(202) Minor Collection (High Usage)
+[104.124s][info][gc] GC(202) Minor Collection (High Usage) 730M(91%)->98M(12%) 0.007s
+[104.591s][info][gc] GC(203) Minor Collection (High Usage)
+[104.597s][info][gc] GC(203) Minor Collection (High Usage) 740M(91%)->102M(13%) 0.007s
+[105.067s][info][gc] GC(204) Minor Collection (High Usage)
+[105.074s][info][gc] GC(204) Minor Collection (High Usage) 746M(91%)->98M(12%) 0.007s
+[105.553s][info][gc] GC(205) Minor Collection (High Usage)
+[105.561s][info][gc] GC(205) Minor Collection (High Usage) 756M(91%)->102M(12%) 0.007s
+[106.047s][info][gc] GC(206) Minor Collection (High Usage)
+[106.054s][info][gc] GC(206) Minor Collection (High Usage) 768M(91%)->102M(12%) 0.007s
+[106.321s][info][gc] GC(207) Major Collection (Proactive)
+[106.385s][info][gc] GC(207) Major Collection (Proactive) 470M(55%)->190M(22%) 0.064s
+[106.755s][info][gc] GC(208) Minor Collection (High Usage)
+[106.762s][info][gc] GC(208) Minor Collection (High Usage) 696M(91%)->102M(13%) 0.007s
+[107.204s][info][gc] GC(209) Minor Collection (High Usage)
+[107.211s][info][gc] GC(209) Minor Collection (High Usage) 706M(91%)->102M(13%) 0.007s
+[107.655s][info][gc] GC(210) Minor Collection (High Usage)
+[107.662s][info][gc] GC(210) Minor Collection (High Usage) 714M(91%)->102M(13%) 0.007s
+[108.114s][info][gc] GC(211) Minor Collection (High Usage)
+[108.120s][info][gc] GC(211) Minor Collection (High Usage) 720M(91%)->102M(13%) 0.007s
+[108.577s][info][gc] GC(212) Minor Collection (High Usage)
+[108.584s][info][gc] GC(212) Minor Collection (High Usage) 726M(90%)->92M(11%) 0.007s
+[109.057s][info][gc] GC(213) Minor Collection (High Usage)
+[109.064s][info][gc] GC(213) Minor Collection (High Usage) 742M(91%)->98M(12%) 0.007s
+[109.540s][info][gc] GC(214) Minor Collection (High Usage)
+[109.547s][info][gc] GC(214) Minor Collection (High Usage) 752M(91%)->100M(12%) 0.007s
+[110.028s][info][gc] GC(215) Minor Collection (High Usage)
+[110.036s][info][gc] GC(215) Minor Collection (High Usage) 758M(91%)->104M(12%) 0.007s
+[110.160s][info][gc] GC(216) Major Collection (Proactive)
+[110.223s][info][gc] GC(216) Major Collection (Proactive) 278M(33%)->178M(21%) 0.063s
+[110.596s][info][gc] GC(217) Minor Collection (High Usage)
+[110.604s][info][gc] GC(217) Minor Collection (High Usage) 686M(90%)->102M(13%) 0.007s
+[111.039s][info][gc] GC(218) Minor Collection (High Usage)
+[111.046s][info][gc] GC(218) Minor Collection (High Usage) 700M(90%)->104M(13%) 0.007s
+[111.489s][info][gc] GC(219) Minor Collection (High Usage)
+[111.496s][info][gc] GC(219) Minor Collection (High Usage) 712M(90%)->96M(12%) 0.007s
+[111.957s][info][gc] GC(220) Minor Collection (High Usage)
+[111.964s][info][gc] GC(220) Minor Collection (High Usage) 728M(91%)->98M(12%) 0.007s
+[112.430s][info][gc] GC(221) Minor Collection (High Usage)
+[112.437s][info][gc] GC(221) Minor Collection (High Usage) 736M(90%)->102M(13%) 0.007s
+[112.914s][info][gc] GC(222) Minor Collection (High Usage)
+[112.920s][info][gc] GC(222) Minor Collection (High Usage) 754M(91%)->96M(12%) 0.007s
+[113.407s][info][gc] GC(223) Minor Collection (High Usage)
+[113.414s][info][gc] GC(223) Minor Collection (High Usage) 762M(90%)->100M(12%) 0.007s
+[113.721s][info][gc] GC(224) Major Collection (Proactive)
+[113.786s][info][gc] GC(224) Major Collection (Proactive) 522M(61%)->182M(21%) 0.066s
+[114.164s][info][gc] GC(225) Minor Collection (High Usage)
+[114.171s][info][gc] GC(225) Minor Collection (High Usage) 696M(90%)->98M(13%) 0.007s
+[114.622s][info][gc] GC(226) Minor Collection (High Usage)
+[114.629s][info][gc] GC(226) Minor Collection (High Usage) 716M(91%)->98M(12%) 0.007s
+[115.088s][info][gc] GC(227) Minor Collection (High Usage)
+[115.095s][info][gc] GC(227) Minor Collection (High Usage) 726M(91%)->100M(13%) 0.007s
+[115.554s][info][gc] GC(228) Minor Collection (High Usage)
+[115.561s][info][gc] GC(228) Minor Collection (High Usage) 730M(91%)->94M(12%) 0.006s
+[116.031s][info][gc] GC(229) Minor Collection (High Usage)
+[116.037s][info][gc] GC(229) Minor Collection (High Usage) 740M(91%)->92M(11%) 0.007s
+[116.515s][info][gc] GC(230) Minor Collection (High Usage)
+[116.522s][info][gc] GC(230) Minor Collection (High Usage) 748M(91%)->98M(12%) 0.007s
+[117.004s][info][gc] GC(231) Minor Collection (High Usage)
+[117.011s][info][gc] GC(231) Minor Collection (High Usage) 758M(91%)->100M(12%) 0.007s
+[117.232s][info][gc] GC(232) Major Collection (Proactive)
+[117.296s][info][gc] GC(232) Major Collection (Proactive) 408M(49%)->184M(22%) 0.064s
+[117.665s][info][gc] GC(233) Minor Collection (High Usage)
+[117.673s][info][gc] GC(233) Minor Collection (High Usage) 686M(91%)->100M(13%) 0.007s
+[118.112s][info][gc] GC(234) Minor Collection (High Usage)
+[118.119s][info][gc] GC(234) Minor Collection (High Usage) 702M(91%)->104M(13%) 0.007s
+[118.559s][info][gc] GC(235) Minor Collection (High Usage)
+[118.566s][info][gc] GC(235) Minor Collection (High Usage) 708M(90%)->98M(12%) 0.006s
+[119.018s][info][gc] GC(236) Minor Collection (High Usage)
+[119.024s][info][gc] GC(236) Minor Collection (High Usage) 720M(91%)->98M(12%) 0.006s
+[119.482s][info][gc] GC(237) Minor Collection (High Usage)
+[119.489s][info][gc] GC(237) Minor Collection (High Usage) 728M(90%)->98M(12%) 0.007s
+[119.957s][info][gc] GC(238) Minor Collection (High Usage)
+[119.964s][info][gc] GC(238) Minor Collection (High Usage) 740M(90%)->100M(12%) 0.007s
+[120.442s][info][gc] GC(239) Minor Collection (High Usage)
+[120.449s][info][gc] GC(239) Minor Collection (High Usage) 756M(91%)->100M(12%) 0.007s
+[120.668s][info][gc] GC(240) Major Collection (Proactive)
+[120.732s][info][gc] GC(240) Major Collection (Proactive) 406M(48%)->182M(22%) 0.065s
+[121.101s][info][gc] GC(241) Minor Collection (High Usage)
+[121.109s][info][gc] GC(241) Minor Collection (High Usage) 682M(90%)->96M(13%) 0.008s
+[121.547s][info][gc] GC(242) Minor Collection (High Usage)
+[121.555s][info][gc] GC(242) Minor Collection (High Usage) 700M(91%)->96M(12%) 0.007s
+[122.005s][info][gc] GC(243) Minor Collection (High Usage)
+[122.012s][info][gc] GC(243) Minor Collection (High Usage) 714M(91%)->98M(12%) 0.007s
+[122.467s][info][gc] GC(244) Minor Collection (High Usage)
+[122.473s][info][gc] GC(244) Minor Collection (High Usage) 720M(90%)->96M(12%) 0.006s
+[122.934s][info][gc] GC(245) Minor Collection (High Usage)
+[122.941s][info][gc] GC(245) Minor Collection (High Usage) 730M(90%)->92M(11%) 0.007s
+[123.416s][info][gc] GC(246) Minor Collection (High Usage)
+[123.423s][info][gc] GC(246) Minor Collection (High Usage) 744M(91%)->94M(11%) 0.007s
+[123.909s][info][gc] GC(247) Minor Collection (High Usage)
+[123.916s][info][gc] GC(247) Minor Collection (High Usage) 760M(91%)->94M(11%) 0.007s
+[124.099s][info][gc] GC(248) Major Collection (Proactive)
+[124.162s][info][gc] GC(248) Major Collection (Proactive) 348M(41%)->178M(21%) 0.063s
+[124.534s][info][gc] GC(249) Minor Collection (High Usage)
+[124.541s][info][gc] GC(249) Minor Collection (High Usage) 686M(91%)->96M(13%) 0.007s
+[124.980s][info][gc] GC(250) Minor Collection (High Usage)
+[124.987s][info][gc] GC(250) Minor Collection (High Usage) 698M(90%)->100M(13%) 0.007s
+[125.435s][info][gc] GC(251) Minor Collection (High Usage)
+[125.442s][info][gc] GC(251) Minor Collection (High Usage) 714M(91%)->96M(12%) 0.006s
+[125.900s][info][gc] GC(252) Minor Collection (High Usage)
+[125.907s][info][gc] GC(252) Minor Collection (High Usage) 726M(91%)->96M(12%) 0.007s
+[126.371s][info][gc] GC(253) Minor Collection (High Usage)
+[126.377s][info][gc] GC(253) Minor Collection (High Usage) 732M(90%)->100M(12%) 0.007s
+[126.854s][info][gc] GC(254) Minor Collection (High Usage)
+[126.860s][info][gc] GC(254) Minor Collection (High Usage) 750M(91%)->98M(12%) 0.007s
+[127.346s][info][gc] GC(255) Minor Collection (High Usage)
+[127.352s][info][gc] GC(255) Minor Collection (High Usage) 762M(91%)->100M(12%) 0.006s
+[127.522s][info][gc] GC(256) Major Collection (Proactive)
+[127.586s][info][gc] GC(256) Major Collection (Proactive) 336M(40%)->180M(21%) 0.064s
+[127.956s][info][gc] GC(257) Minor Collection (High Usage)
+[127.964s][info][gc] GC(257) Minor Collection (High Usage) 684M(90%)->102M(13%) 0.008s
+[128.404s][info][gc] GC(258) Minor Collection (High Usage)
+[128.411s][info][gc] GC(258) Minor Collection (High Usage) 704M(90%)->94M(12%) 0.007s
+[128.869s][info][gc] GC(259) Minor Collection (High Usage)
+[128.877s][info][gc] GC(259) Minor Collection (High Usage) 722M(91%)->96M(12%) 0.008s
+[129.333s][info][gc] GC(260) Minor Collection (High Usage)
+[129.341s][info][gc] GC(260) Minor Collection (High Usage) 726M(90%)->96M(12%) 0.007s
+[129.809s][info][gc] GC(261) Minor Collection (High Usage)
+[129.816s][info][gc] GC(261) Minor Collection (High Usage) 740M(91%)->96M(12%) 0.007s
+[130.292s][info][gc] GC(262) Minor Collection (High Usage)
+[130.298s][info][gc] GC(262) Minor Collection (High Usage) 750M(91%)->96M(12%) 0.006s
+[130.787s][info][gc] GC(263) Minor Collection (High Usage)
+[130.795s][info][gc] GC(263) Minor Collection (High Usage) 766M(91%)->102M(12%) 0.008s
+[130.988s][info][gc] GC(264) Major Collection (Proactive)
+[131.051s][info][gc] GC(264) Major Collection (Proactive) 372M(44%)->184M(22%) 0.063s
+[131.426s][info][gc] GC(265) Minor Collection (High Usage)
+[131.434s][info][gc] GC(265) Minor Collection (High Usage) 694M(91%)->94M(12%) 0.008s
+[131.884s][info][gc] GC(266) Minor Collection (High Usage)
+[131.891s][info][gc] GC(266) Minor Collection (High Usage) 714M(91%)->94M(12%) 0.006s
+[132.347s][info][gc] GC(267) Minor Collection (High Usage)
+[132.353s][info][gc] GC(267) Minor Collection (High Usage) 722M(91%)->96M(12%) 0.006s
+[132.820s][info][gc] GC(268) Minor Collection (High Usage)
+[132.828s][info][gc] GC(268) Minor Collection (High Usage) 736M(91%)->102M(13%) 0.007s

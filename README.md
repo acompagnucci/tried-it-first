@@ -25,3 +25,4 @@ Se qualcosa non funziona, apritemi una issue.
 | 2026-11-11 | java | [1.000 bonifici rifiutati e 1.000 controlli ancora in corso: ExecutorService e StructuredTaskScope in Java 28](java/2026-11-11-structured-concurrency/) |
 | 2026-11-13 | aws | [Il giro di un bonifico su AWS Emulator e su AWS](aws/2026-11-13-aws-emulator/) |
 | 2026-11-16 | java | [Le prime 500 richieste in 272 ms invece di 783: il codice compilato nella cache AOT di Java 28](java/2026-11-16-codice-aot/) |
+| 2026-11-18 | java | [PetClinic con 1 GB di heap invece di 7,6: l'heap adattivo di ZGC in Java 28](java/2026-11-18-zgc-petclinic/) |

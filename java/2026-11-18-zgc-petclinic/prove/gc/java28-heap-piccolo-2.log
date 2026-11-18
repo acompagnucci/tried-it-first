@@ -1,0 +1,65 @@
+[0.013s][info][gc] Using The Z Garbage Collector
+[0.755s][info][gc] GC(0) Major Collection (Metadata GC Threshold)
+[0.794s][info][gc] GC(0) Major Collection (Metadata GC Threshold) 284M(3%)->44M(1%) 0.039s
+[1.607s][info][gc] GC(1) Major Collection (Metadata GC Threshold)
+[1.686s][info][gc] GC(1) Major Collection (Metadata GC Threshold) 372M(5%)->88M(1%) 0.079s
+[2.354s][info][gc] GC(2) Major Collection (Metadata GC Threshold)
+[2.450s][info][gc] GC(2) Major Collection (Metadata GC Threshold) 304M(4%)->110M(1%) 0.097s
+[4.963s][info][gc] GC(3) Major Collection (Warmup)
+[5.024s][info][gc] GC(3) Major Collection (Warmup) 820M(10%)->156M(2%) 0.061s
+[8.167s][info][gc] GC(4) Major Collection (Warmup)
+[8.266s][info][gc] GC(4) Major Collection (Warmup) 1644M(20%)->170M(2%) 0.099s
+[10.913s][info][gc] GC(5) Major Collection (Warmup)
+[11.058s][info][gc] GC(5) Major Collection (Warmup) 2464M(30%)->250M(3%) 0.145s
+[16.069s][info][gc] GC(6) Minor Collection (Allocation Rate)
+[16.104s][info][gc] GC(6) Minor Collection (Allocation Rate) 6716M(82%)->146M(2%) 0.035s
+[21.645s][info][gc] GC(7) Minor Collection (Allocation Rate)
+[21.730s][info][gc] GC(7) Minor Collection (Allocation Rate) 7640M(93%)->254M(3%) 0.085s
+[27.175s][info][gc] GC(8) Minor Collection (Allocation Rate)
+[27.214s][info][gc] GC(8) Minor Collection (Allocation Rate) 7656M(93%)->152M(2%) 0.039s
+[32.416s][info][gc] GC(9) Major Collection (Proactive)
+[32.588s][info][gc] GC(9) Major Collection (Proactive) 7210M(88%)->336M(4%) 0.173s
+[38.056s][info][gc] GC(10) Minor Collection (High Usage)
+[38.088s][info][gc] GC(10) Minor Collection (High Usage) 7750M(95%)->142M(2%) 0.032s
+[43.703s][info][gc] GC(11) Minor Collection (High Usage)
+[43.733s][info][gc] GC(11) Minor Collection (High Usage) 7760M(95%)->138M(2%) 0.030s
+[47.647s][info][gc] GC(12) Major Collection (Proactive)
+[47.780s][info][gc] GC(12) Major Collection (Proactive) 5450M(67%)->284M(3%) 0.133s
+[53.286s][info][gc] GC(13) Minor Collection (High Usage)
+[53.338s][info][gc] GC(13) Minor Collection (High Usage) 7750M(95%)->174M(2%) 0.051s
+[58.923s][info][gc] GC(14) Minor Collection (High Usage)
+[58.961s][info][gc] GC(14) Minor Collection (High Usage) 7748M(95%)->160M(2%) 0.038s
+[60.813s][info][gc] GC(15) Major Collection (Proactive)
+[60.940s][info][gc] GC(15) Major Collection (Proactive) 2674M(33%)->282M(3%) 0.126s
+[66.444s][info][gc] GC(16) Minor Collection (High Usage)
+[66.477s][info][gc] GC(16) Minor Collection (High Usage) 7746M(95%)->154M(2%) 0.034s
+[71.896s][info][gc] GC(17) Major Collection (Proactive)
+[72.027s][info][gc] GC(17) Major Collection (Proactive) 7500M(92%)->296M(4%) 0.131s
+[77.526s][info][gc] GC(18) Minor Collection (High Usage)
+[77.543s][info][gc] GC(18) Minor Collection (High Usage) 7750M(95%)->132M(2%) 0.017s
+[81.433s][info][gc] GC(19) Major Collection (Proactive)
+[81.533s][info][gc] GC(19) Major Collection (Proactive) 5410M(66%)->250M(3%) 0.099s
+[87.072s][info][gc] GC(20) Minor Collection (High Usage)
+[87.089s][info][gc] GC(20) Minor Collection (High Usage) 7758M(95%)->134M(2%) 0.017s
+[89.986s][info][gc] GC(21) Major Collection (Proactive)
+[90.085s][info][gc] GC(21) Major Collection (Proactive) 4064M(50%)->248M(3%) 0.099s
+[95.622s][info][gc] GC(22) Minor Collection (High Usage)
+[95.638s][info][gc] GC(22) Minor Collection (High Usage) 7754M(95%)->126M(2%) 0.016s
+[97.148s][info][gc] GC(23) Major Collection (Proactive)
+[97.235s][info][gc] GC(23) Major Collection (Proactive) 2180M(27%)->234M(3%) 0.087s
+[102.780s][info][gc] GC(24) Minor Collection (High Usage)
+[102.788s][info][gc] GC(24) Minor Collection (High Usage) 7748M(95%)->120M(1%) 0.009s
+[103.853s][info][gc] GC(25) Major Collection (Proactive)
+[103.929s][info][gc] GC(25) Major Collection (Proactive) 1568M(19%)->220M(3%) 0.076s
+[109.488s][info][gc] GC(26) Minor Collection (High Usage)
+[109.498s][info][gc] GC(26) Minor Collection (High Usage) 7754M(95%)->120M(1%) 0.010s
+[110.172s][info][gc] GC(27) Major Collection (Proactive)
+[110.250s][info][gc] GC(27) Major Collection (Proactive) 1040M(13%)->222M(3%) 0.078s
+[115.142s][info][gc] GC(28) Major Collection (Proactive)
+[115.229s][info][gc] GC(28) Major Collection (Proactive) 6852M(84%)->234M(3%) 0.088s
+[120.234s][info][gc] GC(29) Major Collection (Proactive)
+[120.309s][info][gc] GC(29) Major Collection (Proactive) 7018M(86%)->218M(3%) 0.075s
+[125.027s][info][gc] GC(30) Major Collection (Proactive)
+[125.101s][info][gc] GC(30) Major Collection (Proactive) 6614M(81%)->196M(2%) 0.073s
+[129.387s][info][gc] GC(31) Major Collection (Proactive)
+[129.463s][info][gc] GC(31) Major Collection (Proactive) 6006M(73%)->204M(2%) 0.077s

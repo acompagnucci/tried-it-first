@@ -1,0 +1,193 @@
+[0.016s][info][gc] Using The Z Garbage Collector
+[0.962s][info][gc] GC(0) Major Collection (Metadata GC Threshold)
+[1.011s][info][gc] GC(0) Major Collection (Metadata GC Threshold) 282M(3%)->42M(1%) 0.049s
+[1.992s][info][gc] GC(1) Major Collection (Metadata GC Threshold)
+[2.070s][info][gc] GC(1) Major Collection (Metadata GC Threshold) 372M(5%)->84M(1%) 0.078s
+[2.886s][info][gc] GC(2) Major Collection (Metadata GC Threshold)
+[2.981s][info][gc] GC(2) Major Collection (Metadata GC Threshold) 296M(4%)->104M(1%) 0.095s
+[5.562s][info][gc] GC(3) Major Collection (Warmup)
+[5.632s][info][gc] GC(3) Major Collection (Warmup) 822M(10%)->158M(2%) 0.070s
+[8.783s][info][gc] GC(4) Major Collection (Warmup)
+[8.909s][info][gc] GC(4) Major Collection (Warmup) 1644M(20%)->184M(2%) 0.125s
+[11.541s][info][gc] GC(5) Major Collection (Warmup)
+[11.703s][info][gc] GC(5) Major Collection (Warmup) 2466M(30%)->272M(3%) 0.163s
+[16.554s][info][gc] GC(6) Minor Collection (Allocation Rate)
+[16.618s][info][gc] GC(6) Minor Collection (Allocation Rate) 6518M(80%)->178M(2%) 0.064s
+[22.011s][info][gc] GC(7) Minor Collection (Allocation Rate)
+[22.094s][info][gc] GC(7) Minor Collection (Allocation Rate) 7512M(92%)->208M(3%) 0.083s
+[27.549s][info][gc] GC(8) Minor Collection (Allocation Rate)
+[27.609s][info][gc] GC(8) Minor Collection (Allocation Rate) 7640M(93%)->196M(2%) 0.060s
+[33.168s][info][gc] GC(9) Minor Collection (High Usage)
+[33.625s][info][gc] Allocation Stall (http-nio-8080-exec-107) 0.011ms
+[33.652s][info][gc] Allocation Stall (http-nio-8080-exec-94) 0.008ms
+[33.655s][info][gc] Allocation Stall (http-nio-8080-exec-92) 3.628ms
+[33.662s][info][gc] Allocation Stall (http-nio-8080-exec-21) 10.246ms
+[33.662s][info][gc] Allocation Stall (http-nio-8080-exec-122) 10.268ms
+[33.662s][info][gc] Allocation Stall (http-nio-8080-exec-69) 10.267ms
+[33.663s][info][gc] Allocation Stall (http-nio-8080-exec-111) 11.479ms
+[33.663s][info][gc] Allocation Stall (http-nio-8080-exec-77) 11.571ms
+[33.667s][info][gc] Allocation Stall (http-nio-8080-exec-74) 15.762ms
+[33.667s][info][gc] Allocation Stall (http-nio-8080-exec-101) 15.767ms
+[33.668s][info][gc] Allocation Stall (http-nio-8080-exec-113) 15.837ms
+[33.668s][info][gc] Allocation Stall (http-nio-8080-exec-19) 15.830ms
+[33.668s][info][gc] Allocation Stall (http-nio-8080-exec-72) 15.851ms
+[33.668s][info][gc] Allocation Stall (http-nio-8080-exec-132) 16.024ms
+[33.668s][info][gc] Allocation Stall (http-nio-8080-exec-54) 42.516ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-131) 20.142ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-25) 20.274ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-53) 20.250ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-6) 20.196ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-88) 20.293ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-133) 20.289ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-90) 20.306ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-81) 20.287ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-27) 20.301ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-10) 20.361ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-36) 20.310ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-85) 20.321ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-38) 10.301ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-78) 10.322ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-35) 9.173ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-31) 9.298ms
+[33.672s][info][gc] Allocation Stall (http-nio-8080-exec-14) 9.262ms
+[33.673s][info][gc] Allocation Stall (http-nio-8080-exec-9) 9.533ms
+[33.691s][info][gc] Allocation Stall (http-nio-8080-exec-16) 28.057ms
+[33.691s][info][gc] Allocation Stall (http-nio-8080-exec-116) 28.104ms
+[33.691s][info][gc] Allocation Stall (http-nio-8080-exec-30) 28.112ms
+[33.691s][info][gc] Allocation Stall (http-nio-8080-exec-130) 28.114ms
+[33.692s][info][gc] Allocation Stall (http-nio-8080-exec-42) 28.369ms
+[33.692s][info][gc] Allocation Stall (http-nio-8080-exec-65) 28.394ms
+[33.692s][info][gc] Allocation Stall (http-nio-8080-exec-124) 28.627ms
+[33.693s][info][gc] Allocation Stall (http-nio-8080-exec-13) 29.508ms
+[33.694s][info][gc] Allocation Stall (http-nio-8080-exec-39) 26.643ms
+[33.694s][info][gc] Allocation Stall (http-nio-8080-exec-97) 26.639ms
+[33.694s][info][gc] Allocation Stall (http-nio-8080-exec-131) 13.114ms
+[33.694s][info][gc] Allocation Stall (http-nio-8080-exec-20) 26.795ms
+[33.695s][info][gc] Allocation Stall (http-nio-8080-exec-59) 31.182ms
+[33.695s][info][gc] Allocation Stall (http-nio-8080-exec-136) 31.189ms
+[33.695s][info][gc] Allocation Stall (http-nio-8080-exec-109) 27.148ms
+[33.695s][info][gc] Allocation Stall (http-nio-8080-exec-117) 27.166ms
+[33.695s][info][gc] Allocation Stall (http-nio-8080-exec-68) 27.327ms
+[33.695s][info][gc] Allocation Stall (http-nio-8080-exec-106) 27.327ms
+[33.697s][info][gc] Allocation Stall (http-nio-8080-exec-44) 29.031ms
+[33.697s][info][gc] Allocation Stall (http-nio-8080-exec-45) 24.736ms
+[33.697s][info][gc] Allocation Stall (http-nio-8080-exec-135) 24.871ms
+[33.697s][info][gc] Allocation Stall (http-nio-8080-exec-104) 24.867ms
+[33.697s][info][gc] Allocation Stall (http-nio-8080-exec-71) 23.155ms
+[33.697s][info][gc] Allocation Stall (http-nio-8080-exec-94) 22.664ms
+[33.697s][info][gc] Allocation Stall (http-nio-8080-exec-49) 22.329ms
+[33.697s][info][gc] Allocation Stall (http-nio-8080-exec-40) 22.922ms
+[33.697s][info][gc] Allocation Stall (http-nio-8080-exec-126) 21.915ms
+[33.698s][info][gc] Allocation Stall (http-nio-8080-exec-17) 21.867ms
+[33.698s][info][gc] Allocation Stall (http-nio-8080-exec-70) 22.232ms
+[33.698s][info][gc] Allocation Stall (http-nio-8080-exec-69) 21.873ms
+[33.698s][info][gc] Allocation Stall (http-nio-8080-exec-6) 21.782ms
+[33.698s][info][gc] Allocation Stall (http-nio-8080-exec-88) 21.767ms
+[33.698s][info][gc] Allocation Stall (http-nio-8080-exec-82) 18.283ms
+[33.698s][info][gc] Allocation Stall (http-nio-8080-exec-60) 30.180ms
+[33.698s][info][gc] Allocation Stall (http-nio-8080-exec-10) 16.253ms
+[33.698s][info][gc] Allocation Stall (http-nio-8080-exec-118) 30.219ms
+[33.698s][info][gc] Allocation Stall (http-nio-8080-exec-133) 16.265ms
+[33.698s][info][gc] Allocation Stall (http-nio-8080-exec-96) 16.133ms
+[33.698s][info][gc] Allocation Stall (http-nio-8080-exec-55) 15.556ms
+[33.698s][info][gc] Allocation Stall (http-nio-8080-exec-7) 15.491ms
+[33.699s][info][gc] Allocation Stall (http-nio-8080-exec-108) 15.849ms
+[33.699s][info][gc] Allocation Stall (http-nio-8080-exec-113) 15.704ms
+[33.699s][info][gc] Allocation Stall (http-nio-8080-exec-127) 16.037ms
+[33.699s][info][gc] Allocation Stall (http-nio-8080-exec-72) 14.853ms
+[33.699s][info][gc] Allocation Stall (http-nio-8080-exec-1) 14.606ms
+[33.699s][info][gc] Allocation Stall (http-nio-8080-exec-53) 7.400ms
+[33.699s][info][gc] Allocation Stall (Notification Thread) 7.514ms
+[33.699s][info][gc] Allocation Stall (http-nio-8080-exec-77) 7.257ms
+[33.699s][info][gc] Allocation Stall (http-nio-8080-exec-35) 7.337ms
+[33.699s][info][gc] Allocation Stall (http-nio-8080-exec-14) 7.010ms
+[33.699s][info][gc] Allocation Stall (http-nio-8080-exec-78) 7.288ms
+[33.700s][info][gc] Allocation Stall (http-nio-8080-exec-62) 36.178ms
+[33.700s][info][gc] Allocation Stall (http-nio-8080-exec-123) 36.173ms
+[33.700s][info][gc] Allocation Stall (http-nio-8080-exec-23) 36.175ms
+[33.700s][info][gc] Allocation Stall (http-nio-8080-exec-28) 36.176ms
+[33.700s][info][gc] Allocation Stall (http-nio-8080-Poller) 36.860ms
+[33.700s][info][gc] Allocation Stall (http-nio-8080-Acceptor) 36.866ms
+[33.700s][info][gc] Allocation Stall (http-nio-8080-exec-89) 36.881ms
+[33.700s][info][gc] Allocation Stall (http-nio-8080-exec-107) 36.873ms
+[33.700s][info][gc] Allocation Stall (http-nio-8080-exec-100) 36.908ms
+[33.700s][info][gc] Allocation Stall (http-nio-8080-exec-80) 32.855ms
+[33.701s][info][gc] Allocation Stall (http-nio-8080-exec-83) 37.234ms
+[33.701s][info][gc] Allocation Stall (http-nio-8080-exec-91) 33.415ms
+[33.701s][info][gc] Allocation Stall (http-nio-8080-exec-32) 33.428ms
+[33.701s][info][gc] Allocation Stall (http-nio-8080-exec-79) 33.384ms
+[33.701s][info][gc] Allocation Stall (http-nio-8080-exec-11) 33.427ms
+[33.701s][info][gc] Allocation Stall (http-nio-8080-exec-8) 33.376ms
+[33.701s][info][gc] Allocation Stall (http-nio-8080-exec-58) 33.388ms
+[33.701s][info][gc] Allocation Stall (http-nio-8080-exec-67) 33.411ms
+[33.701s][info][gc] Allocation Stall (http-nio-8080-exec-119) 33.434ms
+[33.701s][info][gc] Allocation Stall (http-nio-8080-exec-22) 33.718ms
+[33.701s][info][gc] Allocation Stall (http-nio-8080-exec-64) 33.775ms
+[33.701s][info][gc] Allocation Stall (http-nio-8080-exec-34) 33.794ms
+[33.702s][info][gc] Allocation Stall (http-nio-8080-exec-105) 34.356ms
+[33.702s][info][gc] Allocation Stall (http-nio-8080-exec-125) 34.398ms
+[33.702s][info][gc] Allocation Stall (http-nio-8080-exec-114) 34.557ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-61) 34.925ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-103) 35.219ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-2) 35.294ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-4) 35.281ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-75) 35.251ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-137) 35.264ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-129) 35.236ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-93) 35.233ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-48) 31.101ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-86) 31.084ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-120) 31.126ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-37) 31.092ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-24) 31.106ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-29) 31.093ms
+[33.703s][info][gc] Allocation Stall (http-nio-8080-exec-138) 31.200ms
+[33.779s][info][gc] GC(9) Minor Collection (High Usage) 7750M(95%)->686M(8%) 0.611s
+[33.779s][info][gc] GC(10) Major Collection (Proactive)
+[34.005s][info][gc] GC(10) Major Collection (Proactive) 686M(8%)->510M(6%) 0.225s
+[37.331s][info][gc] GC(11) Minor Collection (Allocation Rate)
+[37.363s][info][gc] GC(11) Minor Collection (Allocation Rate) 5268M(64%)->164M(2%) 0.032s
+[41.092s][info][gc] GC(12) Minor Collection (Allocation Rate)
+[41.137s][info][gc] GC(12) Minor Collection (Allocation Rate) 5248M(64%)->174M(2%) 0.044s
+[45.987s][info][gc] GC(13) Minor Collection (Allocation Rate)
+[46.060s][info][gc] GC(13) Minor Collection (Allocation Rate) 6768M(83%)->208M(3%) 0.073s
+[51.272s][info][gc] GC(14) Minor Collection (Allocation Rate)
+[51.311s][info][gc] GC(14) Minor Collection (Allocation Rate) 7306M(89%)->170M(2%) 0.039s
+[56.797s][info][gc] GC(15) Minor Collection (Allocation Rate)
+[56.829s][info][gc] GC(15) Minor Collection (Allocation Rate) 7634M(93%)->166M(2%) 0.032s
+[57.682s][info][gc] GC(16) Major Collection (Proactive)
+[57.814s][info][gc] GC(16) Major Collection (Proactive) 1344M(16%)->304M(4%) 0.132s
+[63.297s][info][gc] GC(17) Minor Collection (High Usage)
+[63.335s][info][gc] GC(17) Minor Collection (High Usage) 7752M(95%)->172M(2%) 0.037s
+[68.906s][info][gc] GC(18) Minor Collection (High Usage)
+[68.935s][info][gc] GC(18) Minor Collection (High Usage) 7746M(95%)->160M(2%) 0.030s
+[74.515s][info][gc] GC(19) Minor Collection (High Usage)
+[74.564s][info][gc] GC(19) Minor Collection (High Usage) 7750M(95%)->190M(2%) 0.049s
+[75.716s][info][gc] GC(20) Major Collection (Proactive)
+[75.868s][info][gc] GC(20) Major Collection (Proactive) 1774M(22%)->342M(4%) 0.152s
+[81.320s][info][gc] GC(21) Minor Collection (High Usage)
+[81.361s][info][gc] GC(21) Minor Collection (High Usage) 7750M(95%)->166M(2%) 0.041s
+[86.938s][info][gc] GC(22) Minor Collection (High Usage)
+[86.974s][info][gc] GC(22) Minor Collection (High Usage) 7754M(95%)->166M(2%) 0.036s
+[89.410s][info][gc] GC(23) Major Collection (Proactive)
+[89.560s][info][gc] GC(23) Major Collection (Proactive) 3488M(43%)->330M(4%) 0.150s
+[95.029s][info][gc] GC(24) Minor Collection (High Usage)
+[95.063s][info][gc] GC(24) Minor Collection (High Usage) 7756M(95%)->160M(2%) 0.034s
+[100.644s][info][gc] GC(25) Minor Collection (High Usage)
+[100.673s][info][gc] GC(25) Minor Collection (High Usage) 7752M(95%)->156M(2%) 0.029s
+[101.399s][info][gc] GC(26) Major Collection (Proactive)
+[101.529s][info][gc] GC(26) Major Collection (Proactive) 1162M(14%)->304M(4%) 0.129s
+[107.014s][info][gc] GC(27) Minor Collection (High Usage)
+[107.027s][info][gc] GC(27) Minor Collection (High Usage) 7756M(95%)->138M(2%) 0.012s
+[112.628s][info][gc] GC(28) Minor Collection (High Usage)
+[112.640s][info][gc] GC(28) Minor Collection (High Usage) 7758M(95%)->138M(2%) 0.012s
+[113.360s][info][gc] GC(29) Major Collection (Proactive)
+[113.446s][info][gc] GC(29) Major Collection (Proactive) 1138M(14%)->252M(3%) 0.086s
+[118.968s][info][gc] GC(30) Minor Collection (High Usage)
+[118.979s][info][gc] GC(30) Minor Collection (High Usage) 7752M(95%)->142M(2%) 0.011s
+[122.201s][info][gc] GC(31) Major Collection (Proactive)
+[122.284s][info][gc] GC(31) Major Collection (Proactive) 4536M(55%)->248M(3%) 0.083s
+[127.803s][info][gc] GC(32) Minor Collection (High Usage)
+[127.815s][info][gc] GC(32) Minor Collection (High Usage) 7746M(95%)->144M(2%) 0.013s
+[129.357s][info][gc] GC(33) Major Collection (Proactive)
+[129.437s][info][gc] GC(33) Major Collection (Proactive) 2258M(28%)->250M(3%) 0.080s

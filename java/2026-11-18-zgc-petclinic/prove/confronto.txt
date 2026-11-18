@@ -1,0 +1,33 @@
+PetClinic, 5 corse per ogni scenario, alternate
+carico: da 20 a 600 richieste al secondo in 10 secondi, poi 600 al secondo per 120 secondi
+pagine, a turno: /owners/1 /owners?lastName=Davis /vets.html /owners/5 /owners?lastName=
+java25-heap-piccolo: openjdk version "25.0.2" 2026-01-20, -XX:+UseZGC -Xms2M -Xmx8G
+java25-heap-grande: openjdk version "25.0.2" 2026-01-20, -XX:+UseZGC -Xms8G -Xmx8G -XX:+AlwaysPreTouch
+java28-heap-piccolo: openjdk version "28-ea" 2027-03-23, -XX:+UseZGC -Xms2M -Xmx8G
+java28-adattivo: openjdk version "28-ea" 2027-03-23, -XX:+UseZGC -XX:+ZAdaptiveHeapSizing
+
+java25-heap-piccolo-1: prima risposta dopo 3.234 ms, P99 sopra 20 ms in 3 secondi su 130, sempre sotto dal secondo 41, heap fino a 7.804 MB, alla fine 7.804 MB, errori 0
+java25-heap-grande-1: prima risposta dopo 3.622 ms, P99 sopra 20 ms in 12 secondi su 130, sempre sotto dal secondo 130, heap fino a 8.192 MB, alla fine 8.192 MB, errori 0
+java28-heap-piccolo-1: prima risposta dopo 3.733 ms, P99 sopra 20 ms in 3 secondi su 130, sempre sotto dal secondo 67, heap fino a 7.804 MB, alla fine 7.804 MB, errori 0
+java28-adattivo-1: prima risposta dopo 3.139 ms, P99 sopra 20 ms in 1 secondi su 130, sempre sotto dal secondo 1, heap fino a 976 MB, alla fine 828 MB, errori 0
+java25-heap-piccolo-2: prima risposta dopo 3.223 ms, P99 sopra 20 ms in 1 secondi su 130, sempre sotto dal secondo 1, heap fino a 7.806 MB, alla fine 7.806 MB, errori 0
+java25-heap-grande-2: prima risposta dopo 3.501 ms, P99 sopra 20 ms in 2 secondi su 130, sempre sotto dal secondo 130, heap fino a 8.192 MB, alla fine 8.192 MB, errori 0
+java28-heap-piccolo-2: prima risposta dopo 3.391 ms, P99 sopra 20 ms in 5 secondi su 130, sempre sotto dal secondo 22, heap fino a 7.820 MB, alla fine 7.820 MB, errori 0
+java28-adattivo-2: prima risposta dopo 3.182 ms, P99 sopra 20 ms in 1 secondi su 130, sempre sotto dal secondo 1, heap fino a 1.022 MB, alla fine 820 MB, errori 0
+java25-heap-piccolo-3: prima risposta dopo 3.091 ms, P99 sopra 20 ms in 1 secondi su 130, sempre sotto dal secondo 1, heap fino a 7.798 MB, alla fine 7.798 MB, errori 0
+java25-heap-grande-3: prima risposta dopo 3.547 ms, P99 sopra 20 ms in 40 secondi su 130, sempre sotto dal secondo 130, heap fino a 8.192 MB, alla fine 8.192 MB, errori 0
+java28-heap-piccolo-3: prima risposta dopo 4.042 ms, P99 sopra 20 ms in 18 secondi su 130, sempre sotto dal secondo 125, heap fino a 8.192 MB, alla fine 8.192 MB, errori 0
+java28-adattivo-3: prima risposta dopo 3.358 ms, P99 sopra 20 ms in 11 secondi su 130, sempre sotto dal secondo 129, heap fino a 1.450 MB, alla fine 1.136 MB, errori 0
+java25-heap-piccolo-4: prima risposta dopo 3.366 ms, P99 sopra 20 ms in 10 secondi su 130, sempre sotto dal secondo 119, heap fino a 7.810 MB, alla fine 7.810 MB, errori 0
+java25-heap-grande-4: prima risposta dopo 3.658 ms, P99 sopra 20 ms in 6 secondi su 130, sempre sotto dal secondo 66, heap fino a 8.192 MB, alla fine 8.192 MB, errori 0
+java28-heap-piccolo-4: prima risposta dopo 3.258 ms, P99 sopra 20 ms in 5 secondi su 130, sempre sotto dal secondo 29, heap fino a 7.856 MB, alla fine 7.856 MB, errori 0
+java28-adattivo-4: prima risposta dopo 3.189 ms, P99 sopra 20 ms in 2 secondi su 130, sempre sotto dal secondo 4, heap fino a 1.008 MB, alla fine 814 MB, errori 0
+java25-heap-piccolo-5: prima risposta dopo 3.076 ms, P99 sopra 20 ms in 1 secondi su 130, sempre sotto dal secondo 1, heap fino a 7.810 MB, alla fine 7.810 MB, errori 0
+java25-heap-grande-5: prima risposta dopo 3.592 ms, P99 sopra 20 ms in 1 secondi su 130, sempre sotto dal secondo 1, heap fino a 8.192 MB, alla fine 8.192 MB, errori 0
+java28-heap-piccolo-5: prima risposta dopo 3.115 ms, P99 sopra 20 ms in 3 secondi su 130, sempre sotto dal secondo 21, heap fino a 7.834 MB, alla fine 7.834 MB, errori 0
+java28-adattivo-5: prima risposta dopo 3.239 ms, P99 sopra 20 ms in 3 secondi su 130, sempre sotto dal secondo 60, heap fino a 1.432 MB, alla fine 852 MB, errori 0
+
+java25-heap-piccolo, mediana di 5 corse: prima risposta dopo 3.223 ms, P99 sopra 20 ms in 1 secondi su 130, sempre sotto dal secondo 1, heap fino a 7.806 MB, alla fine 7.806 MB
+java25-heap-grande, mediana di 5 corse: prima risposta dopo 3.592 ms, P99 sopra 20 ms in 6 secondi su 130, sempre sotto dal secondo 130, heap fino a 8.192 MB, alla fine 8.192 MB
+java28-heap-piccolo, mediana di 5 corse: prima risposta dopo 3.391 ms, P99 sopra 20 ms in 5 secondi su 130, sempre sotto dal secondo 29, heap fino a 7.834 MB, alla fine 7.834 MB
+java28-adattivo, mediana di 5 corse: prima risposta dopo 3.189 ms, P99 sopra 20 ms in 2 secondi su 130, sempre sotto dal secondo 4, heap fino a 1.022 MB, alla fine 828 MB
