@@ -1,0 +1,4 @@
+banca/target/
+extenddb/chiave.env
+extenddb/certificato.pem
+extenddb/certificato.p12

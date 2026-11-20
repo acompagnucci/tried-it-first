@@ -1,0 +1,6 @@
+shard: 4
+conto	evento	saldo prima	saldo dopo
+C001	INSERT	-	1000
+C001	MODIFY	1000	700
+C002	INSERT	-	0
+C002	MODIFY	0	300

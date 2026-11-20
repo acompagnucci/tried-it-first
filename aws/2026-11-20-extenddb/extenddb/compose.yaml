@@ -1,0 +1,67 @@
+name: tried-it-first-extenddb
+
+x-extenddb: &extenddb
+  image: extenddb/extenddb-postgres:1.0.0
+  env_file: password-di-prova.env
+  read_only: true
+  tmpfs:
+    - /tmp:rw,noexec,nosuid,size=16m
+  cap_drop:
+    - ALL
+  security_opt:
+    - no-new-privileges:true
+  volumes:
+    - stato:/var/lib/extenddb
+
+services:
+  postgres:
+    image: postgres:18.4
+    env_file: password-di-prova.env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    volumes:
+      - dati:/var/lib/postgresql
+
+  permessi:
+    image: extenddb/extenddb-postgres:1.0.0
+    user: "0:0"
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+    entrypoint: ["chown", "-R", "10001:10001", "/var/lib/extenddb"]
+    volumes:
+      - stato:/var/lib/extenddb
+
+  init:
+    <<: *extenddb
+    depends_on:
+      postgres:
+        condition: service_healthy
+      permessi:
+        condition: service_completed_successfully
+    entrypoint: ["/bin/sh", "-ec"]
+    command:
+      - |
+        [ -f /var/lib/extenddb/extenddb.toml ] && exit 0
+        exec extenddb init --config /var/lib/extenddb/extenddb.toml --backend postgres \
+          --pg-host postgres --pg-port 5432 --pg-user postgres --extenddb-user extenddb_app \
+          --bind-addr 0.0.0.0 --tls-san extenddb
+
+  extenddb:
+    <<: *extenddb
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    environment:
+      EXTENDDB__SERVER__REGION: eu-south-1
+    ports:
+      - "127.0.0.1:18443:18443"
+    stop_grace_period: 80s
+
+volumes:
+  dati:
+  stato:

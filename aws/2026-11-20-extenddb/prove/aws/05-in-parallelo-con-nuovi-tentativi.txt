@@ -1,0 +1,35 @@
+Corsa 1
+100 bonifici da 100 euro da C010 a C011, partiti insieme, fino a 50 tentativi ciascuno
+eseguiti: 100
+tentativi in tutto: 331
+saldi finali: C010 0, C011 10000
+tempo: 0,998 secondi
+
+Corsa 2
+100 bonifici da 100 euro da C010 a C011, partiti insieme, fino a 50 tentativi ciascuno
+eseguiti: 100
+tentativi in tutto: 366
+saldi finali: C010 0, C011 10000
+tempo: 1,015 secondi
+
+Corsa 3
+100 bonifici da 100 euro da C010 a C011, partiti insieme, fino a 50 tentativi ciascuno
+eseguiti: 100
+tentativi in tutto: 335
+saldi finali: C010 0, C011 10000
+tempo: 0,931 secondi
+
+Corsa 4
+100 bonifici da 100 euro da C010 a C011, partiti insieme, fino a 50 tentativi ciascuno
+eseguiti: 100
+tentativi in tutto: 373
+saldi finali: C010 0, C011 10000
+tempo: 1,072 secondi
+
+Corsa 5
+100 bonifici da 100 euro da C010 a C011, partiti insieme, fino a 50 tentativi ciascuno
+eseguiti: 100
+tentativi in tutto: 331
+saldi finali: C010 0, C011 10000
+tempo: 0,940 secondi
+

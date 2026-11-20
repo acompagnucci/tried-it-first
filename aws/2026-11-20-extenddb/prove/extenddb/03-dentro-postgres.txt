@@ -1,0 +1,29 @@
+Le tabelle DynamoDB nel catalogo:
+        table_name        |               table_id               | ttl_attribute 
+--------------------------+--------------------------------------+---------------
+ tried-it-first-conti     | d58437ec-c86a-4d59-b6ba-a489237440bb | 
+ tried-it-first-movimenti | 2b15d8c4-c108-4c24-a2e5-a448456e802f | scade
+(2 rows)
+
+I conti nella tabella _ddb_d58437ec-c86a-4d59-b6ba-a489237440bb:
+  pk  |                    item_data                    
+------+-------------------------------------------------
+ C001 | {"conto": {"S": "C001"}, "saldo": {"N": "700"}}
+ C002 | {"conto": {"S": "C002"}, "saldo": {"N": "300"}}
+(2 rows)
+
+Lo stream della tabella dei conti:
+ event_name | conto | saldo_prima | saldo_dopo |          created_at           
+------------+-------+-------------+------------+-------------------------------
+ Insert     | C001  |             | 1000       | 2026-11-20 07:16:11.362935+00
+ Insert     | C002  |             | 0          | 2026-11-20 07:16:11.380591+00
+ Modify     | C002  | 0           | 300        | 2026-11-20 07:16:11.404643+00
+ Modify     | C001  | 1000        | 700        | 2026-11-20 07:16:11.405043+00
+(4 rows)
+
+L'ultimo token salvato, quello del bonifico 1:
+      token      |   fingerprint    |          created_at          
+-----------------+------------------+------------------------------
+ 1795158971197-1 | 997fd6bc79bb1626 | 2026-11-20 07:16:11.40295+00
+(1 row)
+

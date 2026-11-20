@@ -1,0 +1,28 @@
+Conti aperti: C001 con 1000 euro, C002 con 0
+
+1. Bonifico di 300 euro da C001 a C002
+   eseguito
+   saldi: C001 700, C002 300
+
+2. Bonifico di 5000 euro da C001 a C002
+   rifiutato: TransactionCanceledException, HTTP 400
+   messaggio: Transaction cancelled, please refer cancellation reasons for specific reasons [ConditionalCheckFailed, None]
+   motivo 1: ConditionalCheckFailed (The conditional request failed), item com'era: conto=C001, saldo=700
+   motivo 2: None
+   saldi: C001 700, C002 300
+
+3. Bonifico di 100 euro da C001 a C999, che non esiste
+   rifiutato: TransactionCanceledException, HTTP 400
+   messaggio: Transaction cancelled, please refer cancellation reasons for specific reasons [None, ConditionalCheckFailed]
+   motivo 1: None
+   motivo 2: ConditionalCheckFailed (The conditional request failed)
+   saldi: C001 700, C002 300
+
+4. Di nuovo il bonifico 1, con lo stesso id
+   eseguito
+   saldi: C001 700, C002 300
+
+5. Lo stesso id del bonifico 1, ma con 400 euro invece di 300
+   rifiutato: IdempotentParameterMismatchException, HTTP 400
+   messaggio: Specified idempotent token was used with different request parameters within the idempotency window
+   saldi: C001 700, C002 300

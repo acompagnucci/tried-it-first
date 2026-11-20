@@ -1,0 +1,40 @@
+Corsa 1
+100 bonifici da 100 euro da C010 a C011, partiti insieme, un tentativo ciascuno
+eseguiti: 22
+rifiutati per conflitto: 78
+tentativi in tutto: 100
+saldi finali: C010 7800, C011 2200
+tempo: 0,278 secondi
+
+Corsa 2
+100 bonifici da 100 euro da C010 a C011, partiti insieme, un tentativo ciascuno
+eseguiti: 27
+rifiutati per conflitto: 73
+tentativi in tutto: 100
+saldi finali: C010 7300, C011 2700
+tempo: 0,307 secondi
+
+Corsa 3
+100 bonifici da 100 euro da C010 a C011, partiti insieme, un tentativo ciascuno
+eseguiti: 25
+rifiutati per conflitto: 75
+tentativi in tutto: 100
+saldi finali: C010 7500, C011 2500
+tempo: 0,276 secondi
+
+Corsa 4
+100 bonifici da 100 euro da C010 a C011, partiti insieme, un tentativo ciascuno
+eseguiti: 21
+rifiutati per conflitto: 79
+tentativi in tutto: 100
+saldi finali: C010 7900, C011 2100
+tempo: 0,290 secondi
+
+Corsa 5
+100 bonifici da 100 euro da C010 a C011, partiti insieme, un tentativo ciascuno
+eseguiti: 26
+rifiutati per conflitto: 74
+tentativi in tutto: 100
+saldi finali: C010 7400, C011 2600
+tempo: 0,285 secondi
+

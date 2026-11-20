@@ -1,0 +1,14 @@
+== 01-bonifici.txt
+--- aws
++++ extenddb
+@@ -24,5 +24,5 @@
+ 
+ 5. Lo stesso id del bonifico 1, ma con 400 euro invece di 300
+    rifiutato: IdempotentParameterMismatchException, HTTP 400
+-   messaggio: Specified idempotent token was used with different request parameters within the idempotency window
++   messaggio: The request uses the same client token as a previous, but different, request.
+    saldi: C001 700, C002 300
+
+== 02-stream.txt
+uguali
+

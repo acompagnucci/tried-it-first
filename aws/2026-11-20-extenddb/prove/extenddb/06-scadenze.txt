@@ -1,0 +1,12 @@
+scritti 1000 movimenti già scaduti: scade = 1795158933 (2026-11-20T07:15:33Z)
+07:16:34 minuto 0: 1000 movimenti ancora in tabella
+07:17:35 minuto 1: 900 movimenti ancora in tabella
+07:18:35 minuto 2: 800 movimenti ancora in tabella
+07:19:34 minuto 3: 700 movimenti ancora in tabella
+07:20:34 minuto 4: 600 movimenti ancora in tabella
+07:21:35 minuto 5: 500 movimenti ancora in tabella
+07:22:34 minuto 6: 400 movimenti ancora in tabella
+07:23:35 minuto 7: 300 movimenti ancora in tabella
+07:24:34 minuto 8: 200 movimenti ancora in tabella
+07:25:35 minuto 9: 100 movimenti ancora in tabella
+07:26:34 minuto 10: 0 movimenti ancora in tabella
