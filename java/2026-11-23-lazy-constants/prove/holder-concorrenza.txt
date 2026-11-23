@@ -1,0 +1,6 @@
+Java 28-ea+25-2095, scenario concorrenza
+holder: una holder class per componente
+servizio pronto dopo 0 ms
+100 bonifici di 250,00 € insieme
+  eseguiti: 100, risposte tra 304 e 307 ms
+  caricamenti dal DB: tabella ABI 1, tassi di cambio 0, template della ricevuta 0

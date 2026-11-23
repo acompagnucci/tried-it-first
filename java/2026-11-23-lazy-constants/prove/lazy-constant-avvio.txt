@@ -1,0 +1,8 @@
+Java 28-ea+25-2095, scenario avvio
+lazy-constant: un campo LazyConstant per componente
+servizio pronto dopo 1 ms
+bonifico di 250,00 € verso Banca di Prova: risposta dopo 322 ms
+  caricamenti dal DB: tabella ABI 1, tassi di cambio 0, template della ricevuta 0
+bonifico di 300,00 USD con ricevuta: risposta dopo 609 ms
+  ricevuta: Bonifico di 300,00 USD verso Banca di Prova, pari a 261,00 €
+  caricamenti dal DB: tabella ABI 1, tassi di cambio 1, template della ricevuta 1

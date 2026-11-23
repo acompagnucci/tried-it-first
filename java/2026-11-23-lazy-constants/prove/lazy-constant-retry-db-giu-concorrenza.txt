@@ -1,0 +1,7 @@
+Java 28-ea+25-2095, scenario db-giu-concorrenza
+lazy-constant-retry: LazyConstant con 3 tentativi nel Supplier
+il DB va in timeout al primo caricamento della tabella ABI, poi torna su
+servizio pronto dopo 1 ms
+100 bonifici di 250,00 € insieme
+  eseguiti: 100, risposte tra 713 e 716 ms
+  caricamenti dal DB: tabella ABI 2, tassi di cambio 0, template della ricevuta 0

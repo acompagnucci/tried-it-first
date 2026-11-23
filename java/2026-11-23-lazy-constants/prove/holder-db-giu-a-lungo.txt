@@ -1,0 +1,8 @@
+Java 28-ea+25-2095, scenario db-giu-a-lungo
+holder: una holder class per componente
+il DB va in timeout ai primi 3 caricamenti della tabella ABI, poi torna su
+servizio pronto dopo 0 ms
+bonifico 1: errore dopo 305 ms, ExceptionInInitializerError, causa: DatabaseNonDisponibile
+bonifico 2: errore dopo 0 ms, NoClassDefFoundError (Could not initialize class bonifico.ConHolder$TabellaAbiHolder), causa: ExceptionInInitializerError
+bonifico 3: errore dopo 0 ms, NoClassDefFoundError (Could not initialize class bonifico.ConHolder$TabellaAbiHolder), causa: ExceptionInInitializerError
+  caricamenti dal DB: tabella ABI 1, tassi di cambio 0, template della ricevuta 0

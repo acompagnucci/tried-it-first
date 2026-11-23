@@ -1,0 +1,8 @@
+Java 28-ea+25-2095, scenario db-giu-concorrenza
+double-checked: double-checked locking su un campo volatile
+il DB va in timeout al primo caricamento della tabella ABI, poi torna su
+servizio pronto dopo 0 ms
+100 bonifici di 250,00 € insieme
+  eseguiti: 99, risposte tra 608 e 610 ms
+  in errore: 1, risposta dopo 305 ms, DatabaseNonDisponibile (timeout sulla lettura della tabella ABI)
+  caricamenti dal DB: tabella ABI 2, tassi di cambio 0, template della ricevuta 0

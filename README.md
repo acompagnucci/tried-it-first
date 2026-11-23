@@ -27,3 +27,4 @@ Se qualcosa non funziona, apritemi una issue.
 | 2026-11-16 | java | [Le prime 500 richieste in 272 ms invece di 783: il codice compilato nella cache AOT di Java 28](java/2026-11-16-codice-aot/) |
 | 2026-11-18 | java | [PetClinic con 1 GB di heap invece di 7,6: l'heap adattivo di ZGC in Java 28](java/2026-11-18-zgc-petclinic/) |
 | 2026-11-20 | aws | [Lo stesso codice DynamoDB su AWS e su PostgreSQL: ExtendDB 1.0](aws/2026-11-20-extenddb/) |
+| 2026-11-23 | java | [100 bonifici insieme e la tabella ABI caricata 100 volte: le Lazy Constants di Java 28](java/2026-11-23-lazy-constants/) |

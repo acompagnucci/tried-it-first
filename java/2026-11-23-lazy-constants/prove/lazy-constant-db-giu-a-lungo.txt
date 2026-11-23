@@ -1,0 +1,8 @@
+Java 28-ea+25-2095, scenario db-giu-a-lungo
+lazy-constant: un campo LazyConstant per componente
+il DB va in timeout ai primi 3 caricamenti della tabella ABI, poi torna su
+servizio pronto dopo 1 ms
+bonifico 1: errore dopo 306 ms, NoSuchElementException (Unable to access the constant because bonifico.DatabaseNonDisponibile was thrown at initial computation), causa: DatabaseNonDisponibile
+bonifico 2: errore dopo 0 ms, NoSuchElementException (Unable to access the constant because bonifico.DatabaseNonDisponibile was thrown at initial computation)
+bonifico 3: errore dopo 0 ms, NoSuchElementException (Unable to access the constant because bonifico.DatabaseNonDisponibile was thrown at initial computation)
+  caricamenti dal DB: tabella ABI 1, tassi di cambio 0, template della ricevuta 0

@@ -1,0 +1,6 @@
+Java 28-ea+25-2095, scenario concorrenza
+final: campi final caricati nel costruttore
+servizio pronto dopo 916 ms
+100 bonifici di 250,00 € insieme
+  eseguiti: 100, risposte tra 0 e 0 ms
+  caricamenti dal DB: tabella ABI 1, tassi di cambio 1, template della ricevuta 1

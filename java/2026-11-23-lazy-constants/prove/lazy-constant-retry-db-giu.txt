@@ -1,0 +1,8 @@
+Java 28-ea+25-2095, scenario db-giu
+lazy-constant-retry: LazyConstant con 3 tentativi nel Supplier
+il DB va in timeout al primo caricamento della tabella ABI, poi torna su
+servizio pronto dopo 1 ms
+bonifico 1: eseguito dopo 712 ms
+bonifico 2: eseguito dopo 0 ms
+bonifico 3: eseguito dopo 0 ms
+  caricamenti dal DB: tabella ABI 2, tassi di cambio 0, template della ricevuta 0

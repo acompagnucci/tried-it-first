@@ -1,0 +1,8 @@
+Java 28-ea+25-2095, scenario db-giu-a-lungo
+if-null: caricamento al primo uso con if (campo == null)
+il DB va in timeout ai primi 3 caricamenti della tabella ABI, poi torna su
+servizio pronto dopo 0 ms
+bonifico 1: errore dopo 306 ms, DatabaseNonDisponibile (timeout sulla lettura della tabella ABI)
+bonifico 2: errore dopo 301 ms, DatabaseNonDisponibile (timeout sulla lettura della tabella ABI)
+bonifico 3: errore dopo 303 ms, DatabaseNonDisponibile (timeout sulla lettura della tabella ABI)
+  caricamenti dal DB: tabella ABI 3, tassi di cambio 0, template della ricevuta 0
