@@ -1,0 +1,3 @@
+Java 28-ea+25-2095, caso importo
+bonifico di 1.000.000,00 USD, limite per bonifico 50.000,00
+  accettato: 1.000.000,00 USD

@@ -1,0 +1,23 @@
+bonifico.Banca
+  minor version: 0
+  major version: 72
+  static final java.lang.String ABI;
+    flags: (0x0018) ACC_STATIC, ACC_FINAL
+  static {};
+    flags: (0x0008) ACC_STATIC
+bonifico.Configurazione
+  minor version: 0
+  major version: 72
+  private static final java.lang.String ABI_DI_PROVA;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+  static final java.lang.String INTESTAZIONE_RICEVUTA;
+    flags: (0x0018) ACC_STATIC, ACC_FINAL
+  static {};
+    flags: (0x0008) ACC_STATIC
+bonifico.ImportoInValuta
+  minor version: 0
+  major version: 72
+  private final long centesimi;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+  private final java.lang.String valuta;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL

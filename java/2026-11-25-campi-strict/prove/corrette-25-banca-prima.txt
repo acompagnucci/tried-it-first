@@ -1,0 +1,4 @@
+Java 25.0.2+10-69, caso banca-prima
+prima Banca.ABI, poi Configurazione.INTESTAZIONE_RICEVUTA
+  Banca.ABI: 00001
+  intestazione della ricevuta: ABI 00001

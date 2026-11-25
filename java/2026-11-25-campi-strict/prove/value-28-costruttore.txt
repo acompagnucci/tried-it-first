@@ -1,0 +1,11 @@
+  bonifico.ImportoInValuta(long, java.lang.String);
+    Code:
+         0: aload_0
+         1: lload_1
+         2: putfield      #1                  // Field centesimi:J
+         5: aload_0
+         6: aload_3
+         7: putfield      #7                  // Field valuta:Ljava/lang/String;
+        10: aload_0
+        11: invokespecial #11                 // Method bonifico/Importo."<init>":()V
+        14: return

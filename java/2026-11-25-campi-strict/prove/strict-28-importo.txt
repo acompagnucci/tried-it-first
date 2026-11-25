@@ -1,0 +1,20 @@
+Java 28-ea+25-2095, caso importo
+bonifico di 1.000.000,00 USD, limite per bonifico 50.000,00
+Exception in thread "main" java.lang.VerifyError: All strict fields must be initialized before super(): 2 field(s) in bonifico/ImportoInValuta
+Exception Details:
+  Location:
+    bonifico/ImportoInValuta.<init>(JLjava/lang/String;)V @1: invokespecial
+  Reason:
+    Invalid use of strict instance fields
+  Current Frame:
+    bci: @1
+    flags: { flagThisUninit }
+    locals: { uninitializedThis, long, long_2nd, 'java/lang/String' }
+    stack: { uninitializedThis }
+  Bytecode:
+    0000000: 2ab7 0001 2a1f b500 072a 2db5 000d b1  
+
+	at bonifico.Prova.importoOltreIlLimite(Prova.java:41)
+	at bonifico.Prova.esegui(Prova.java:31)
+	at bonifico.Prova.main(Prova.java:25)
+(la JVM è uscita con codice 1)

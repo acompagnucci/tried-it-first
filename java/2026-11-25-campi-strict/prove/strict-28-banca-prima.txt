@@ -1,0 +1,11 @@
+Java 28-ea+25-2095, caso banca-prima
+prima Banca.ABI, poi Configurazione.INTESTAZIONE_RICEVUTA
+Exception in thread "main" java.lang.ExceptionInInitializerError
+	at bonifico.Banca.<clinit>(Banca.java:5)
+	at bonifico.Prova.bancaPrima(Prova.java:50)
+	at bonifico.Prova.esegui(Prova.java:32)
+	at bonifico.Prova.main(Prova.java:25)
+Caused by: java.lang.IllegalStateException: Strict static "ABI" is unset before first read in bonifico.Banca
+	at bonifico.Configurazione.<clinit>(Configurazione.java:7)
+	... 4 more
+(la JVM è uscita con codice 1)
