@@ -1,0 +1,26 @@
+{"batch":10000,"finestra":60,"poller":{"MinimumPollers":2,"MaximumPollers":10}}
+Funzione tried-it-first-diecimila, prova diecimila-1000-20261127-082151
+Inviati 10000 bonifici su 1000 conti
+Invocazioni                              12
+Messaggi ricevuti                        10.000
+di cui ricevuti di nuovo                 0
+Messaggi per invocazione, il minimo      310
+Messaggi per invocazione, la mediana     940
+Messaggi per invocazione, il massimo     980
+Evento più grande, KB                    1.022
+Evento più grande, messaggi              980
+Dalla prima all'ultima invocazione, ms   57.999
+Tempo totale nella Lambda, ms            8.273
+Conti letti e riscritti su DynamoDB      1.000
+Conti                                    1.000
+Bonifici registrati                      10.000
+Rifiutati per saldo insufficiente        0
+Scartati come doppioni                   0
+Somma dei saldi                          0,00 €
+Conti con bonifici rifiutati             0
+
+Invocazioni partite, a blocchi di 10 secondi dalla prima
+  dal secondo   invocazioni   messaggi
+            0             2        630
+           50            10      9.370
+Nella coda dei falliti: 0

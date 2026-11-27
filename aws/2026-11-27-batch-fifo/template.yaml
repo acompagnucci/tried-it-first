@@ -1,0 +1,312 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Tried It First - bonifici su code SQS FIFO lette da Lambda in provisioned mode,
+  a batch da 10 e da 10.000. Gli event source mapping nascono spenti.
+
+Globals:
+  Function:
+    Runtime: java21
+    Architectures: [arm64]
+    Handler: bonifici.RimandaIlRestoDelConto::handleRequest
+    MemorySize: 1024
+    Timeout: 30
+    Environment:
+      Variables:
+        CONTI: !Ref Conti
+        INVOCAZIONI: !Ref Invocazioni
+
+Resources:
+  Conti:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: tried-it-first-batch-conti
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: prova
+          AttributeType: S
+        - AttributeName: conto
+          AttributeType: N
+      KeySchema:
+        - AttributeName: prova
+          KeyType: HASH
+        - AttributeName: conto
+          KeyType: RANGE
+
+  Invocazioni:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: tried-it-first-batch-invocazioni
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: prova
+          AttributeType: S
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: prova
+          KeyType: HASH
+        - AttributeName: id
+          KeyType: RANGE
+
+  Falliti:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: tried-it-first-falliti.fifo
+      FifoQueue: true
+      MessageRetentionPeriod: 86400
+
+  Ruolo:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: bonifici
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dynamodb:GetItem
+                  - dynamodb:PutItem
+                Resource: !GetAtt Conti.Arn
+              - Effect: Allow
+                Action: dynamodb:PutItem
+                Resource: !GetAtt Invocazioni.Arn
+              - Effect: Allow
+                Action:
+                  - sqs:ReceiveMessage
+                  - sqs:DeleteMessage
+                  - sqs:GetQueueAttributes
+                Resource:
+                  - !GetAtt CodaDieci.Arn
+                  - !GetAtt CodaDiecimila.Arn
+                  - !GetAtt CodaRestoDelConto.Arn
+                  - !GetAtt CodaSoloIlFallito.Arn
+                  - !GetAtt CodaEccezione.Arn
+
+  CodaDieci:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: tried-it-first-dieci.fifo
+      FifoQueue: true
+      DeduplicationScope: messageGroup
+      FifoThroughputLimit: perMessageGroupId
+      VisibilityTimeout: 180
+      MessageRetentionPeriod: 3600
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt Falliti.Arn
+        maxReceiveCount: 5
+
+  LogDieci:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-dieci
+      RetentionInDays: 1
+
+  Dieci:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-dieci
+      CodeUri: bonifici/target/bonifici.jar
+      Role: !GetAtt Ruolo.Arn
+      LoggingConfig:
+        LogGroup: !Ref LogDieci
+
+  LetturaDieci:
+    Type: AWS::Lambda::EventSourceMapping
+    Properties:
+      FunctionName: !Ref Dieci
+      EventSourceArn: !GetAtt CodaDieci.Arn
+      Enabled: false
+      BatchSize: 10
+      FunctionResponseTypes: [ReportBatchItemFailures]
+      ProvisionedPollerConfig:
+        MinimumPollers: 2
+        MaximumPollers: 10
+
+  CodaDiecimila:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: tried-it-first-diecimila.fifo
+      FifoQueue: true
+      DeduplicationScope: messageGroup
+      FifoThroughputLimit: perMessageGroupId
+      VisibilityTimeout: 190
+      MessageRetentionPeriod: 3600
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt Falliti.Arn
+        maxReceiveCount: 5
+
+  LogDiecimila:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-diecimila
+      RetentionInDays: 1
+
+  Diecimila:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-diecimila
+      CodeUri: bonifici/target/bonifici.jar
+      Role: !GetAtt Ruolo.Arn
+      LoggingConfig:
+        LogGroup: !Ref LogDiecimila
+
+  LetturaDiecimila:
+    Type: AWS::Lambda::EventSourceMapping
+    Properties:
+      FunctionName: !Ref Diecimila
+      EventSourceArn: !GetAtt CodaDiecimila.Arn
+      Enabled: false
+      BatchSize: 10000
+      MaximumBatchingWindowInSeconds: 10
+      FunctionResponseTypes: [ReportBatchItemFailures]
+      ProvisionedPollerConfig:
+        MinimumPollers: 2
+        MaximumPollers: 10
+
+  CodaRestoDelConto:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: tried-it-first-resto-del-conto.fifo
+      FifoQueue: true
+      DeduplicationScope: messageGroup
+      FifoThroughputLimit: perMessageGroupId
+      VisibilityTimeout: 190
+      MessageRetentionPeriod: 3600
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt Falliti.Arn
+        maxReceiveCount: 5
+
+  LogRestoDelConto:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-resto-del-conto
+      RetentionInDays: 1
+
+  RestoDelConto:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-resto-del-conto
+      CodeUri: bonifici/target/bonifici.jar
+      Role: !GetAtt Ruolo.Arn
+      Environment:
+        Variables:
+          CONTO_GUASTO: 500
+          BONIFICO_GUASTO: 5
+      LoggingConfig:
+        LogGroup: !Ref LogRestoDelConto
+
+  LetturaRestoDelConto:
+    Type: AWS::Lambda::EventSourceMapping
+    Properties:
+      FunctionName: !Ref RestoDelConto
+      EventSourceArn: !GetAtt CodaRestoDelConto.Arn
+      Enabled: false
+      BatchSize: 10000
+      MaximumBatchingWindowInSeconds: 10
+      FunctionResponseTypes: [ReportBatchItemFailures]
+      ProvisionedPollerConfig:
+        MinimumPollers: 2
+        MaximumPollers: 10
+
+  CodaSoloIlFallito:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: tried-it-first-solo-il-fallito.fifo
+      FifoQueue: true
+      DeduplicationScope: messageGroup
+      FifoThroughputLimit: perMessageGroupId
+      VisibilityTimeout: 190
+      MessageRetentionPeriod: 3600
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt Falliti.Arn
+        maxReceiveCount: 5
+
+  LogSoloIlFallito:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-solo-il-fallito
+      RetentionInDays: 1
+
+  SoloIlFallito:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-solo-il-fallito
+      CodeUri: bonifici/target/bonifici.jar
+      Role: !GetAtt Ruolo.Arn
+      Handler: bonifici.RimandaSoloIlFallito::handleRequest
+      Environment:
+        Variables:
+          CONTO_GUASTO: 500
+          BONIFICO_GUASTO: 5
+      LoggingConfig:
+        LogGroup: !Ref LogSoloIlFallito
+
+  LetturaSoloIlFallito:
+    Type: AWS::Lambda::EventSourceMapping
+    Properties:
+      FunctionName: !Ref SoloIlFallito
+      EventSourceArn: !GetAtt CodaSoloIlFallito.Arn
+      Enabled: false
+      BatchSize: 10000
+      MaximumBatchingWindowInSeconds: 10
+      FunctionResponseTypes: [ReportBatchItemFailures]
+      ProvisionedPollerConfig:
+        MinimumPollers: 2
+        MaximumPollers: 10
+
+  CodaEccezione:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: tried-it-first-eccezione.fifo
+      FifoQueue: true
+      DeduplicationScope: messageGroup
+      FifoThroughputLimit: perMessageGroupId
+      VisibilityTimeout: 190
+      MessageRetentionPeriod: 3600
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt Falliti.Arn
+        maxReceiveCount: 5
+
+  LogEccezione:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/tried-it-first-eccezione
+      RetentionInDays: 1
+
+  Eccezione:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: tried-it-first-eccezione
+      CodeUri: bonifici/target/bonifici.jar
+      Role: !GetAtt Ruolo.Arn
+      Handler: bonifici.LanciaUnEccezione::handleRequest
+      Environment:
+        Variables:
+          CONTO_GUASTO: 500
+          BONIFICO_GUASTO: 5
+      LoggingConfig:
+        LogGroup: !Ref LogEccezione
+
+  LetturaEccezione:
+    Type: AWS::Lambda::EventSourceMapping
+    Properties:
+      FunctionName: !Ref Eccezione
+      EventSourceArn: !GetAtt CodaEccezione.Arn
+      Enabled: false
+      BatchSize: 10000
+      MaximumBatchingWindowInSeconds: 10
+      FunctionResponseTypes: [ReportBatchItemFailures]
+      ProvisionedPollerConfig:
+        MinimumPollers: 2
+        MaximumPollers: 10

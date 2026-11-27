@@ -29,3 +29,4 @@ Se qualcosa non funziona, apritemi una issue.
 | 2026-11-20 | aws | [Lo stesso codice DynamoDB su AWS e su PostgreSQL: ExtendDB 1.0](aws/2026-11-20-extenddb/) |
 | 2026-11-23 | java | [100 bonifici insieme e la tabella ABI caricata 100 volte: le Lazy Constants di Java 28](java/2026-11-23-lazy-constants/) |
 | 2026-11-25 | java | [1.000.000 USD su un limite di 50.000, e il controllo vede 0: i campi strict di Java 28](java/2026-11-25-campi-strict/) |
+| 2026-11-27 | aws | [Da circa 1.000 invocazioni a 12: il batch da 10.000 di Lambda sulle code SQS FIFO](aws/2026-11-27-batch-fifo/) |

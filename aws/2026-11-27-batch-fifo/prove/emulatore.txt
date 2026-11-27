@@ -1,0 +1,5 @@
+Version: 1.0.635
+Lambda java21 con bonifici.jar, invocata con un bonifico:
+  The runtime java21 is not supported by this emulator, which runs the Python and node runtimes.
+Event source mapping FIFO, provisioned mode, batch da 10.000 e finestra da 10 secondi:
+  Batching window is not supported for FIFO queues
